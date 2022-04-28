@@ -1,0 +1,185 @@
+2022-04-28 21:04:508 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:430 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:500 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:986 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:110 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:252 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (de87ea74-69d1-4b1c-a868-5e766a6d83c2)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:965 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:253 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:848 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:505 INFO  BasePage:125 - Entered text :datastudioplace
+2022-04-28 21:04:507 INFO  BasePage:134 - Successfully entered value...: datastudioplace
+2022-04-28 21:04:05 INFO  BasePage:125 - Entered text :Manchester1
+2022-04-28 21:04:09 INFO  BasePage:134 - Successfully entered value...: Manchester1
+2022-04-28 21:04:747 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:998 INFO  BasePage:51 - Successfully Found element: Welcome back firstName
+2022-04-28 21:04:949 INFO  BasePage:75 - waited for.....
+2022-04-28 21:04:453 INFO  BasePage:35 - click on ""
+2022-04-28 21:04:699 INFO  BasePage:51 - Successfully Found element: MY ACCOUNT INFORMATION
+2022-04-28 21:04:272 INFO  BasePage:70 - Waited and Entered text :firstName
+2022-04-28 21:04:587 INFO  BasePage:70 - Waited and Entered text :lastName
+2022-04-28 21:04:990 INFO  BasePage:70 - Waited and Entered text :1651150834588@gmail.com
+2022-04-28 21:04:496 INFO  BasePage:70 - Waited and Entered text :213-233-3340
+2022-04-28 21:04:795 INFO  BasePage:70 - Waited and Entered text :213-233-7770
+2022-04-28 21:04:912 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-04-28 21:04:941 INFO  JavaScriptHelper:50 - scroll to WebElement...
+2022-04-28 21:04:236 INFO  BasePage:271 - Click Action is performed: 
+2022-04-28 21:04:607 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-04-28 21:04:965 INFO  BasePage:75 - waited for.....  Logoff
+2022-04-28 21:04:248 INFO  BasePage:80 - element clicked.....Proxy element for: DefaultElementLocator 'By.linkText: Logoff'
+2022-04-28 21:04:380 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-04-28 21:04:677 INFO  BasePage:51 - Successfully Found element: Continue
+2022-04-28 21:04:104 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-04-28 21:04:470 INFO  BasePage:35 - click on "Continue"
+2022-04-28 21:04:780 INFO  BasePage:779 - FluentWait FAILED to wait.....
+2022-04-28 21:04:797 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:753 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:769 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:336 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:740 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:756 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:208 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:414 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:438 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (b712645d-31b8-4c37-8d72-bfba9a4d10c7)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:963 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:163 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:600 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:228 INFO  BasePage:125 - Entered text :WrongLoginName
+2022-04-28 21:04:230 INFO  BasePage:134 - Successfully entered value...: WrongLoginName
+2022-04-28 21:04:596 INFO  BasePage:125 - Entered text :Manchester1
+2022-04-28 21:04:598 INFO  BasePage:134 - Successfully entered value...: Manchester1
+2022-04-28 21:04:101 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:876 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:247 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:267 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:777 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:997 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:842 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (97204596-ede2-4087-8112-a1775d9343f0)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:406 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:604 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:944 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:572 INFO  BasePage:125 - Entered text :datastudioplace
+2022-04-28 21:04:574 INFO  BasePage:134 - Successfully entered value...: datastudioplace
+2022-04-28 21:04:970 INFO  BasePage:125 - Entered text :WrongPassword
+2022-04-28 21:04:974 INFO  BasePage:134 - Successfully entered value...: WrongPassword
+2022-04-28 21:04:514 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:125 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:82 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:94 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:561 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:674 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:299 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (c69e8826-0d77-47de-a162-93486268ed17)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:806 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:973 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:244 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:576 INFO  BasePage:125 - Entered text :WrongLoginName
+2022-04-28 21:04:576 INFO  BasePage:134 - Successfully entered value...: WrongLoginName
+2022-04-28 21:04:823 INFO  BasePage:125 - Entered text :WrongPassword
+2022-04-28 21:04:823 INFO  BasePage:134 - Successfully entered value...: WrongPassword
+2022-04-28 21:04:221 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:527 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:561 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:574 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:337 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:548 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:308 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (6a18d46d-bdad-4dc1-aa9a-4c7aa76ec201)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:395 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:893 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:576 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:395 INFO  BasePage:125 - Entered text :
+2022-04-28 21:04:397 INFO  BasePage:134 - Successfully entered value...: 
+2022-04-28 21:04:755 INFO  BasePage:125 - Entered text :
+2022-04-28 21:04:756 INFO  BasePage:134 - Successfully entered value...: 
+2022-04-28 21:04:630 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:09 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:721 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:738 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:822 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:50 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:637 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (f6792be1-061b-4d6b-a47f-6fbf0517a319)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:391 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:611 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:20 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:644 INFO  BasePage:125 - Entered text :datastudioplace
+2022-04-28 21:04:645 INFO  BasePage:134 - Successfully entered value...: datastudioplace
+2022-04-28 21:04:945 INFO  BasePage:125 - Entered text :
+2022-04-28 21:04:947 INFO  BasePage:134 - Successfully entered value...: 
+2022-04-28 21:04:492 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:626 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:647 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:658 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:394 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:551 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:170 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (7155e4ab-2fa8-479b-963b-011680953b66)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:895 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:277 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:700 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:156 INFO  BasePage:125 - Entered text :
+2022-04-28 21:04:159 INFO  BasePage:134 - Successfully entered value...: 
+2022-04-28 21:04:51 INFO  BasePage:125 - Entered text :Manchester1
+2022-04-28 21:04:61 INFO  BasePage:134 - Successfully entered value...: Manchester1
+2022-04-28 21:04:779 INFO  BasePage:35 - click on "Login"
+2022-04-28 21:04:245 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:787 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:800 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:917 INFO  BasePage:51 - Successfully Found element: Login or register
+2022-04-28 21:04:197 INFO  BasePage:105 - The element is Enabled...: Login or register
+2022-04-28 21:04:33 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (4615e255-8205-49c6-9ade-88cb8120a6f8)] -> xpath: //a[contains(text(),'Login or register')]]
+2022-04-28 21:04:730 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:956 INFO  BasePage:51 - Successfully Found element: I AM A NEW CUSTOMER.
+2022-04-28 21:04:430 INFO  BasePage:51 - Successfully Found element: RETURNING CUSTOMER
+2022-04-28 21:04:915 INFO  BasePage:51 - Successfully Found element:  Register Account  
+2022-04-28 21:04:555 INFO  BasePage:35 - click on "Continue"
+2022-04-28 21:04:932 INFO  BasePage:779 - FluentWait FAILED to wait.....
+2022-04-28 21:04:396 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:399 INFO  BasePage:134 - getting the element text...
+2022-04-28 21:04:735 INFO  BasePage:51 - Successfully Found element: Your Personal Details
+2022-04-28 21:04:302 INFO  BasePage:125 - Entered text :yourFirstName
+2022-04-28 21:04:304 INFO  BasePage:134 - Successfully entered value...: yourFirstName
+2022-04-28 21:04:582 INFO  BasePage:125 - Entered text :yourLastName
+2022-04-28 21:04:584 INFO  BasePage:134 - Successfully entered value...: yourLastName
+2022-04-28 21:04:164 INFO  BasePage:70 - Waited and Entered text :1651151141585@gmail.com
+2022-04-28 21:04:588 INFO  BasePage:125 - Entered text :2122332000
+2022-04-28 21:04:590 INFO  BasePage:134 - Successfully entered value...: 2122332000
+2022-04-28 21:04:874 INFO  BasePage:125 - Entered text :2122332444
+2022-04-28 21:04:885 INFO  BasePage:134 - Successfully entered value...: 2122332444
+2022-04-28 21:04:93 INFO  BasePage:51 - Successfully Found element: Your Address
+2022-04-28 21:04:526 INFO  BasePage:125 - Entered text :yourCompanyName
+2022-04-28 21:04:528 INFO  BasePage:134 - Successfully entered value...: yourCompanyName
+2022-04-28 21:04:834 INFO  BasePage:125 - Entered text :yourAddress1
+2022-04-28 21:04:836 INFO  BasePage:134 - Successfully entered value...: yourAddress1
+2022-04-28 21:04:172 INFO  BasePage:125 - Entered text :yourAddress2
+2022-04-28 21:04:177 INFO  BasePage:134 - Successfully entered value...: yourAddress2
+2022-04-28 21:04:633 INFO  BasePage:125 - Entered text :yourCity
+2022-04-28 21:04:637 INFO  BasePage:134 - Successfully entered value...: yourCity
+2022-04-28 21:04:985 INFO  BasePage:125 - Entered text :M1 7TG
+2022-04-28 21:04:986 INFO  BasePage:134 - Successfully entered value...: M1 7TG
+2022-04-28 21:04:980 INFO  BasePage:51 - Successfully Found element: Login Details
+2022-04-28 21:04:423 INFO  BasePage:125 - Entered text :1651151125184Apr
+2022-04-28 21:04:425 INFO  BasePage:134 - Successfully entered value...: 1651151125184Apr
+2022-04-28 21:04:746 INFO  BasePage:125 - Entered text :yourPassword01
+2022-04-28 21:04:748 INFO  BasePage:134 - Successfully entered value...: yourPassword01
+2022-04-28 21:04:54 INFO  BasePage:125 - Entered text :yourPassword01
+2022-04-28 21:04:55 INFO  BasePage:134 - Successfully entered value...: yourPassword01
+2022-04-28 21:04:310 INFO  BasePage:51 - Successfully Found element: Newsletter
+2022-04-28 21:04:941 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (4615e255-8205-49c6-9ade-88cb8120a6f8)] -> css selector: #AccountFrm_newsletter1]
+2022-04-28 21:04:374 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (4615e255-8205-49c6-9ade-88cb8120a6f8)] -> css selector: #AccountFrm_newsletter1]
+2022-04-28 21:04:27 INFO  BasePage:80 - element clicked.....[[FirefoxDriver: firefox on WINDOWS (4615e255-8205-49c6-9ade-88cb8120a6f8)] -> css selector: #AccountFrm_agree]
+2022-04-28 21:04:200 INFO  BasePage:75 - waited for.....Continue
+2022-04-28 21:04:697 INFO  BasePage:35 - click on ""
+2022-04-28 21:04:506 INFO  BasePage:75 - waited for.....Welcome back yourFirstName
+2022-04-28 21:04:114 INFO  BasePage:86 - element is Displayed..Welcome back yourFirstName
+2022-04-28 21:04:449 INFO  BasePage:75 - waited for.....Continue
+2022-04-28 21:04:823 INFO  BasePage:35 - click on "Continue"
+2022-04-28 21:04:493 INFO  BasePage:51 - Successfully Found element: Welcome back yourFirstName
+2022-04-28 21:04:972 INFO  BasePage:75 - waited for.....  Logoff
+2022-04-28 21:04:710 INFO  BasePage:80 - element clicked.....Proxy element for: DefaultElementLocator 'By.linkText: Logoff'
+2022-04-28 21:04:907 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-04-28 21:04:509 INFO  BasePage:35 - click on "Continue"
+2022-04-28 21:04:603 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-04-28 21:04:620 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:307 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:326 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/
+2022-04-28 21:04:506 INFO  BasePage:38 - navigating To Index Page....: https://automationteststore.com/
+2022-04-28 21:04:52 INFO  BasePage:42 - got current Page Title....: A place to practice your automation skills!
+2022-04-28 21:04:71 INFO  BasePage:47 - got current Page Url....: https://automationteststore.com/

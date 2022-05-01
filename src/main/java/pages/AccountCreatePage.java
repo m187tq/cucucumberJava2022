@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class AccountCreatePage extends BasePage {
+    String loginName = "covid19" + generateRandomString(5);
+    String email = System.currentTimeMillis() + "Apr";
     public AccountCreatePage() throws IOException {
         super();
 
@@ -81,12 +83,14 @@ public class AccountCreatePage extends BasePage {
     // Summit button //
     @FindBy(xpath = "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[5]/div[1]/div[1]/button[1]")
     public WebElement continueBtn;
+
+
+
+    //**********ERRORS ********************//
     @FindBy(css = "#AccountFrm_firstname")
     public WebElement firstNameErrorTxt;
     @FindBy(css = "#AccountFrm_lastname")
     public WebElement lastNameErrorTxt;
-
-    //**********ERRORS ********************//
     @FindBy(css = "#AccountFrm_email")
     public WebElement emailErrorTxt;
     @FindBy(css = "#AccountFrm_address_1")
@@ -127,7 +131,7 @@ public class AccountCreatePage extends BasePage {
     public WebElement passwordRedMessages;
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div[1]")
     public WebElement agreeToPrivacyPolicyRedMessages;
-    String email = System.currentTimeMillis() + "Apr";
+
 
     public String createAccountText(String arg0) {
         act.fluentWait(getDriver(),createAccountTxt, globalVars.getDefaultExplicitTimeout());
@@ -135,60 +139,61 @@ public class AccountCreatePage extends BasePage {
         return createAccountTxt.getText();
     }
 
-    public boolean verifyIfYouAlreadyHaveAnAccountWithUsIsDisplayed() {
-        return act.isDisplayed(getDriver(), ifYouAlreadyHaveAnAccountWithUs);
+    public String getIfYouAlreadyHaveAnAccountWithUsTxt() {
+        return getText(ifYouAlreadyHaveAnAccountWithUs);
     }
-    public boolean verifyYourPersonalDetailsTxtIsDisplayed(String arg1) {
-        return act.isDisplayed(getDriver(), yourPersonalDetailsTxt);
-    }
-
-    public void enterFirstName(String firstName) {
-        act.type(firstNameTextBox, firstName);
+    public String getYourPersonalDetailsTxt(String arg1) {
+        return getText(yourPersonalDetailsTxt);
     }
 
-    public void enterLastName(String lastName) {
-        act.type(lastNameTextBox, lastName);
+    public void enterFirstName(String firstname) throws Exception {
+        sendKeysToWebElement(firstNameTextBox, firstname);
+
     }
 
-    public void enterEmailAddress() {
-        String email = System.currentTimeMillis() + "@gmail.com";
-        sendKeys(emailTextBox, email);
+    public void enterLastName(String lastName) throws Exception {
+        sendKeysToWebElement(lastNameTextBox, lastName);
+
     }
 
-    public void enterTelephoneNumber(String telephone) {
-        act.type(telephoneTextBox, telephone);
+    public void enterFreshEmailAddress() throws Exception {
+        sendKeysToWebElement(emailTextBox, email);
     }
 
-    public void enterFaxNumber(String fax) {
-        act.type(faxTextBox, fax);
+    public void enterTelephoneNumber(String telephoneNumber) throws Exception {
+        sendKeysToWebElement(telephoneTextBox,telephoneNumber);
     }
 
-    public void enterYourPersonalDetailsSection(String firstName, String lastName, String telephone, String fax) {
+    public void enterFaxNumber(String faxNumber) throws Exception {
+        sendKeysToWebElement(faxTextBox, faxNumber);
+    }
+
+    public void enterYourPersonalDetailsSection(String firstName, String lastName, String telephone, String fax) throws Exception {
         enterFirstName(firstName);
         enterLastName(lastName);
-        enterEmailAddress();
+        enterFreshEmailAddress();
         enterTelephoneNumber(telephone);
         enterFaxNumber(fax);
 
     }
-    public boolean verifyYourAddressTextIsDisplayed(String arg0) {
-        return act.isDisplayed(getDriver(), yourAddressText);
+    public WebElement verifyYourAddressTxt() {
+        return yourAddressText;
     }
-    public void enterCompanyName(String companyName) {
-        act.type(companyTextBox, companyName);
+    public void enterCompanyName(String companyName) throws Exception {
+        sendKeysToWebElement(companyTextBox, companyName);
     }
-    public void enterAddress1(String address1) {
-        act.type(address1TextBox, address1);
+    public void enterAddress1(String address1) throws Exception {
+        sendKeysToWebElement(address1TextBox, address1);
     }
-    public void enterAddress2(String address2) {
-        act.type(address2TextBox, address2);
+    public void enterAddress2(String address2) throws Exception {
+        sendKeysToWebElement(address2TextBox, address2);
     }
-    public void enterCity(String cityName) {
-        act.type(cityTextBox, cityName);
+    public void enterCity(String yourCity) throws Exception {
+        sendKeysToWebElement(cityTextBox, yourCity);
     }
 
-    public void selectRegionState(String regionOrStateName) {
-        act.selectByVisibleText(regionOrStateName, regionStateDropdownBtn);
+    public void selectRegionState(String yourRegionOrState) {
+        act.selectByVisibleText(yourRegionOrState, regionStateDropdownBtn);
     }
     public void enterZipCode(String ZipCode) {
         act.type(zipCodeTextBox, ZipCode);
@@ -199,25 +204,25 @@ public class AccountCreatePage extends BasePage {
  
     }
 
-    public boolean verifyLoginDetailsSectionTextIsDisplayed(String arg0) throws IOException {
-        return act.isDisplayed(getDriver(), loginDetailsSectionText);
+    public String getloginDetailsSectionText(String arg0) throws IOException {
+        return loginDetailsSectionText.getText();
     }
 
     public void enterLoginName() {
-        act.type(loginNameTextBox, email);
+        //act.type(loginNameTextBox, generateRandomString(5) +"Covid");
+        act.type(loginNameTextBox, ("Covid" + generateRandomNumber(5)));
 
     }
-    public void enterPassword(String password) {
-        act.type(passwordTextBox, password);
-
+    public void enterPassword(String arg0) {
+        act.type(passwordTextBox, arg0);
 
     }
-    public void enterPasswordConfirm(String passwordConfirm) {
-        act.type(passwordConfirmTextBox, passwordConfirm);
+    public void enterPasswordConfirm(String arg0) {
+        act.type(passwordConfirmTextBox, arg0);
     }
 
-    public boolean verifyNewsletterTextIsDisplayed() throws IOException {
-        return act.isDisplayed(getDriver(), newsletterText);
+    public String verifyNewsletterTxt() throws IOException {
+        return newsletterText.getText();
 
     }
 
@@ -237,7 +242,6 @@ public class AccountCreatePage extends BasePage {
     }
 
     public void checkOnIAgreeToPrivacyPolicyRadioButton() {
-        
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
     }
 
@@ -245,9 +249,10 @@ public class AccountCreatePage extends BasePage {
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
     }
 
-    public AccountSuccessPage clickOnContinueButton() throws IOException {
+    public AccountSuccessPage clickOnContinueButton() throws IOException, InterruptedException {
         waitFor(continueBtn);
         act.click(getDriver(), continueBtn);
+        Thread.sleep(3000);
         return new AccountSuccessPage();
     }
 

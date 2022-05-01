@@ -1,6 +1,7 @@
 package pages;
 
 import helper.javaScript.JavaScriptHelper;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.globalVars;
@@ -8,6 +9,8 @@ import utils.globalVars;
 import java.io.IOException;
 
 public class AccountEditPage extends BasePage {
+    String email = System.currentTimeMillis() + "@gmail.com";
+
     public AccountEditPage() throws IOException {
         super();
     }
@@ -31,31 +34,31 @@ public class AccountEditPage extends BasePage {
 
 
     public boolean validateUserOnAccountEditPageIsDisplayed() throws InterruptedException {
-        Thread.sleep(2000);
-        return act.isDisplayed(getDriver(), myaccountInformationHeadingtext);
+        waitFor(myaccountInformationHeadingtext);
+        return myaccountInformationHeadingtext.isDisplayed();
     }
+
     public void enterFirstNameBox(String FirstName) throws Exception {
-        sendKeys(firstNameBox, FirstName);
+        sendKeysToWebElement(firstNameBox, FirstName);
     }
 
     public void enterLastNameBox(String Lastname) throws Exception {
-        sendKeys(lastNameBox, Lastname);
+        sendKeysToWebElement(lastNameBox, Lastname);
 
     }
+
     public void enterFreshEmailBox() throws Exception {
-        //emailBox.clear();
-        String email = System.currentTimeMillis() + "@gmail.com";
-        sendKeys(emailBox, email);
+        sendKeysToWebElement(emailBox, email);
 
     }
 
     public void enterTelephoneBox(String Telephone) throws Exception {
-        sendKeys(telephoneBox, Telephone);
+        sendKeysToWebElement(telephoneBox, Telephone);
 
     }
 
     public void enterFaxBox(String Fax) throws Exception {
-        sendKeys(faxBox, Fax);
+        sendKeysToWebElement(faxBox, Fax);
 
     }
 
@@ -76,6 +79,14 @@ public class AccountEditPage extends BasePage {
         enterFaxBox(fax);
         log.info("editing Profile Details....");
 
+    }
+
+    public void userUpdateProfile(DataTable dataTable) throws Exception {
+        sendKeysToWebElement(firstNameBox, dataTable.cell(1, 0));
+        sendKeysToWebElement(lastNameBox, dataTable.cell(1, 1));
+        enterFreshEmailBox();
+        sendKeysToWebElement(telephoneBox, dataTable.cell(1, 2));
+        sendKeysToWebElement(faxBox, dataTable.cell(1, 3));
     }
 
 }

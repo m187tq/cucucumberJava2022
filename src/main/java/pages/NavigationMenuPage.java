@@ -13,7 +13,6 @@ public class NavigationMenuPage extends BasePage {
 	public NavigationMenuPage() throws IOException {
 		super();
 	}
-
 	@FindBy(xpath = "//*[@id=\"menu\"]/nav/ul[1]")
 	private List<WebElement> subMenuList;
 

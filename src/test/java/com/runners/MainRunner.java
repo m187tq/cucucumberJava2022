@@ -12,6 +12,7 @@ import io.cucumber.testng.CucumberOptions;
         //tags = "@LoginValidCredentials",
         //tags = "@RegistrationFunctionality",
         //tags = "@NegativeLogin",
+        //tags = "@e2e",
         monochrome = true,
         //dryRun = false,
         //Strict = false,

@@ -48,7 +48,7 @@ public class DataBaseHelper {
             try {
                 connection = DriverManager.getConnection(url, userName, password);
                 if (connection != null) {
-                    log.info("Connected to data base..");
+                    log.info("Connected to datarepo base..");
                 }
             } catch (SQLException e) {
                 log.error("Failed to create Data base connection.." + e);

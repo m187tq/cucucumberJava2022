@@ -40,7 +40,7 @@ public class AddToCartPage extends BasePage {
     }
     public boolean validateAddToCart() throws Throwable {
         act.fluentWait(getDriver(), addToCartMessage, 10);
-        return isDisplayed(addToCartMessage);
+        return act.isDisplayed(getDriver(), addToCartMessage);
     }
     public OrderConfirmationPage clickOnCheckOut() throws Throwable {
         act.fluentWait(getDriver(), proceedToCheckOutBtn, 10);

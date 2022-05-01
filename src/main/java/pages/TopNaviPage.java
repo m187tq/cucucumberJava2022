@@ -2,8 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utilities.data;
-import utils.globalVars;
+import utilities.datarepo;
 
 import java.io.IOException;
 
@@ -13,7 +12,7 @@ public class TopNaviPage extends BasePage {
         super();
     }
 
-    public final String URL = data.BASE_URL;
+    public final String URL = datarepo.BASE_URL;
 
     @FindBy(css = ".navbar-header.header-logo")
     public WebElement logoImage;
@@ -61,27 +60,47 @@ public class TopNaviPage extends BasePage {
     public String currentPageTitle() throws InterruptedException {
         return act.getTitle(getDriver());
     }
+    public String loginOrRegisterLink() {
+        return loginOrRegisterLink.getText();
+    }
+
     public boolean loginOrRegisterBtnEnabled() {
         return act.isEnabled(getDriver(), loginOrRegisterLink);
     }
     public AccountLoginPage clickOnLoginRegisterBtn() throws IOException {
         AccountLoginPage accountLoginPage = new AccountLoginPage();
         waitForWebElementAndClick(loginOrRegisterLink);
-        act.fluentWait(getDriver(), accountLoginPage.createAnAccountTxt, globalVars.getDefaultExplicitTimeout());
+        waitFor(accountLoginPage.createAnAccountTxt);
         return new AccountLoginPage();
     }
 
     //************************************************//
 
+
+
     public void clickAndSelectProductCategoryAndEnterKeywordOnSearchBox(String keyword) throws Exception {
         waitForWebElementAndClick(searchBox);
-        act.type(searchBox, keyword);
+        sendKeysToWebElement(searchBox, keyword);
+    }
+
+    public void clickOnSearchBox(){
+        waitForWebElementAndClick(searchBox);
+
+    }
+    public void enterItemKeyword(String keyword) throws Exception {
+        sendKeysToWebElement(searchBox, keyword);
     }
 
     public SearchResultPage clickOnSearchBtn() throws IOException {
-         waitForWebElementAndClick(searchBtn);
+        waitForWebElementAndClick(searchBtn);
         return new SearchResultPage();
     }
+
+
+
+
+
+
 
 
 }

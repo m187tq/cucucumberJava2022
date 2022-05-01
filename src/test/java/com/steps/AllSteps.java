@@ -1,5 +1,9 @@
 package com.steps;
 
+
+import helper.assertionHelper.VerificationHelper;
+import helper.wait.WaitHelper;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,11 +11,13 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.*;
-import utilities.data;
+import utilities.datarepo;
 
 import java.io.IOException;
 
+
 public class AllSteps extends BasePage {
+    String email = "covid" + generateRandomNumber(5) + "@gmail.com";
 
     public AllSteps() throws IOException {
         super();
@@ -33,9 +39,7 @@ public class AllSteps extends BasePage {
     private ShippingReturnsPage shippingReturnsPage;
     private InvoiceOrderPage invoiceOrderPage;
     private MiddleMenuNaviPage middleMenuNaviPage;
-
     private FooterPage footerPage;
-
     private CheckoutBillingPage checkoutBillingPage;
     private CheckoutCartPage checkoutCartPage;
     private CheckoutConfirmationPage checkoutConfirmationPage;
@@ -79,10 +83,8 @@ public class AllSteps extends BasePage {
         this.accountSuccessPage = accountSuccessPage;
         this.accountEditPage = accountEditPage;
         this.accountLogoutPage = accountLogoutPage;
-        this.accountCreatePage = accountCreatePage;
         this.accountPage = accountPage;
         this.addToCartPage = addToCartPage;
-        this.accountLoginPage = accountLoginPage;
         this.productIDPage = productIDPage;
         this.searchResultPage = searchResultPage;
         this.shippingReturnsPage = shippingReturnsPage;
@@ -97,30 +99,30 @@ public class AllSteps extends BasePage {
         this.checkoutPage = checkoutPage;
         this.paymentModeEditPage = paymentModeEditPage;
         this.cartSummary = cartSummary;
+        this.navigationMenuPage = navigationMenuPage;
         this.cartPage = cartPage;
+        this.footerPage = footerPage;
     }
 
     @Given("user is on index page url as {string} and page title as {string}")
     public void userIsOnIndexPageUrlAsAndPageTitleAs(String Url, String arg1) throws InterruptedException {
         goToIndexPage(Url);
-        Assert.assertEquals(getCurrentPageTitle(arg1),arg1);
-        Assert.assertEquals(getCurrentPageUrl(Url),Url);
     }
-
-    @When("user clicks the LoginOrRegister link")
-    public void userClicksTheLoginOrRegisterLink() throws IOException {
-        Assert.assertTrue(topNaviPage.loginOrRegisterBtnEnabled());
+    @When("user clicks on Login Or Register link")
+    public void userClicksOnLoginOrRegisterLink() throws IOException {
         topNaviPage.clickOnLoginRegisterBtn();
     }
-     @And("user should be on account login page with option to login as {string} or create an Account as {string}")
+    @And("user should be on account login page with option to login as {string} or create an Account as {string}")
     public void userShouldBeOnAccountLoginPageWithOptionToLoginAsOrCreateAnAccountAs(String arg0, String arg1) {
-        Assert.assertTrue(accountLoginPage.validateNewCustomerTxtIsDisplayed(arg0));
-        Assert.assertTrue(accountLoginPage.verifyReturningCustomerTxtIsDisplayed(arg1));
+        accountLoginPage.validateNewCustomerTxtIsDisplayed(arg0);
+       accountLoginPage.verifyReturningCustomerTxtIsDisplayed(arg1);
 
     }
 
     @When("user enters login Name as {string} and password as {string} and clicks on Login button")
     public void user_enters_login_name_as_and_password_as_and_clicks_on_login_button(String string, String string2) throws Exception {
+        WaitHelper waitHelper = new WaitHelper(driver);
+        waitHelper.waitForElement(accountLoginPage.loginBtn, 60);
         accountLoginPage.enterLoginName(string);
         accountLoginPage.enterPassword(string2);
         accountLoginPage.clickOnLoginBtn();
@@ -130,7 +132,7 @@ public class AllSteps extends BasePage {
         Assert.assertTrue(accountPage.homePageWelcomeMessage(arg1), arg1);
     }
     @Then("user clicks on edit profile button")
-    public void user_clicks_on_edit_profile_button() throws IOException {
+    public void user_clicks_on_edit_profile_button() throws IOException, InterruptedException {
         accountPage.clickOnEditAccountDetailsLink();
     }
     @Then("user enters {string} {string} and EmailAddress telephone as {string} and fax as {string} in their respective box")
@@ -159,7 +161,6 @@ public class AllSteps extends BasePage {
     }
 
     // NEGATIVE LOGIN UNIQUE STEPS//
-
     @And("user enters wrong combination of both login Name as {string} or password as {string}")
     public void userEntersWrongCombinationOfBothLoginNameAsOrPasswordAs(String loginName, String password) throws Exception {
         accountLoginPage.enterLoginName(loginName);
@@ -179,79 +180,181 @@ public class AllSteps extends BasePage {
 
     @And("^user verifies register account radio button is checked and clicks on Continue button$")
     public void userVerifiesRegisterAccountRadioButtonIsCheckedAndClicksOnContinueButton() throws IOException, InterruptedException {
-        Assert.assertTrue(accountLoginPage.verifyRegisterAccountTextCheckBoxIsDisplayed());
+        accountLoginPage.verifyRegisterAccountTextCheckBoxIsDisplayed();
         accountLoginPage.clickOnContinueRegisterAccountBtn();
     }
     @And("user is on account create page and verifies page heading as {string} and page Url contains {string}")
     public void userIsOnAccountCreatePageAndVerifiesPageHeadingAsAndPageUrlContains(String arg0, String arg1) throws InterruptedException {
-        Assert.assertEquals(accountCreatePage.createAccountText(arg0), arg0);
-        Assert.assertTrue(getDriver().getCurrentUrl().contains(arg1));
+        accountCreatePage.createAccountText(arg0);
+        getDriver().getCurrentUrl().contains(arg1);
 
     }
-
-    @And("user enters email and personal details in {string}")
+/*    @And("user enters email and personal details in {string}")
     public void userEntersEmailAndPersonalDetailsIn(String arg0) {
         Assert.assertTrue(accountCreatePage.verifyYourPersonalDetailsTxtIsDisplayed(arg0));
-        accountCreatePage.enterFirstName(data.firstName);
-        accountCreatePage.enterLastName(data.lastName);
+        accountCreatePage.enterFirstName(datarepo.firstName);
+        accountCreatePage.enterLastName(datarepo.lastName);
         accountCreatePage.enterEmailAddress();
-        accountCreatePage.enterTelephoneNumber(data.getTelephone());
-        accountCreatePage.enterFaxNumber(data.getFaxNumber());
+        accountCreatePage.enterTelephoneNumber(datarepo.getTelephone());
+        accountCreatePage.enterFaxNumber(datarepo.getFaxNumber());
+    }*/
+    @And("user is in personal details in {string}")
+    public void userIsInPersonalDetailsIn(String arg0) {
+        String result = accountCreatePage.getYourPersonalDetailsTxt(arg0);
+        Assert.assertEquals(result, arg0);
+
+    }
+    @And("user enters First Name box as {word}")
+    public void userEntersFirstNameBoxAsFirstName(String firstname) throws Exception {
+        accountCreatePage.enterFirstName(firstname);
+    }
+    @And("user enters Last Name box as {word}")
+    public void userEntersLastNameBoxAsLastName(String lastName) throws Exception {
+        accountCreatePage.enterLastName(lastName);
+    }
+    @And("user enters fresh email in E-Mail box")
+    public void userEntersFreshEmailInEMailBox() {
+        sendKeys(accountCreatePage.emailTextBox, email);
+    }
+    @And("user enters Telephone box as {word}")
+    public void userEntersTelephoneBoxAs(String telephoneNumber) throws Exception {
+        accountCreatePage.enterTelephoneNumber(telephoneNumber);
+    }
+    @And("user enters Fax box as {word}")
+    public void userEntersFaxBoxAs(String faxNumber) throws Exception {
+        accountCreatePage.enterFaxNumber(faxNumber);
+    }
+    @And("user on Address Section as {string}")
+    public void userOnAddressSectionAs(String arg0) throws Exception {
+        accountCreatePage.verifyYourAddressTxt().isDisplayed();
+        accountCreatePage.enterCompanyName(datarepo.getCompanyName());
+        accountCreatePage.enterAddress1(datarepo.getAddress1());
+        accountCreatePage.enterAddress2(datarepo.getAddress2());
+        accountCreatePage.enterCity(datarepo.getCity());
+        accountCreatePage.selectRegionState(datarepo.getRegionState());
+        accountCreatePage.enterZipCode(datarepo.getZipCode());
+        accountCreatePage.selectCountry(datarepo.getCountry());
+    }
+    @And("user enters Company name as {word}")
+    public void userEntersCompanyNameAsYourCompanyName(String companyName) throws Exception {
+        accountCreatePage.enterCompanyName(companyName);
+    }
+    @And("user enters Address One box as {word}")
+    public void userEntersAddressOneBoxAsYourAddress(String address1) throws Exception {
+        accountCreatePage.enterAddress1(address1);
     }
 
-    @And("user enters all the address details as {string}")
-    public void userEntersAllTheAddressDetailsAs(String arg0) {
-        Assert.assertTrue(accountCreatePage.verifyYourAddressTextIsDisplayed(arg0));
-        accountCreatePage.enterCompanyName(data.getCompanyName());
-        accountCreatePage.enterAddress1(data.getAddress1());
-        accountCreatePage.enterAddress2(data.getAddress2());
-        accountCreatePage.enterCity(data.getCity());
-        accountCreatePage.enterZipCode(data.getZipCode());
-        accountCreatePage.selectRegionState(data.getRegionState());
-        accountCreatePage.selectCountry(data.getCountry());
+    @And("user enters Address Two box as {word}")
+    public void userEntersAddressTwoBoxAsYourAddress(String address2) throws Exception {
+        accountCreatePage.enterAddress2(address2);
+    }
+    @And("user enters City box as {word}")
+    public void userEntersCityBoxAsYourCity(String yourCity) throws Exception {
+        accountCreatePage.enterCity(yourCity);
+    }
+    @And("user enters Region or State box as {string}")
+    public void userEntersRegionOrStateBoxAsYourRegionOrState(String yourRegionOrState ) {
+        accountCreatePage.selectRegionState(datarepo.regionState);
+    }
+    @And("user enters ZIP Code box as {string}")
+    public void userEntersZIPCodeBoxAsYourZIPCode(String yourZIPCode) {
+        accountCreatePage.enterZipCode(yourZIPCode);
+    }
+    @And("user enters Country box as {string}")
+    public void userEntersCountryBoxAs(String arg0) {
+        accountCreatePage.selectCountry(arg0);
     }
     @And("user enters all the login requested details as {string}")
-    public void userEntersAllTheLoginRequestedDetailsAs(String arg0) throws IOException {
-        Assert.assertTrue(accountCreatePage.verifyLoginDetailsSectionTextIsDisplayed(arg0));
+    public void userEntersAllTheLoginRequestedDetailsAs() throws IOException {
+        Assert.assertTrue(accountCreatePage.loginDetailsSectionText.isDisplayed());
         accountCreatePage.enterLoginName();
-        accountCreatePage.enterPassword(data.getPassword());
-        accountCreatePage.enterPasswordConfirm(data.getConfirmPassword());
+        accountCreatePage.enterPassword(datarepo.getPassword());
+        accountCreatePage.enterPasswordConfirm(datarepo.getConfirmPassword());
+    }
+    @And("user enters the following details")
+    public void userEntersTheFollowingDetails(DataTable dataTable) throws Exception {
+        accountEditPage.userUpdateProfile(dataTable);
+
+    }
+    @And("user on login section as {string}")
+    public void userOnLoginSectionAs(String arg0) throws IOException {
+        Assert.assertEquals(accountCreatePage.getloginDetailsSectionText(arg0), arg0);
     }
 
+    @And("user enters loginName in Login name box")
+    public void userEntersLoginNameInLoginNameBox() {
+        accountCreatePage.enterLoginName();
+    }
+    @And("user enters password in Password box as {string}")
+    public void userEntersPasswordInPasswordBoxAs(String arg0) {
+        accountCreatePage.enterPassword(arg0);
+    }
+    @And("user enters Confirm password in Password Confirm box as {string}")
+    public void userEntersConfirmPasswordInPasswordConfirmBoxAs(String arg0) {
+        accountCreatePage.enterPasswordConfirm(arg0);
+
+    }
     @And("^user subscribed to Newsletter and check on Yes$")
     public void userSubscribedToNewsletterAndCheckOnYes() throws IOException {
-        Assert.assertTrue(accountCreatePage.verifyNewsletterTextIsDisplayed());
         accountCreatePage.tickOnSubscribeAsYes();
+        Assert.assertTrue(act.isSelected(getDriver(), accountCreatePage.subscribeYesRadioButton));
     }
-    @And("user ticks on Privacy Policy radio button and create account button")
-    public void userTicksOnPrivacyPolicyRadioButtonAndCreateAccountButton() throws IOException, InterruptedException {
-        accountCreatePage.tickOnSubscribeAsYes();
+    @And("user ticks on read and agree to the Privacy Policy radio button")
+    public void userTicksOnReadAndAgreeToThePrivacyPolicyRadioButton() {
         accountCreatePage.checkOnIAgreeToPrivacyPolicyRadioButton();
-        accountCreatePage.clickOnContinueButton();
     }
+
     @Then("user gets success confirmation message as {string}")
-    public void userGetsSuccessConfirmationMessageAs(String arg1) {
-        Assert.assertTrue(accountSuccessPage.validateAccountHasBeenCreatedHeadingTxtIsDisplayed(arg1));
+    public void userGetsSuccessConfirmationMessageAs(String Actual) {
+        String Expected = accountSuccessPage.getAccountHasBeenCreatedHeadingTxt();
+        Assert.assertEquals(Expected, Actual);
+        VerificationHelper.verifyText(Expected, Actual);
     }
-    @And("^user clicks on Continue Shipping button$")
-    public void userClicksOnContinueShippingButton() throws IOException {
+    @And("user gets congratulatory message as {string}")
+    public void userGetsCongratulatoryMessageAs(String arg0) {
+        String result = String.valueOf(accountSuccessPage.congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt().isDisplayed());
+        Assert.assertTrue(Boolean.parseBoolean(result));
+        VerificationHelper.verifyText(result, arg0);
+    }
+    @And("user clicks on ContinueAccountSuccess button")
+    public void userClicksOnContinueAccountSuccessButton() throws IOException, InterruptedException {
         accountSuccessPage.clickOnContinueAccountSuccessBtn();
     }
+
+
+    @When("user clicks on logoff button on Account page")
+    public void userClicksOnLogoffButtonOnAccountPage() {
+        accountPage.clickOnLogoutBtn();
+
+    }
+    @And("user clicks on Continue button")
+    public void userClicksOnContinueButton() throws IOException, InterruptedException {
+        accountCreatePage.clickOnContinueButton();
+    }
+
     @And("user is on home page and presented with welcome message as {string}")
     public void userIsOnHomePageAndPresentedWithWelcomeMessageAs(String arg0) throws InterruptedException {
         Assert.assertTrue(accountPage.homePageWelcomeMessage(arg0),(arg0));
 
     }
+
+
     @And("^user clicks on SignOut button$")
-    public void userClicksOnSignOutButton() throws IOException, InterruptedException {
+    public void userClicksOnSignOutButton() throws IOException {
         accountPage.clickOnLogoffBtn();
         accountLogoutPage.clickOnLogoutContinueButton();
 
     }
-
+    @And("user on account logout page url contains {string} and clicks on logout Continue Button")
+    public void userOnAccountLogoutPageUrlContainsAndClicksOnLogoutContinueButton(String arg0) throws IOException {
+        Assert.assertTrue(act.getCurrentURL(getDriver()).contains(arg0));
+        Assert.assertTrue(accountLogoutPage.validateLogoutContinueBtnIsDisplayed());
+        accountLogoutPage.clickOnLogoutContinueButton();
+    }
     @And("user is back to login page url as {string}")
     public void userIsBackToLoginPageUrlAs(String arg0) {
         Assert.assertEquals(getDriver().getCurrentUrl(), arg0);
+
     }
 
 }

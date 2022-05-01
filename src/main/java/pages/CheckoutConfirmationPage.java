@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utilities.data;
+import utilities.datarepo;
 
 import java.io.IOException;
 import java.util.List;
@@ -74,8 +74,6 @@ public class CheckoutConfirmationPage extends BasePage {
 
     @FindBy(css = "span.bold.totalamout")
     private List<WebElement> totalPriceAndAmountTxt;
-
-
     @FindBy(xpath = "//b[contains(text(),'$')]")
     private WebElement unitPriceTxt;
 
@@ -106,14 +104,9 @@ public class CheckoutConfirmationPage extends BasePage {
     }
 
     public void selectCurrencyDropdownBtn(String currenyName) {
-        act.explicitWait(getDriver(), currencyDropdownBtn, data.getTenSeconds());
+        act.explicitWait(getDriver(), currencyDropdownBtn, datarepo.getTenSeconds());
         act.selectByVisibleText(currenyName, currencyDropdownBtn);
     }
-
-   /* public CheckoutSuccessPage clickOnConfirmOrderBtn() throws IOException {
-        waitForWebElementAndClick(confirmOrderBtn);
-        return new CheckoutSuccessPage();
-    }*/
 
     public CheckoutCartPage clickOnItemsCartIcon() throws IOException {
         waitForWebElementAndClick(itemsCartIcon);
@@ -128,10 +121,12 @@ public class CheckoutConfirmationPage extends BasePage {
 
     public boolean validateClickingConfirmOrderReturnPolicyText() {
         return act.isDisplayed(getDriver(), clickingConfirmOrderReturnPolicyText);
+
     }
 
     public void clickOnReturnPolicyTxtLink() {
         waitForWebElementAndClick(returnPolicyTxtLink);
+
     }
 
     public CheckoutShippingModeEditPage clickEditShipmentIcon() throws IOException {
@@ -141,12 +136,13 @@ public class CheckoutConfirmationPage extends BasePage {
 
     public boolean validateShippingTxt() {
         return act.isDisplayed(getDriver(), shippingTxt);
+
     }
 
-    public boolean validatePaymentTxt() {
-        return act.isDisplayed(getDriver(), paymentTxt);
-    }
+    public WebElement paymentTxt() {
+        return paymentTxt;
 
+    }
     public PaymentModeEditPage clickOnEditPaymentIcon() throws IOException {
         waitForWebElementAndClick(editPaymentIcon);
         return new PaymentModeEditPage();
@@ -157,17 +153,18 @@ public class CheckoutConfirmationPage extends BasePage {
         return new PaymentModeEditPage();
     }
 
-    public boolean validateItemsInYourCartTxt() {
-        return act.isDisplayed(getDriver(), itemsInYourCartTxt);
+    public WebElement ItemsInYourCartTxt() {
+        return itemsInYourCartTxt;
+
     }
 
     public CheckoutCartPage clickOnEditCartIcon() throws IOException {
         waitForWebElementAndClick(editCartIcon);
         return new CheckoutCartPage();
-    }
 
-    public boolean validateItemsInYourCart() {
-        return act.isDisplayed(getDriver(), itemsInYourCart);
+    }
+    public String itemsInYourCartTxt() {
+        return itemsInYourCart.getText();
     }
 
     public PaymentModeEditPage clickOnBackArrowBtn() throws IOException {
@@ -175,12 +172,13 @@ public class CheckoutConfirmationPage extends BasePage {
         return new PaymentModeEditPage();
     }
 
-    public boolean validateTotalPriceTxt() {
-        return act.isDisplayed(getDriver(), totalPriceTxt);
-    }
+    public WebElement totalPriceTxt() {
+        return totalPriceTxt;
 
+    }
     public boolean validateAmountTxt() {
         return act.isDisplayed(getDriver(), amountTxt);
+
     }
 
     public double getUnitPrice() {
@@ -198,8 +196,7 @@ public class CheckoutConfirmationPage extends BasePage {
     }
 
     public CheckoutSuccessPage clickOnConfirmOrderBtn() throws Throwable {
-        act.fluentWait(getDriver(), confirmOrderBtn, 10);
-        act.click(getDriver(), confirmOrderBtn);
+        waitAndClickElement(confirmOrderBtn);
         return new CheckoutSuccessPage();
     }
 

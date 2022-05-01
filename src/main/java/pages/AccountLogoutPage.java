@@ -34,7 +34,7 @@ public class AccountLogoutPage extends BasePage {
     public IndexPage clickOnLogoutContinueButton() throws IOException {
         IndexPage indexPage = new IndexPage();
         act.explicitWait(getDriver(), logoutAccountContinueBtn, globalVars.getDefaultExplicitTimeout());
-        act.click(getDriver(), logoutAccountContinueBtn);
+        waitAndClickElement(logoutAccountContinueBtn);
         act.fluentWait(getDriver(), indexPage.logoImage, globalVars.getDefaultExplicitTimeout());
         return new IndexPage();
 

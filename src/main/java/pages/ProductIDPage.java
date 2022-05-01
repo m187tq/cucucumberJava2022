@@ -52,7 +52,7 @@ public class ProductIDPage extends BasePage {
 	
 	public void selectColor(String data){
 		assert getDriver() != null;
-		//new JavaScriptHelper(getDriver().scrollIntoView(getDriver().findElement(By.xpath("//a[contains(text(),'"+data+"')]/parent::*/preceding-sibling::input[1]")));
+		//new JavaScriptHelper(getDriver().scrollIntoView(getDriver().findElement(By.xpath("//a[contains(text(),'"+datarepo+"')]/parent::*/preceding-sibling::input[1]")));
 		getDriver().findElement(By.xpath("//a[contains(text(),'"+data+"')]/parent::*/preceding-sibling::input[1]")).click();
 		try {
 			Thread.sleep(7000);

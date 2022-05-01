@@ -92,7 +92,7 @@ public class AccountPage extends BasePage {
     }
     public boolean homePageWelcomeMessage(String arg1) throws InterruptedException {
         //act.fluentWait(getDriver(), welcomeBackTxt, globalVars.getDefaultExplicitTimeout());
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         return act.isDisplayed(getDriver(), welcomeBackTxt);
     }
 
@@ -102,12 +102,12 @@ public class AccountPage extends BasePage {
 
     public void clickOnLogoutBtn() {
         waitFor(logout);
-        act.click(getDriver(), logout);
+        waitAndClickElement(logout);
     }
-
-    public AccountEditPage clickOnEditAccountDetailsLink() throws IOException {
+    public AccountEditPage clickOnEditAccountDetailsLink() throws IOException, InterruptedException {
         waitFor(editAccountDetailsLink);
         act.click(getDriver(), editAccountDetailsLink);
+        Thread.sleep(5000);
         return new AccountEditPage();
 
     }

@@ -2,21 +2,17 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.globalVars;
 
 import java.io.IOException;
-import java.time.Duration;
 
 public class AccountLoginPage extends BasePage {
+    AccountPage accountPage = new AccountPage();
     public AccountLoginPage() throws IOException {
     super();
     }
 
     @FindBy(id = "loginFrm_loginname")
     public WebElement loginNameTxtField;
-
     @FindBy(css = "#loginFrm_password")
     public WebElement passwordTxtField;
     @FindBy(xpath = "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/fieldset[1]/button[1]")
@@ -28,7 +24,6 @@ public class AccountLoginPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div[1]/text()")
     public WebElement loginWithBadPasswordTxt;
-
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div[1]")
     public WebElement errorIncorrectLoginOrPasswordProvidedTxt;
 
@@ -36,10 +31,8 @@ public class AccountLoginPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(text(),'By creating an account you will be able to shop fa')]")
     public WebElement createAnAccountTxt;
-
     @FindBy(xpath = "//h2[contains(text(),'Returning Customer')]")
     public WebElement returningCustomerTxt;
-
     @FindBy(xpath = "//a[contains(text(),'Forgot your passwordErrorTxt?')]")
     public WebElement forgotYourPasswordLink;
 
@@ -55,11 +48,11 @@ public class AccountLoginPage extends BasePage {
 
     @FindBy(xpath = "//h2[contains(text(),'I am a new customer.')]")
     public WebElement newCustomerTxt;
-
-    public String getCreateAnAccountTxt() {
-        return createAnAccountTxt.getText();
+    @FindBy(id = "accountFrm_accountguest")
+    public WebElement guestCheckoutRadioBtn;
+    public boolean validateGuestCheckoutRadioBtnIsEnabled() {
+        return act.isEnabled(getDriver(), guestCheckoutRadioBtn);
     }
-
 
     // Forget Password Variable declaration //
 
@@ -70,26 +63,24 @@ public class AccountLoginPage extends BasePage {
     public WebElement registerAccountContinueBtn;
 
 
-    public void enterLoginName(String LoginName) {
-        act.type(loginNameTxtField,LoginName);
+    public void enterLoginName(String LoginName) throws Exception {
+        sendKeysToWebElement(loginNameTxtField,LoginName);
     }
-    public void enterPassword(String Password) {
-        //sendKeys(passwordTxtField, Password);
-        act.type(passwordTxtField, Password);
+    public void enterPassword(String Password) throws Exception {
+        sendKeysToWebElement(passwordTxtField, Password);
     }
     public AccountPage clickOnLoginBtn() throws IOException, InterruptedException {
-        act.click(getDriver(), loginBtn);
-        Thread.sleep(2000);
+        waitAndClickElement(loginBtn);
+        waitFor(accountPage.welcomeBackTxt);
         return new AccountPage();
     }
-
-    public void clickOnLoginButton() throws InterruptedException, IOException {
-        act.click(getDriver(), loginBtn);
-        Thread.sleep(2000);
+    public AccountLoginPage clickOnLoginButton() throws InterruptedException, IOException {
+        waitAndClickElement(loginBtn);
+        waitFor(errorIncorrectLoginOrPasswordProvidedTxt);
+        return new AccountLoginPage();
     }
-
-    public boolean isLoginBtnEnabled() {
-        return act.isEnabled(getDriver(), loginBtn);
+    public boolean validateLoginBtnIsEnabled() {
+        return isEnabled(loginBtn);
     }
 
     public void goToLoginPageEnterLoginNameAndPasswordThenClickOnLoginBtn(String loginName, String password) throws Exception {
@@ -100,52 +91,53 @@ public class AccountLoginPage extends BasePage {
 
     public void clickForgetYourLogin() {
         waitForWebElementAndClick(forgotYourLoginLink);
-    }
 
+    }
     public void clickForgetYourPassword() {
        waitForWebElementAndClick(forgotYourPasswordLink);
+
     }
 
-    public boolean verifyForgotYourPasswordTxtLink() {
-        return act.isDisplayed(getDriver(), forgotYourPasswordLink);
+    public String getForgotYourPasswordTxtLink() {
+        return getText(forgotYourPasswordLink);
     }
+    public String getForgotYourLogin() {
+        return getText(forgotYourLoginLink);
 
-    public boolean verifyingForgotYourLogin() {
-        return act.isDisplayed(getDriver(),forgotYourLoginLink);
     }
-
     public String errorIncorrectLoginPasswordProvidedConfirmationMessage(String loginValidationErrorMessage) {
-        return errorIncorrectLoginOrPasswordProvidedTxt.getText();
-    }
+        return getText(errorIncorrectLoginOrPasswordProvidedTxt);
 
-    public boolean validateErrorIncorrectLoginPasswordProvidedConfirmationMessage() {
+    }
+    public String validateErrorIncorrectLoginPasswordProvidedConfirmationMessage() {
         waitFor(errorIncorrectLoginOrPasswordProvidedTxt);
-        return act.isDisplayed(getDriver(), errorIncorrectLoginOrPasswordProvidedTxt);
+        return getText(errorIncorrectLoginOrPasswordProvidedTxt);
     }
     public String currentPageTitle(String pageTitle) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(globalVars.DEFAULT_EXPLICIT_TIMEOUT));
-        this.wait.until(ExpectedConditions.visibilityOf(errorIncorrectLoginOrPasswordProvidedTxt));
         return getDriver().getTitle();
     }
-
-
   public boolean verifyReturningCustomerTxtIsDisplayed(String arg1) {
-      return  act.isDisplayed(getDriver(), returningCustomerTxt);
+      waitFor(returningCustomerTxt);
+      return isDisplayed(returningCustomerTxt);
   }
-
     public boolean verifyRegisterAccountTextCheckBoxIsDisplayed() {
-        return act.isDisplayed(getDriver(), registerAccountCheckBoxTxt);
+        waitFor(registerAccountCheckBoxTxt);
+        return registerAccountCheckBoxTxt.isDisplayed();
     }
-
     public boolean validateNewCustomerTxtIsDisplayed(String arg0) {
-        return act.isDisplayed(getDriver(),newCustomerTxt);
+        waitFor(newCustomerTxt);
+        return isDisplayed(newCustomerTxt);
     }
-
     public AccountCreatePage clickOnContinueRegisterAccountBtn() throws IOException, InterruptedException {
-        act.click(getDriver(), continueRegisterAccountBtn);
         AccountCreatePage acp = new AccountCreatePage();
-        act.fluentWait(getDriver(), acp.createAccountTxt, globalVars.getDefaultExplicitTimeout());
+        waitFor(continueRegisterAccountBtn);
+        continueRegisterAccountBtn.click();
+        waitFor(acp.createAccountTxt);
         return new AccountCreatePage();
+    }
+    public String getCreateAnAccountTxt() {
+        return getText(createAnAccountTxt);
+
     }
 
 

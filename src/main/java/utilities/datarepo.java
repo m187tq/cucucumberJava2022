@@ -1,6 +1,6 @@
 package utilities;
 
-public class data {
+public class datarepo {
 
     public final static String CONFIG_PROPERTIES_DIRECTORY = "properties\\config.properties";
     public final static String GECKO_DRIVER_DIRECTORY = System.getProperty("webdriver.gecko.driver", "C:/drivers/geckodriver.exe");

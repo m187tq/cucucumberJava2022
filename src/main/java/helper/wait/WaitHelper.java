@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.data;
+import utilities.datarepo;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -29,7 +29,7 @@ public class WaitHelper {
 	 */
 	public void setImplicitWait(long timeout, TimeUnit unit) {
 		log.info("Implicit Wait has been set to: " + timeout);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(data.SIXTY_SECONDS));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class WaitHelper {
 	 * @return
 	 */
 	private WebDriverWait getWait(int timeOutInSeconds, int pollingEveryInMiliSec) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(data.SIXTY_SECONDS));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 		wait.pollingEvery(Duration.ofMillis(pollingEveryInMiliSec));
 		wait.ignoring(NoSuchElementException.class);
 		wait.ignoring(ElementNotVisibleException.class);
@@ -72,7 +72,7 @@ public class WaitHelper {
 	 */
 	public void WaitForElementClickable(WebElement element, int timeOutInSeconds) {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(data.SIXTY_SECONDS));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		log.info("element is clickable now");
 	}
@@ -86,7 +86,7 @@ public class WaitHelper {
 	 */
 	public boolean waitForElementNotPresent(WebElement element, long timeOutInSeconds) {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(data.SIXTY_SECONDS));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 		boolean status = wait.until(ExpectedConditions.invisibilityOf(element));
 		log.info("element is invisibile now");
 		return status;
@@ -100,7 +100,7 @@ public class WaitHelper {
 	 */
 	public void waitForframeToBeAvailableAndSwitchToIt(WebElement element, long timeOutInSeconds) {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(data.SIXTY_SECONDS));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 		log.info("frame is available and switched");
 	}
@@ -119,20 +119,18 @@ public class WaitHelper {
 	}
 	
 	/**
-	 * 
-	 * @param element
-	 * @param timeOutInSeconds
-	 * @param pollingEveryInMiliSec
-	 */
-	public WebElement waitForElement(WebElement element, int timeOutInSeconds, int pollingEveryInMiliSec){
-		Wait<WebDriver> fwait = getfluentWait(timeOutInSeconds, pollingEveryInMiliSec);
+     * @param element
+     * @param timeOutInSeconds
+     */
+	public WebElement waitForElement(WebElement element, int timeOutInSeconds){
+		Wait<WebDriver> fwait = getfluentWait(timeOutInSeconds, 250);
 		fwait.until(ExpectedConditions.visibilityOf(element));
 		return element;
 	}
 	
 	public void pageLoadTime(long timeout, TimeUnit unit){
 		log.info("waiting for page to load for : "+ unit+ " seconds");
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(data.SIXTY_SECONDS));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(datarepo.SIXTY_SECONDS));
 		log.info("page is loaded");
 	}
 

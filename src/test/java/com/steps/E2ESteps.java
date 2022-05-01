@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import pages.*;
 
 import java.io.IOException;
@@ -23,7 +24,6 @@ public class E2ESteps extends BasePage {
     private AccountSuccessPage accountSuccessPage;
     private IndexPage indexPage;
     private AddToCartPage addToCartPage;
-
     private NavigationMenuPage navigationMenuPage;
     private ProductIDPage productIDPage;
     private SearchResultPage searchResultPage;
@@ -32,8 +32,6 @@ public class E2ESteps extends BasePage {
     private MiddleMenuNaviPage middleMenuNaviPage;
 
     private FooterPage footerPage;
-
-
     private CheckoutBillingPage checkoutBillingPage;
     private CheckoutCartPage checkoutCartPage;
     private CheckoutConfirmationPage checkoutConfirmationPage;
@@ -66,6 +64,7 @@ public class E2ESteps extends BasePage {
                       CheckoutConfirmationPage checkoutConfirmationPage,
                       CheckoutCustomerPage checkoutCustomerPage,
                       CheckoutPage checkoutPage,
+                      CheckoutSuccessPage checkoutSuccessPage,
                       CheckoutShippingModeEditPage checkoutShippingModeEditPage,
                       PaymentModeEditPage paymentModeEditPage,
                       CartSummary cartSummary,
@@ -77,10 +76,8 @@ public class E2ESteps extends BasePage {
         this.accountSuccessPage = accountSuccessPage;
         this.accountEditPage = accountEditPage;
         this.accountLogoutPage = accountLogoutPage;
-        this.accountCreatePage = accountCreatePage;
         this.accountPage = accountPage;
         this.addToCartPage = addToCartPage;
-        this.accountLoginPage = accountLoginPage;
         this.productIDPage = productIDPage;
         this.searchResultPage = searchResultPage;
         this.shippingReturnsPage = shippingReturnsPage;
@@ -89,6 +86,7 @@ public class E2ESteps extends BasePage {
         this.middleMenuNaviPage = middleMenuNaviPage;
         this.checkoutBillingPage = checkoutBillingPage;
         this.checkoutCartPage = checkoutCartPage;
+        this.checkoutSuccessPage = checkoutSuccessPage;
         this.checkoutConfirmationPage = checkoutConfirmationPage;
         this.checkoutCustomerPage = checkoutCustomerPage;
         this.checkoutShippingModeEditPage = checkoutShippingModeEditPage;
@@ -96,96 +94,82 @@ public class E2ESteps extends BasePage {
         this.paymentModeEditPage = paymentModeEditPage;
         this.cartSummary = cartSummary;
         this.cartPage = cartPage;
-    }
-/*    @Given("user is on index page url as {string} and page title as {string}")
-    public void userIsOnIndexPageUrlAsAndPageTitleAs(String Url, String arg1) throws InterruptedException {
-        goToIndexPage(Url);
-        Assert.assertEquals(getCurrentPageTitle(arg1),arg1);
-        Assert.assertEquals(getCurrentPageUrl(Url),Url);
-    }*/
-
-    @When("user clicks on search button")
-    public void userClicksOnSearchButton() {
+        this.navigationMenuPage = navigationMenuPage;
+        this.footerPage = footerPage;
     }
 
-    @And("user enters product name as {string}")
-    public void userEntersProductNameAs(String arg0) {
-
+    @When("user clicks on search box and enters product name as {string} and click on search button")
+    public void userClicksOnSearchBoxAndEntersProductNameAsAndClickOnSearchButton(String keyword) throws Exception {
+        act.click(getDriver(), topNaviPage.searchBox);
+        topNaviPage.enterItemKeyword(keyword);
+        topNaviPage.clickOnSearchBtn();
     }
-
-    @And("user should be able to see search result items")
-    public void userShouldBeAbleToSeeSearchResultItems() {
+    @And("user should be able to see search result item and click on add to cart button")
+    public void userShouldBeAbleToSeeSearchResultItemAndClickOnAddToCartButton() throws Throwable {
+        searchResultPage.productName().isDisplayed();
+        searchResultPage.productDetailsImage().isDisplayed();
+        searchResultPage.productAvailablity().isDisplayed();
+        searchResultPage.addtoCartBtn().isDisplayed();
+        searchResultPage.clickOnAddToCartBtn();
     }
-
-    @And("user adds products to the cart")
-    public void userAddsProductsToTheCart() {
+    @And("user enters a number in quantity box to increases items by {string} and clicks on remove icon to remove from cart")
+    public void userEntersANumberInQuantityBoxToIncreasesItemsByAndClicksOnRemoveIconToRemoveFromCart(String arg0) throws InterruptedException {
+        checkoutCartPage.validateUserOnShoppingCartPage();
+        checkoutCartPage.validateRemoveIconBtnisEnabled();
+        checkoutCartPage.enterAddQuantityBox(arg0);
+        checkoutCartPage.clickOnUpdateBtn();
+        checkoutCartPage.clickOnRemoveIconBtn();
+        Assert.assertTrue(checkoutCartPage.validateYourShoppingCartIsEmptyIsDisplayed());
     }
-
+    @And("user starts all over again from the previous steps as {string} and increases items by {string}")
+    public void userStartsAllOverAgainFromThePreviousStepsAsAndIncreasesItemsBy(String arg0, String arg1) throws Exception {
+        act.click(getDriver(), topNaviPage.searchBox);
+        topNaviPage.enterItemKeyword(arg0);
+        topNaviPage.clickOnSearchBtn();
+        searchResultPage.clickOnAddToCartBtn();
+        checkoutCartPage.enterAddQuantityBox(arg1);
+        checkoutCartPage.clickOnUpdateBtn();
+    }
     @And("user verifies the product item by item image, unit price, quantity and grand total")
     public void userVerifiesTheProductItemByItemImageUnitPriceQuantityAndGrandTotal() {
+        checkoutCartPage.validateProductImageIsDisplayed();
+        checkoutCartPage.getProductPrice();
+        checkoutCartPage.getSubPrice();
+        checkoutCartPage.getProductTotalPrice();
+        checkoutCartPage.getProductGrandTotalPrice();
+
+    }
+    @And("user clicks on the Checkout button")
+    public void userClicksOnTheCheckOutButton() throws IOException, InterruptedException {
+        checkoutCartPage.clickOnCheckoutBtn();
     }
 
-    @And("user should be able to increase and remove item from cart")
-    public void userShouldBeAbleToIncreaseAndRemoveItemFromCart() {
+    @And("user on checkout confirmation page and validates all the order details displayed")
+    public void userOnCheckoutConfirmationPageAndValidatesAllTheOrderDetailsDisplayed() throws Throwable {
+
+    }
+    @And("user clicks on confirm order button")
+    public void userClicksOnConfirmOrderButton() throws Throwable {
+        checkoutConfirmationPage.clickOnConfirmOrderBtn();
+
+    }
+    @And("user presented with a checkout success page as {string}")
+    public void userPresentedWithACheckoutSuccessPageAs(String arg0) {
+
     }
 
-    @And("user clicks on the Check out button")
-    public void userClicksOnTheCheckOutButton() {
-    }
+    @Then("user gets an order number as {string} and thank message displayed as {string}")
+    public void userGetsAnOrderNumberAsAndThankMessageDisplayedAs(String arg0, String arg1) {
 
-    @And("user is on checks Customer Shipping Address, Method,Order Summary, Coupon and Total")
-    public void userIsOnChecksCustomerShippingAddressMethodOrderSummaryCouponAndTotal() {
     }
-
-    @And("user should be able to edit the cart")
-    public void userShouldBeAbleToEditTheCart() {
-    }
-    @And("user verifies the unit price against total price")
-    public void userVerifiesTheUnitPriceAgainstTotalPrice() {
-    }
-    @And("user clicks on continue button")
-    public void userClicksOnContinueButton() {
-    }
-
-    @And("user confirms email, Shipping Address, Method, Billing and total")
-    public void userConfirmsEmailShippingAddressMethodBillingAndTotal() {
-    }
-
-    @And("user should be able to edit the cart, Shipping,Method and Billing Address")
-    public void userShouldBeAbleToEditTheCartShippingMethodAndBillingAddress() {
-    }
-
-    @And("user is given the option to register or login or as a guest")
-    public void userIsGivenTheOptionToRegisterOrLoginOrAsAGuest() {
-    }
-
-    @And("user registers and login as a new user")
-    public void userRegistersAndLoginAsANewUser() {
-    }
-
-    @And("user enters payment details and clicks on place order button")
-    public void userEntersPaymentDetailsAndClicksOnPlaceOrderButton() {
-    }
-
-    @And("user is presented with a purchase confirmation page.")
-    public void userIsPresentedWithAPurchaseConfirmationPage() {
-    }
-
-    @Then("user gets an order number and thank message with first name displayed")
-    public void userGetsAnOrderNumberAndThankMessageWithFirstNameDisplayed() {
-    }
-
-    @And("user order confirmation page is populate with print icon, item image total price and continue shipping button")
-    public void userOrderConfirmationPageIsPopulateWithPrintIconItemImageTotalPriceAndContinueShippingButton() {
-    }
-
     @And("user clicks on continue and logout button")
-    public void userClicksOnContinueAndLogoutButton() {
-    }
+    public void userClicksOnContinueAndLogoutButton() throws IOException, InterruptedException {
+        checkoutSuccessPage.clickOnContinueBtn();
 
+    }
     @Then("user is back to home page")
     public void userIsBackToHomePage() {
-    }
 
+    }
 
 }

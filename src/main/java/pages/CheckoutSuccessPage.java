@@ -6,59 +6,53 @@ import org.openqa.selenium.support.FindBy;
 import java.io.IOException;
 
 public class CheckoutSuccessPage extends BasePage {
-
+    IndexPage indexPage = new IndexPage();
     public CheckoutSuccessPage() throws IOException {
         super();
     }
-
-    public String orderSuccessPageUrl = "https://automationteststore.com/index.php?rt=checkout/success";
-
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/h1/span[1]")
-    private WebElement yourOrderHasBeenProcessedHeadingTxt;
+    WebElement yourOrderHasBeenProcessedHeadingTxt;
 
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div/section/p[2]")
-    private WebElement OrderNumberText;
+    WebElement OrderNumberText;
 
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div/section/p[3]")
-    private WebElement viewInvoiceText;
+    WebElement viewInvoiceText;
 
     @FindBy(xpath = "//p[contains(text(),'Thank you for shopping with us!')]")
-    private WebElement thankYouForShoppingWithUsText;
+    WebElement thankYouForShoppingWithUsTxt;
 
     @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div/section/p[3]")
-    private WebElement invoicePageLink;
+    WebElement invoicePageLink;
 
-    @FindBy(xpath = "//*[@id=\"maincontainer\"]/div/div/div/div/section/a")
-    private WebElement continueCheckoutSuccessBtn;
+    @FindBy(xpath = "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/a[1]")
+    WebElement continueBtn;
 
-    public String validateOrderSuccessPageUrl() {
-        return orderSuccessPageUrl;
+    public String getOrderHasBeenProcessedHeading() {
+        return getText(yourOrderHasBeenProcessedHeadingTxt);
+
     }
+    public String getOrderNumber() {
+        return getText(OrderNumberText);
 
-    public boolean validateYourOrderHasBeenProcessedHeadingTxt() {
-        return act.isDisplayed(getDriver(), yourOrderHasBeenProcessedHeadingTxt);
     }
-
-    public boolean validateOrderNumberText() {
-        return act.isDisplayed(getDriver(), OrderNumberText);
+    public String getViewInvoice() {
+        return getText(viewInvoiceText);
     }
-
-    public boolean validateViewInvoiceText() {
-        return act.isDisplayed(getDriver(), viewInvoiceText);
+    public String getThankYouForShoppingWithUsTxt() {
+        return thankYouForShoppingWithUsTxt.getText();
     }
-
-    public boolean validateThankYouForShoppingWithUsText() {
-        return act.isDisplayed(getDriver(), thankYouForShoppingWithUsText);
-    }
-
     public InvoiceOrderPage clickOnInvoicePageLink() throws IOException {
         waitForWebElementAndClick(invoicePageLink);
         return new InvoiceOrderPage();
     }
-
-    public IndexPage clickOnContinueCheckoutSuccessBtn() throws IOException {
-        waitForWebElementAndClick(continueCheckoutSuccessBtn);
+    public IndexPage clickOnContinueBtn() throws InterruptedException, IOException {
+        waitFor(continueBtn);
+        waitForWebElementAndClick(continueBtn);
+        waitFor(indexPage.logoImage);
         return new IndexPage();
+
     }
+
 
 }

@@ -4,7 +4,7 @@ import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utilities.data;
+import utilities.datarepo;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,6 +17,7 @@ public class IndexPage extends BasePage {
     }
 
     Logger log = LoggerHelper.getLogger(IndexPage.class);
+    TopNaviPage topMenu = new TopNaviPage();
 
     public final String url = "https://automationteststore.com/";
 
@@ -69,12 +70,12 @@ public class IndexPage extends BasePage {
 
 
     public boolean isUserOnLandingPageTitle() {
-        return getDriver().getTitle().contains(data.expectedTitle);
+        return getDriver().getTitle().contains(datarepo.expectedTitle);
 
     }
 
     public boolean userOnLandingPageUrl() {
-        return getDriver().getCurrentUrl().contains(data.getBaseUrl());
+        return getDriver().getCurrentUrl().contains(datarepo.getBaseUrl());
 
     }
 
@@ -164,4 +165,25 @@ public class IndexPage extends BasePage {
     }
 
 
+    public void clickSearchButton() throws IOException {
+        topMenu.clickOnSearchBtn();
+    }
+
+ /*   public int getSearchItemsCount() {
+        String itemCount = ebayhome_elements.numOfItems.getText().trim();
+        String itemCount2 = itemCount.replace(",", "");
+        int itemCountInt = Integer.parseInt(itemCount2);
+        return itemCountInt;
+    }
+
+    public void selectCategoryOption(String option) {
+        List<WebElement> cat = ebayhome_elements.catOptions;
+        for (WebElement x : cat) {
+            if (x.getText().trim().toLowerCase().equals(option.toLowerCase())) {
+                x.click();
+                break;
+            }
+        }
+    }*/
 }
+

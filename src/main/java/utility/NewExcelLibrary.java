@@ -126,7 +126,7 @@ public class NewExcelLibrary {
 			}
 		}
 	
-		// returns the data from a cell
+		// returns the datarepo from a cell
 		public String getCellData(String sheetName,int colNum,int rowNum){
 			try{
 				if(rowNum <=0)
@@ -182,7 +182,7 @@ public class NewExcelLibrary {
 			}
 		}
 		
-		// returns true if data is set successfully else false
+		// returns true if datarepo is set successfully else false
 		public boolean setCellData(String sheetName,String colName,int rowNum, String data){
 			try{
 			fis = new FileInputStream(path); 

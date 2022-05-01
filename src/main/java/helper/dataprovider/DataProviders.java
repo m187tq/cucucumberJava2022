@@ -103,7 +103,7 @@ public class DataProviders {
 		// Total Columns
 		int column = obj.getColumnCount("AccountCreationData");
 		int actRows = rows - 1;
-		//Created an object of array to store data
+		//Created an object of array to store datarepo
 		Object[][] data = new Object[actRows][1];
 		
 		for (int i = 0; i < actRows; i++) {

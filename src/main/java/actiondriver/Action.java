@@ -8,7 +8,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 import pages.BasePage;
-import utilities.data;
+import utilities.datarepo;
 import utils.globalVars;
 
 import java.io.File;
@@ -66,13 +66,13 @@ public class Action implements ActionInterface {
 			flag = ele.isDisplayed();
 			if (flag) {
 				System.out.println("The element is Displayed...: " + ele.getText());
-				System.out.println("The element is Displayed...: " + ele.getText());
+				log.info("The element is Displayed...: " + ele.getText());
 			} else {
-				System.out.println("The element is not Displayed...: " + ele.getText());
+				log.info("The element is not Displayed...: " + ele.getText());
 				System.out.println("The element is not Displayed...: " + ele.getText());
 			}
 		} else {
-			System.out.println("Not displayed...: " + ele.getText());
+			log.info("Not displayed...: " + ele.getText());
 			System.out.println("Not displayed...: " + ele.getText());
 		}
 		return flag;
@@ -85,7 +85,7 @@ public class Action implements ActionInterface {
 		if (flag) {
 			flag = ele.isSelected();
 			if (flag) {
-				System.out.println("The element is Selected...: " + ele.getText());
+				log.info("The element is Selected...: " + ele.getText());
 			} else {
 				System.out.println("The element is not Selected...: " + ele.getText());
 			}
@@ -156,7 +156,7 @@ public class Action implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Select value from the DropDown");		
+				log.info("Select value from the DropDown");
 			} else {
 				System.out.println("Not Selected value from the DropDown");
 				// throw new ElementNotFoundException("", "", "")
@@ -176,7 +176,7 @@ public class Action implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Option selected by Index");
+				log.info("Option selected by Index");
 			} else {
 				System.out.println("Option not selected by Index");
 			}
@@ -196,7 +196,7 @@ public class Action implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Option selected by Value");
+				log.info("Option selected by Value");
 			} else {
 				System.out.println("Option not selected by Value");
 			}
@@ -215,7 +215,7 @@ public class Action implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Option selected by VisibleText");
+				log.info("Option selected by VisibleText");
 			} else {
 				System.out.println("Option not selected by VisibleText");
 			}
@@ -564,7 +564,7 @@ public class Action implements ActionInterface {
 			return flag;
 		} finally {
 			if (flag) {
-				System.out.println("Window is Navigated with title");				
+				log.info("Window is Navigated with title");
 			} else {
 				System.out.println("The Window with title: is not Selected");
 			}
@@ -782,7 +782,7 @@ public class Action implements ActionInterface {
 	}
 	@Override
 	public void implicitWait(WebDriver driver, int timeOut) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(data.getThreeSeconds()));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(datarepo.getThreeSeconds()));
 		log.info("implicitWait Waiting for 3 SECONDS.....");
 		System.out.println("implicitWait Waiting for 3 SECONDS.....");
 	}

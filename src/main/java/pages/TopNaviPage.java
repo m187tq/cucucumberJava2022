@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utilities.datarepo;
@@ -7,7 +9,7 @@ import utilities.datarepo;
 import java.io.IOException;
 
 public class TopNaviPage extends BasePage {
-
+    public static Logger log = LoggerHelper.getLogger(TopNaviPage.class);
     public TopNaviPage() throws IOException {
         super();
     }
@@ -52,16 +54,20 @@ public class TopNaviPage extends BasePage {
 
     public void navigateToUrl(String string){
         navigateToIndexPage(string);
+        log.info("navigate To IndexPage...");
     }
 
-    public String currentPageUrl() {
-        return getDriver().getCurrentUrl();
+    public String V() {
+        log.info("Gotten current Page Url...");
+        return getCurrentURL();
     }
     public String currentPageTitle() throws InterruptedException {
-        return act.getTitle(getDriver());
+        log.info("Gotten current Page title...");
+        return getTitle();
     }
     public String loginOrRegisterLink() {
-        return loginOrRegisterLink.getText();
+        log.info("Gotten element text..." + loginOrRegisterLink);
+        return getText(loginOrRegisterLink);
     }
 
     public boolean loginOrRegisterBtnEnabled() {
@@ -70,29 +76,32 @@ public class TopNaviPage extends BasePage {
     public AccountLoginPage clickOnLoginRegisterBtn() throws IOException {
         AccountLoginPage accountLoginPage = new AccountLoginPage();
         waitForWebElementAndClick(loginOrRegisterLink);
+        log.info("Waited and clicked on the element: "+ loginOrRegisterLink.getText());
         waitFor(accountLoginPage.createAnAccountTxt);
+        log.info("Waited for element on AccountLoginPage");
         return new AccountLoginPage();
     }
 
     //************************************************//
 
-
-
     public void clickAndSelectProductCategoryAndEnterKeywordOnSearchBox(String keyword) throws Exception {
         waitForWebElementAndClick(searchBox);
+        log.info("Waited and clicked on the element: "+ searchBox.getText());
         sendKeysToWebElement(searchBox, keyword);
+        log.info("Sent data to element: "+ searchBox.getText());
     }
-
     public void clickOnSearchBox(){
         waitForWebElementAndClick(searchBox);
-
+        log.info("Waited and clicked on the element: "+ searchBox.getText());
     }
     public void enterItemKeyword(String keyword) throws Exception {
         sendKeysToWebElement(searchBox, keyword);
+        log.info("Sent keyword data to element:"  + searchBox.getText());
     }
-
     public SearchResultPage clickOnSearchBtn() throws IOException {
         waitForWebElementAndClick(searchBtn);
+        log.info("Waited and clicked on the element: "+ searchBtn.getText());
+        log.info("Returning to new SearchResultPage");
         return new SearchResultPage();
     }
 

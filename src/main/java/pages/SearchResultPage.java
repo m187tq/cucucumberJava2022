@@ -1,12 +1,14 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.io.IOException;
 
 public class SearchResultPage extends BasePage{
-
+    public static Logger log = LoggerHelper.getLogger(SearchResultPage.class);
     public SearchResultPage() throws IOException {
         super();
     }

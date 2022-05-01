@@ -1,6 +1,8 @@
 package pages;
 
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.globalVars;
@@ -9,6 +11,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class AccountCreatePage extends BasePage {
+    public static Logger log = LoggerHelper.getLogger(AccountCreatePage.class);
+    AccountSuccessPage asPage = new AccountSuccessPage();
+
     String loginName = "covid19" + generateRandomString(5);
     String email = System.currentTimeMillis() + "Apr";
     public AccountCreatePage() throws IOException {
@@ -140,119 +145,139 @@ public class AccountCreatePage extends BasePage {
     }
 
     public String getIfYouAlreadyHaveAnAccountWithUsTxt() {
+        log.info("getting the element text => <ifYouAlreadyHaveAnAccountWithUs>");
         return getText(ifYouAlreadyHaveAnAccountWithUs);
     }
     public String getYourPersonalDetailsTxt(String arg1) {
+        log.info("getting the element text => <yourPersonalDetailsTxt>");
         return getText(yourPersonalDetailsTxt);
     }
 
     public void enterFirstName(String firstname) throws Exception {
+        log.info("Entered text :" + firstname);
         sendKeysToWebElement(firstNameTextBox, firstname);
 
     }
-
     public void enterLastName(String lastName) throws Exception {
+        log.info("Entered text :" + lastName);
         sendKeysToWebElement(lastNameTextBox, lastName);
 
     }
 
     public void enterFreshEmailAddress() throws Exception {
         sendKeysToWebElement(emailTextBox, email);
+        log.info("Entered text :" + email);
     }
-
     public void enterTelephoneNumber(String telephoneNumber) throws Exception {
+        log.info("Entered text :" + telephoneNumber);
         sendKeysToWebElement(telephoneTextBox,telephoneNumber);
     }
-
     public void enterFaxNumber(String faxNumber) throws Exception {
         sendKeysToWebElement(faxTextBox, faxNumber);
+        log.info("Entered text :" + faxNumber);
     }
 
     public void enterYourPersonalDetailsSection(String firstName, String lastName, String telephone, String fax) throws Exception {
         enterFirstName(firstName);
+        log.info("Entered text :" + firstName);
         enterLastName(lastName);
+        log.info("Entered text :" + lastName);
         enterFreshEmailAddress();
+        log.info("Entered text => entered Fresh EmailAddress...");
         enterTelephoneNumber(telephone);
+        log.info("Entered text :" + telephone);
         enterFaxNumber(fax);
+        log.info("Entered text :" + fax);
 
     }
-    public WebElement verifyYourAddressTxt() {
-        return yourAddressText;
+    public String getYourAddressTxt() {
+        log.info("get Your Address Txt...");
+        return getText(yourAddressText);
     }
     public void enterCompanyName(String companyName) throws Exception {
         sendKeysToWebElement(companyTextBox, companyName);
+        log.info("Entered text :" + companyName);
     }
     public void enterAddress1(String address1) throws Exception {
         sendKeysToWebElement(address1TextBox, address1);
+        log.info("Entered text :" + address1);
     }
     public void enterAddress2(String address2) throws Exception {
         sendKeysToWebElement(address2TextBox, address2);
+        log.info("Entered text :" + address2);
     }
     public void enterCity(String yourCity) throws Exception {
         sendKeysToWebElement(cityTextBox, yourCity);
+        log.info("Entered text :" + yourCity);
     }
 
     public void selectRegionState(String yourRegionOrState) {
-        act.selectByVisibleText(yourRegionOrState, regionStateDropdownBtn);
+        selectByVisibleText(yourRegionOrState, regionStateDropdownBtn);
+        log.info("Selected Visible Tex :" + yourRegionOrState);
     }
-    public void enterZipCode(String ZipCode) {
-        act.type(zipCodeTextBox, ZipCode);
+    public void enterZipCode(String ZipCode) throws Exception {
+        sendKeysToWebElement(zipCodeTextBox, ZipCode);
+        log.info("Entered text :" + ZipCode);
     }
 
     public void selectCountry(String countryName) {
-        act.selectByVisibleText(countryName, countryDropdownBtn);
- 
+        selectByVisibleText(countryName, countryDropdownBtn);
+        log.info("Selected Visible Text :" + countryName);
     }
-
     public String getloginDetailsSectionText(String arg0) throws IOException {
-        return loginDetailsSectionText.getText();
+        log.info("getting Your Address Txt...");
+        return getText(loginDetailsSectionText);
     }
 
-    public void enterLoginName() {
-        //act.type(loginNameTextBox, generateRandomString(5) +"Covid");
-        act.type(loginNameTextBox, ("Covid" + generateRandomNumber(5)));
-
+    public void enterLoginName() throws Exception {
+        sendKeysToWebElement(loginNameTextBox, ("Covid" + generateRandomNumber(5)));
+        log.info("Entered generated Random loginName.... ");
     }
-    public void enterPassword(String arg0) {
-        act.type(passwordTextBox, arg0);
-
+    public void enterPassword(String arg0) throws Exception {
+        sendKeysToWebElement(passwordTextBox, arg0);
+        log.info("Entered password text :" + arg0);
     }
-    public void enterPasswordConfirm(String arg0) {
-        act.type(passwordConfirmTextBox, arg0);
+    public void enterPasswordConfirm(String arg0) throws Exception {
+       sendKeysToWebElement(passwordConfirmTextBox, arg0);
+        log.info("Entered Confirm password text :" + arg0);
     }
 
-    public String verifyNewsletterTxt() throws IOException {
-        return newsletterText.getText();
+    public String getNewsletterTxt() throws IOException {
+        log.info("Gotten element Newsletter text...");
+        return getText(newsletterText);
 
     }
 
     public void tickOnSubscribeAsYes() {
         waitForWebElementAndClick(subscribeYesRadioButton);
-
+        log.info("Waited and clicked on the element: "+ subscribeYesRadioButton.getText());
     }
 
     public boolean validateSubscribeYesTicked() {
-        return act.isSelected(getDriver(),subscribeYesRadioButton);
+        log.info("Selected visible Radio Btn :" + subscribeYesRadioButton.getText());
+        return isSelected(getDriver(),subscribeYesRadioButton);
 
     }
 
     public void clickOnSubscribeAsNo() {
         waitForWebElementAndClick(subscribeNORadioButton);
+        log.info("Waited and clicked on the element: "+ subscribeNORadioButton.getText());
 
     }
-
     public void checkOnIAgreeToPrivacyPolicyRadioButton() {
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
+        log.info("Waited and clicked on the element: "+ agreeToPrivacyPolicyButton.getText());
     }
-
     public void clickOnIAgreeToPrivacyPolicyRadioButton() {
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
-    }
+        log.info("Waited and clicked on the element: "+ agreeToPrivacyPolicyButton.getText());
 
+    }
     public AccountSuccessPage clickOnContinueButton() throws IOException, InterruptedException {
         waitFor(continueBtn);
-        act.click(getDriver(), continueBtn);
-        Thread.sleep(3000);
+        waitForWebElementAndClick(continueBtn);
+        waitFor(asPage.accountHasBeenCreatedHeadingTxt);
+        log.info("Waited for element on AccountSuccessPage : "+ asPage.accountHasBeenCreatedHeadingTxt.getText());
         return new AccountSuccessPage();
     }
 

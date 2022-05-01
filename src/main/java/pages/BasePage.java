@@ -10,22 +10,20 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import utilities.datarepo;
 import utils.globalVars;
 
 import java.awt.*;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage extends DriverFactory {
-    public static Logger log = LoggerHelper.getLogger(BasePage.class);
+    //public static Logger log = LoggerHelper.getLogger(BasePage.class);
     public static WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(globalVars.explicitWait));
     public static AssertionHelper assertionHelper = new AssertionHelper();
     public static WaitHelper waitHelper = new WaitHelper(getDriver());
@@ -41,23 +39,23 @@ public class BasePage extends DriverFactory {
 
     }
     public void navigateToIndexPage(String url) {
-        // log.info("navigate To IndexPage....: " +url);
+        // // log.info("navigate To IndexPage....: " +url);
         getDriver().get(url);
     }
     public void goToIndexPage(String Url) {
-        // log.info("navigating To Index Page....: " +Url);
+        // // log.info("navigating To Index Page....: " +Url);
         getDriver().get(Url);
     }
     public String getCurrentPageTitle(String arg1) throws InterruptedException {
-        // log.info("got current Page Title....: " +arg1);
+        // // log.info("got current Page Title....: " +arg1);
         return getDriver().getTitle();
     }
     public String getCurrentPageUrl(String Url) throws InterruptedException {
-        // log.info("got current Page Url....: " + Url);
+        // // log.info("got current Page Url....: " + Url);
         return getDriver().getCurrentUrl();
     }
     public String getPageTitle() {
-        // log.info("page title is: " + getDriver().getTitle());
+        // // log.info("page title is: " + getDriver().getTitle());
         return getDriver().getTitle();
     }
     public String generateRandomNumber(int length) {
@@ -108,10 +106,10 @@ public class BasePage extends DriverFactory {
         while (!clicked && attempts < 10) {
             try {
                 this.wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-                // log.info("Successfully clicked on the WebElement: " + "<" + element.toString() + ">");
+                // // log.info("Successfully clicked on the WebElement: " + "<" + element.toString() + ">");
                 clicked = true;
             } catch (Exception e) {
-                // log.info("Unable to wait and click on WebElement, Exception: " + e.getMessage());
+                // // log.info("Unable to wait and click on WebElement, Exception: " + e.getMessage());
                 Assert.fail("Unable to wait and click on the WebElement, using locator: " + "<" + element.toString() + ">");
             }
             attempts++;
@@ -124,10 +122,10 @@ public class BasePage extends DriverFactory {
         while (!clicked && attempts < 10) {
             try {
                 this.wait.until(ExpectedConditions.elementToBeClickable(by)).click();
-                // log.info("Successfully clicked on the element using by locator: " + "<" + by.toString() + ">");
+                // // log.info("Successfully clicked on the element using by locator: " + "<" + by.toString() + ">");
                 clicked = true;
             } catch (Exception e) {
-                // log.info("Unable to wait and click on the element using the By locator, Exception: " + e.getMessage());
+                // // log.info("Unable to wait and click on the element using the By locator, Exception: " + e.getMessage());
                 Assert.fail("Unable to wait and click on the element using the By locator, element: " + "<"+ by.toString() + ">");
             }
             attempts++;
@@ -140,9 +138,9 @@ public class BasePage extends DriverFactory {
             tempWait.until(ExpectedConditions.elementToBeClickable(list)).click();
             list.sendKeys(textToSearchFor);
             list.sendKeys(Keys.ENTER);
-            // log.info("Successfully sent the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
+            // // log.info("Successfully sent the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
         } catch (Exception e) {
-            // log.info("Unable to send the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
+            // // log.info("Unable to send the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
             Assert.fail("Unable to select the required text from the dropdown menu, Exception: " + e.getMessage());
         }
     }
@@ -153,9 +151,9 @@ public class BasePage extends DriverFactory {
             final WebDriverWait customWait = new WebDriverWait(driver, Duration.ofSeconds(globalVars.getExplicitWait()));
             customWait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(locator)));
             locator.click();
-            // log.info("Successfully clicked on the WebElement, using locator: " + "<" + locator + ">"+ ", using a custom Timeout of: " + timeout);
+            // // log.info("Successfully clicked on the WebElement, using locator: " + "<" + locator + ">"+ ", using a custom Timeout of: " + timeout);
         } catch (Exception e) {
-            // log.info("Unable to click on the WebElement, using locator: " + "<" + locator + ">" + ", using a custom Timeout of: " + timeout);
+            // // log.info("Unable to click on the WebElement, using locator: " + "<" + locator + ">" + ", using a custom Timeout of: " + timeout);
             Assert.fail("Unable to click on the WebElement, Exception: " + e.getMessage());
         }
     }
@@ -168,16 +166,14 @@ public class BasePage extends DriverFactory {
         try {
             this.wait.until(ExpectedConditions.elementToBeClickable(element)).isEnabled();
             ob.moveToElement(element).click().build().perform();
-            // log.info("Successfully Action Moved and Clicked on the WebElement, using locator: " + "<" + element.toString() + ">");
         } catch (StaleElementReferenceException elementUpdated) {
             WebElement elementToClick = element;
             Boolean elementPresent = wait.until(ExpectedConditions.elementToBeClickable(elementToClick)).isEnabled();
             if (elementPresent == true) {
                 ob.moveToElement(elementToClick).click().build().perform();
-                // log.info("(Stale Exception) - Successfully Action Moved and Clicked on the WebElement, using locator: " + "<" + element.toString() + ">");
             }
         } catch (Exception e) {
-            // log.info("Unable to Action Move and Click on the WebElement, using locator: " + "<" + element.toString() + ">");
+            // // log.info("Unable to Action Move and Click on the WebElement, using locator: " + "<" + element.toString() + ">");
             Assert.fail("Unable to Action Move and Click on the WebElement, Exception: " + e.getMessage());
         }
     }
@@ -189,14 +185,14 @@ public class BasePage extends DriverFactory {
             if (elementPresent == true) {
                 WebElement elementToClick = getDriver().findElement(element);
                 ob.moveToElement(elementToClick).click().build().perform();
-                // log.info("Action moved and clicked on the following element, using By locator: " + "<" + element.toString() + ">");
+                // // log.info("Action moved and clicked on the following element, using By locator: " + "<" + element.toString() + ">");
             }
         } catch (StaleElementReferenceException elementUpdated) {
             WebElement elementToClick = getDriver().findElement(element);
             ob.moveToElement(elementToClick).click().build().perform();
-            // log.info("(Stale Exception) - Action moved and clicked on the following element, using By locator: "+ "<" + element.toString() + ">");
+            // // log.info("(Stale Exception) - Action moved and clicked on the following element, using By locator: "+ "<" + element.toString() + ">");
         } catch (Exception e) {
-            // log.info("Unable to Action Move and Click on the WebElement using by locator: " + "<" + element.toString() + ">");
+            // // log.info("Unable to Action Move and Click on the WebElement using by locator: " + "<" + element.toString() + ">");
             Assert.fail("Unable to Action Move and Click on the WebElement using by locator, Exception: " + e.getMessage());
         }
     }
@@ -209,9 +205,7 @@ public class BasePage extends DriverFactory {
             this.WaitUntilWebElementIsVisible(element);
             element.clear();
             element.sendKeys(textToSend);
-            // log.info("Successfully Sent the following keys: '" + textToSend + "' to element: " + "<"+ element.toString() + ">");
         } catch (Exception e) {
-            // log.info("Unable to locate WebElement: " + "<" + element.toString() + "> and send the following keys: " + textToSend);
             Assert.fail("Unable to send keys to WebElement, Exception: " + e.getMessage());
         }
     }
@@ -223,9 +217,7 @@ public class BasePage extends DriverFactory {
             this.wait.until(ExpectedConditions.visibilityOf(element)).isEnabled();
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView();", element);
             ((JavascriptExecutor) getDriver()).executeScript("window.scrollBy(0, -400)");
-            // log.info("Succesfully scrolled to the WebElement, using locator: " + "<" + element.toString() + ">");
         } catch (Exception e) {
-            // log.info("Unable to scroll to the WebElement, using locator: " + "<" + element.toString() + ">");
             Assert.fail("Unable to scroll to the WebElement, Exception: " + e.getMessage());
         }
     }
@@ -234,28 +226,25 @@ public class BasePage extends DriverFactory {
         try {
             JavascriptExecutor js = (JavascriptExecutor) getDriver();
             js.executeScript("scroll(" + numb1 + "," + numb2 + ")");
-            // log.info("Succesfully scrolled to the correct position! using locators: " + numb1 + ", " + numb2);
+            // // log.info("Succesfully scrolled to the correct position! using locators: " + numb1 + ", " + numb2);
         } catch (Exception e) {
-            // log.info("Unable to scroll to element using locators: " + "<" + numb1 + "> " + " <" + numb2 + ">");
+            // // log.info("Unable to scroll to element using locators: " + "<" + numb1 + "> " + " <" + numb2 + ">");
             Assert.fail("Unable to manually scroll to WebElement, Exception: " + e.getMessage());
         }
     }
 
-    public void waitAndclickElementUsingJS(WebElement element) {
+    public void waitAndClickElementUsingJS(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             js.executeScript("arguments[0].click();", element);
-            // log.info("Successfully JS clicked on the following WebElement: " + "<" + element.toString() + ">");
         } catch (StaleElementReferenceException elementUpdated) {
             WebElement staleElement = element;
             Boolean elementPresent = wait.until(ExpectedConditions.elementToBeClickable(staleElement)).isEnabled();
             if (elementPresent == true) {
                 js.executeScript("arguments[0].click();", elementPresent);
-                // log.info("(Stale Exception) Successfully JS clicked on the following WebElement: " + "<" + element.toString() + ">");
             }
         } catch (NoSuchElementException e) {
-            // log.info("Unable to JS click on the following WebElement: " + "<" + element.toString() + ">");
             Assert.fail("Unable to JS click on the WebElement, Exception: " + e.getMessage());
         }
     }
@@ -270,10 +259,8 @@ public class BasePage extends DriverFactory {
     public boolean WaitUntilWebElementIsVisible(WebElement element) {
         try {
             this.wait.until(ExpectedConditions.visibilityOf(element));
-            // log.info("WebElement is visible using locator: " + "<" + element.toString() + ">");
             return true;
         } catch (Exception e) {
-            // log.info("WebElement is NOT visible, using locator: " + "<" + element.toString() + ">");
             Assert.fail("WebElement is NOT visible, Exception: " + e.getMessage());
             return false;
         }
@@ -282,10 +269,8 @@ public class BasePage extends DriverFactory {
     public boolean WaitUntilWebElementIsVisibleUsingByLocator(By element) {
         try {
             this.wait.until(ExpectedConditions.visibilityOfElementLocated(element));
-            // log.info("Element is visible using By locator: " + "<" + element.toString() + ">");
             return true;
         } catch (Exception e) {
-            // log.info("WebElement is NOT visible, using By locator: " + "<" + element.toString() + ">");
             Assert.fail("WebElement is NOT visible, Exception: " + e.getMessage());
             return false;
         }
@@ -294,15 +279,13 @@ public class BasePage extends DriverFactory {
     public boolean isElementClickable(WebElement element) {
         try {
             this.wait.until(ExpectedConditions.elementToBeClickable(element));
-            // log.info("WebElement is clickable using locator: " + "<" + element.toString() + ">");
             return true;
         } catch (Exception e) {
-            // log.info("WebElement is NOT clickable using locator: " + "<" + element.toString() + ">");
             return false;
         }
     }
 
-    public boolean waitUntilPreLoadElementDissapears(By element) {
+    public boolean waitUntilPreLoadElementDisappears(By element) {
         return this.wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
     }
 
@@ -311,16 +294,15 @@ public class BasePage extends DriverFactory {
      **********************************************************************************/
     public BasePage loadUrl(String url) throws Exception {
         getDriver().get(url);
+        // log.info("loading Page Url....: " + url);
         return new BasePage();
     }
 
     public String getCurrentURL() {
         try {
             String url = getDriver().getCurrentUrl();
-            // log.info("Found(Got) the following URL: " + url);
             return url;
         } catch (Exception e) {
-            // log.info("Unable to locate (Get) the current URL, Exception: " + e.getMessage());
             return e.getMessage();
         }
     }
@@ -329,17 +311,11 @@ public class BasePage extends DriverFactory {
         try {
             String url = getDriver().getCurrentUrl();
             this.wait.until(ExpectedConditions.urlMatches(urlToWaitFor));
-            // log.info("The current URL was: " + url + ", " + "navigated and waited for the following URL: "+ urlToWaitFor);
             return urlToWaitFor;
         } catch (Exception e) {
-            // log.info("Exception! waiting for the URL: " + urlToWaitFor + ",  Exception: " + e.getMessage());
             return e.getMessage();
         }
     }
-
-    /**********************************************************************************/
-    /**********************************************************************************/
-
 
     /**********************************************************************************
      **ALERT & POPUPS METHODS
@@ -349,7 +325,6 @@ public class BasePage extends DriverFactory {
         try {
             @SuppressWarnings("unused")
             Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            // log.info("A popup has been found!");
             return true;
         } catch (Exception e) {
             System.err.println("Error came while waiting for the alert popup to appear. " + e.getMessage());
@@ -374,7 +349,7 @@ public class BasePage extends DriverFactory {
             Alert alert = getDriver().switchTo().alert();
             alert.accept();
         } catch (Exception e) {
-            // log.info("Unable to close the popup");
+            // // log.info("Unable to close the popup");
             Assert.fail("Unable to close the popup, Exception: " + e.getMessage());
         }
     }
@@ -414,34 +389,32 @@ public class BasePage extends DriverFactory {
         copyFileUsingStream(source, dest);
     }
 
-
-
 //=====================================================================//
 // AssertionHelper
 //=====================================================================//
 
     public static void verifyText(String s1, String s2){
-        // log.info("veryfing test: "+ s1 + " with "+ s2);
+        // // log.info("veryfing test: "+ s1 + " with "+ s2);
         Assert.assertEquals(s1, s1);
     }
 
     public static void markPass(){
-        // log.info("making script PASS..");
+        // // log.info("making script PASS..");
         Assert.assertTrue(true);
     }
 
     public static void markPass(String message){
-        // log.info("making script PASS.."+ message);
+        // // log.info("making script PASS.."+ message);
         Assert.assertTrue(true, message);
     }
 
     public static void markFail(){
-        // log.info("making script FAIL..");
+        // // log.info("making script FAIL..");
         Assert.assertTrue(false);
     }
 
     public static void markFail(String message){
-        // log.info("making script FAIL.."+message);
+        // // log.info("making script FAIL.."+message);
         Assert.assertTrue(false, message);
     }
 
@@ -454,12 +427,12 @@ public class BasePage extends DriverFactory {
     }
 
     public static void verifyNull(String s1){
-        // log.info("verify object is null..");
+        // // log.info("verify object is null..");
         Assert.assertNull(s1);
     }
 
     public static void verifyNotNull(String s1){
-        // log.info("verify object is not null..");
+        // // log.info("verify object is not null..");
         Assert.assertNotNull(s1);
     }
 
@@ -488,11 +461,9 @@ public class BasePage extends DriverFactory {
     public boolean isDisplayed(WebElement element){
         try{
             element.isDisplayed();
-            // log.info("element is Displayed.."+element.getText());
             return true;
         }
         catch(Exception e){
-            log.error("element is not Displayed..", e.getCause());
             return false;
         }
     }
@@ -500,11 +471,9 @@ public class BasePage extends DriverFactory {
     public boolean isEnabled(WebElement element){
         try{
             element.isEnabled();
-            // log.info("element is Enabled.."+element.getText());
             return true;
         }
         catch(Exception e){
-            log.error("element is not Enabled..", e.getCause());
             return false;
         }
     }
@@ -513,23 +482,21 @@ public class BasePage extends DriverFactory {
     public boolean isNotDisplayed(WebElement element){
         try{
             element.isDisplayed();
-            // log.info("element is present.."+element.getText());
             return false;
         }
         catch(Exception e){
-            log.error("element is not present..");
             return true;
         }
     }
 
     public String readValueFromElement(WebElement element){
         if(null == element){
-            // log.info("WebElement is null..");
+            // // log.info("WebElement is null..");
             return null;
         }
         boolean status = isDisplayed(element);
         if(status){
-            // log.info("element text is .."+element.getText());
+            // // log.info("element text is .."+element.getText());
             return element.getText();
         }
         else{
@@ -538,12 +505,10 @@ public class BasePage extends DriverFactory {
     }
     public String getText(WebElement element){
         if(null == element){
-            // log.info("WebElement is null..");
             return null;
         }
         boolean status = isDisplayed(element);
         if(status){
-            // log.info("element text is .."+element.getText());
             return element.getText();
         }
         else{
@@ -552,14 +517,12 @@ public class BasePage extends DriverFactory {
     }
 
     public String getTitle(){
-        // log.info("page title is: "+getDriver().getTitle());
         return getDriver().getTitle();
     }
 
 //=====================================================================//
 
     public void setImplicitWait(long timeout, TimeUnit unit) {
-        // log.info("Implicit Wait has been set to: " + timeout);
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(datarepo.SIXTY_SECONDS));
     }
 
@@ -580,19 +543,11 @@ public class BasePage extends DriverFactory {
         return wait;
     }
 
-    /**
-     * This method will make sure element is visible
-     *
-     * @param element
-     * @param timeOutInSeconds
-     * @param pollingEveryInMiliSec
-     */
-    public void WaitForElementVisibleWithPollingTime(WebElement element, int timeOutInSeconds,
-                                                     int pollingEveryInMiliSec) {
-        // log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
-        WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        // log.info("element is visible now");
+    public void WaitForElementVisibleWithPollingTime(
+            WebElement element, int timeOutInSeconds,
+            int pollingEveryInMiliSec) {
+            WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
+            wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     /**
@@ -602,38 +557,20 @@ public class BasePage extends DriverFactory {
      * @param timeOutInSeconds
      */
     public void WaitForElementClickable(WebElement element, int timeOutInSeconds) {
-        // log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(datarepo.SIXTY_SECONDS));
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        // log.info("element is clickable now");
     }
-
-    /**
-     * This method will make sure invisibilityOf element
-     *
-     * @param element
-     * @param timeOutInSeconds
-     * @return
-     */
     public boolean waitForElementNotPresent(WebElement element, long timeOutInSeconds) {
-        // log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
+        // // log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(datarepo.SIXTY_SECONDS));
         boolean status = wait.until(ExpectedConditions.invisibilityOf(element));
-        // log.info("element is invisibile now");
+        // // log.info("element is invisibile now");
         return status;
     }
 
-    /**
-     * This method will wait for frameToBeAvailableAndSwitchToIt
-     *
-     * @param element
-     * @param timeOutInSeconds
-     */
     public void waitForframeToBeAvailableAndSwitchToIt(WebElement element, long timeOutInSeconds) {
-        // log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(datarepo.SIXTY_SECONDS));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
-        // log.info("frame is available and switched");
     }
 
     private Wait<WebDriver> getfluentWait(int timeOutInSeconds, Duration pollingEveryInMiliSec) {
@@ -643,10 +580,6 @@ public class BasePage extends DriverFactory {
         return fWait;
     }
 
-    /**
-     * @param element
-     * @param timeOutInSeconds
-     */
     public WebElement waitForElement(WebElement element, int timeOutInSeconds){
         Wait<WebDriver> fwait = getfluentWait(timeOutInSeconds, Duration.ofSeconds(60));
         fwait.until(ExpectedConditions.visibilityOf(element));
@@ -654,13 +587,417 @@ public class BasePage extends DriverFactory {
     }
 
     public void pageLoadTime(long timeout, TimeUnit unit){
-        // log.info("waiting for page to load for : "+ unit+ " seconds");
         getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(datarepo.SIXTY_SECONDS));
-        // log.info("page is loaded");
     }
 
     public void clickOnLinkByText(String Text) {
         getDriver().findElement(By.linkText(Text)).click();
+    } public static boolean type(WebElement ele, String text) {
+        boolean flag = false;
+        try {
+            flag = ele.isDisplayed();
+            ele.clear();
+            ele.sendKeys(text);
+
+            flag = true;
+        } catch (Exception e) {
+            flag = false;
+        } finally {
+            if (flag) {
+
+            } else {
+            }
+
+        }
+        return flag;
     }
 
+    public static boolean selectBySendKeys(String value, WebElement ele) {
+        boolean flag = false;
+        try {
+            ele.sendKeys(value);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Select value from the DropDown" + value);
+            } else {
+                // System.out.println("Not Selected value from the DropDown");
+                // throw new ElementNotFoundException("", "", "")
+            }
+        }
+    }
+
+    public static boolean selectByIndex(WebElement element, int index) {
+        boolean flag = false;
+        try {
+            Select s = new Select(element);
+            s.selectByIndex(index);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Option selected by Index: " + "<" + index + ">");
+            } else {
+                // System.out.println("Option not selected by Index: " + "<" + index + ">");
+            }
+        }
+    }
+
+    public static boolean selectByValue(WebElement element, String value) {
+        boolean flag = false;
+        try {
+            Select s = new Select(element);
+            s.selectByValue(value);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Option selected by Value:" + "<" + value + ">");
+            } else {
+                // System.out.println("Option not selected by Value");
+            }
+        }
+    }
+
+    public static boolean selectByVisibleText(String visibletext, WebElement ele) {
+
+        boolean flag = false;
+        try {
+            Select s = new Select(ele);
+            s.selectByVisibleText(visibletext);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Option selected by VisibleText: " + "<" + visibletext + ">");
+            } else {
+                // System.out.println("Option not selected by VisibleText");
+            }
+        }
+    }
+
+    public static void fluentWait(WebDriver driver, WebElement element, int timeOut) {
+        Wait<WebDriver> wait = null;
+        try {
+            wait = new FluentWait<WebDriver>((WebDriver) driver)
+                    .withTimeout(Duration.ofSeconds(20))
+                    .pollingEvery(Duration.ofSeconds(2))
+                    .ignoring(Exception.class);
+            wait.until(ExpectedConditions.visibilityOf(element));
+            element.click();
+        } catch (Exception e) {
+        }
+    }
+    public static String getCurrentTime() {
+        Logger log = LoggerHelper.getLogger(BasePage.class);
+        // System.out.println("CurrentTime performed....");
+        // log.info("CurrentTime performed....");
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
+        return currentDate;
+    }
+    public static boolean isPresent(WebDriver webdriver, By selector) {
+        try {
+            webdriver.findElement(selector);
+        } catch (NoSuchElementException e) {
+            // if element not exist return false
+            return false;
+        }
+        return true;
+    }
+
+    public static WebElement waitToBeClickable(WebDriver driver, By selector, int waitInterval) {
+        WebElement element = (new WebDriverWait(driver, Duration.ofSeconds(30))).until(ExpectedConditions.elementToBeClickable(selector));
+        return element;
+    }
+
+    public static WebElement waitForElementPresence(WebDriver driver, By selector, int waitInterval) {
+        WebElement element = (new WebDriverWait(driver, Duration.ofSeconds(30))).until(ExpectedConditions.presenceOfElementLocated(selector));
+        return element;
+    }
+
+    public static void waitForTitle(WebDriver driver, String title, int waitInterval) {
+        (new WebDriverWait(driver, Duration.ofSeconds(30))).until(ExpectedConditions.titleIs(title));
+    }
+
+    /***
+     * Sleep for specified number of milliseconds
+     * @param msec
+     * @param info
+     */
+    public static void sleep(long msec, String info) {
+        if (info != null) {
+            // System.out.println("Waiting " + (msec * .001) + " seconds :: " + info);
+        }
+        try {
+            Thread.sleep(msec);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /***
+     * Sleep for specified number of milliseconds
+     * @param msec
+     */
+    public static void sleep(long msec) {
+        sleep(msec, null);
+    }
+
+    public static void click(WebDriver driver, WebElement ele) {
+        Actions act = new Actions(driver);
+        // System.out.println("clicking on the element....: " + ele.getText());
+        act.moveToElement(ele).click().build().perform();
+    }
+
+    public static boolean findElement(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        try {
+            ele.isDisplayed();
+
+            flag = true;
+        } catch (Exception e) {
+
+            flag = false;
+        } finally {
+            if (flag) {
+                //// System.out.println("Successfully Found element as :" + ele.getText());
+            } else {
+                // System.out.println("Unable to locate element at");
+            }
+        }
+        return flag;
+    }
+
+    public static boolean isDisplayed(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        flag = findElement(driver, ele);
+        if (flag) {
+            flag = ele.isDisplayed();
+            if (flag) {
+                // System.out.println("The element is Displayed as:  " + "<" + ele.getText() + ">");
+            } else {
+                // System.out.println("The element is not Displayed");
+            }
+        } else {
+            // System.out.println("Not displayed: " + ele.getText());
+        }
+        return flag;
+    }
+
+    public static boolean isSelected(WebDriver driver, WebElement ele) {
+
+        boolean flag = false;
+        flag = findElement(driver, ele);
+        if (flag) {
+            flag = ele.isSelected();
+            if (flag) {
+                // System.out.println("The element is Selected:  " + "<" + ele + ">");
+            } else {
+                // System.out.println("The element is not Selected");
+            }
+        } else {
+            // System.out.println("Not selected ");
+        }
+        return flag;
+    }
+
+    public static boolean isEnabled(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        flag = findElement(driver, ele);
+        if (flag) {
+            flag = ele.isEnabled();
+            if (flag) {
+                // System.out.println("The element is Enabled: " + "<" + ele.getText() + ">");
+            } else {
+                // System.out.println("The element is not Enabled: " + "<" + ele.getText() + ">");
+            }
+        } else {
+            // System.out.println("Not Enabled ");
+        }
+        return flag;
+    }
+
+
+
+    public static boolean JSClick(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        try {
+            // WebElement element = driver.findElement(locator);
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", ele);
+            // driver.executeAsyncScript("arguments[0].click();", element);
+
+            flag = true;
+
+        } catch (Exception e) {
+            throw e;
+
+        } finally {
+            if (flag) {
+                // System.out.println("Click Action is performed");
+                // log.info("Click Action is performed");
+            } else if (!flag) {
+                // System.out.println("Click Action is not performed");
+            }
+        }
+        return flag;
+    }
+
+    public static boolean switchToFrameByIndex(WebDriver driver, int index) {
+        boolean flag = false;
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//iframe")));
+            driver.switchTo().frame(index);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Frame with index \"" + index + "\" is selected");
+                // log.info("Frame with index \"" + index + "\" is selected");
+            } else {
+                // System.out.println("Frame with index \"" + index + "\" is not selected");
+                // log.info("Frame with index \"" + index + "\" is not selected");
+
+            }
+        }
+    }
+    public static boolean switchToFrameById(WebDriver driver, String idValue) {
+        boolean flag = false;
+        try {
+            driver.switchTo().frame(idValue);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Frame with Id \"" + idValue + "\" is selected");
+                // log.info("Frame with Id \"" + idValue + "\" is selected");
+
+            } else {
+                // System.out.println("Frame with Id \"" + idValue + "\" is not selected");
+                // log.info("Frame with Id \"" + idValue + "\" is not selected");
+            }
+        }
+    }
+
+    /**
+     * This method switch the to frame using frame Name.
+     *
+     * @param nameValue : Frame Name wish to switch
+     */
+
+    public static boolean switchToFrameByName(WebDriver driver, String nameValue) {
+
+        boolean flag = false;
+        try {
+            driver.switchTo().frame(nameValue);
+            flag = true;
+            return true;
+        } catch (Exception e) {
+
+            return false;
+        } finally {
+            if (flag) {
+                // System.out.println("Frame with Name \"" + nameValue + "\" is selected");
+                // log.info("Frame with Name \"" + nameValue + "\" is selected");
+
+            } else if (!flag) {
+                // System.out.println("Frame with Name \"" + nameValue + "\" is not selected");
+                // log.info("Frame with Name \"" + nameValue + "\" is not selected");
+
+            }
+        }
+    }
+
+    public static boolean switchToDefaultFrame(WebDriver driver) {
+        boolean flag = false;
+        try {
+            driver.switchTo().defaultContent();
+            flag = true;
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            if (flag) {
+                // log.info("SelectFrame: Frame with Name is selected ");
+                // System.out.println("SelectFrame: Frame with Name is selected");
+            } else if (!flag) {
+                // log.info("SelectFrame: The Frame is not selected ");
+                // System.out.println("SelectFrame => The Frame is not selected");
+            }
+        }
+    }
+
+    public static void mouseOverElement(WebDriver driver, WebElement element) {
+        boolean flag = false;
+        try {
+            new Actions(driver).moveToElement(element).build().perform();
+            flag = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (flag) {
+                // System.out.println(" MouserOver Action is performed on: " + element.getText());
+            } else {
+                // System.out.println("MouseOver axe is not performed on");
+            }
+        }
+    }
+
+    public static boolean moveToElement(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        try {
+            // WebElement element = driver.findElement(locator);
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].scrollIntoView(true);", ele);
+            Actions actions = new Actions(driver);
+            // actions.moveToElement(driver.findElement(locator)).build().perform();
+            actions.moveToElement(ele).build().perform();
+            flag = true;
+            // System.out.println("MouseOver axe is not performed on");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return flag;
+    }
+
+    public static boolean mouseover(WebDriver driver, WebElement ele) {
+        boolean flag = false;
+        try {
+            new Actions(driver).moveToElement(ele).build().perform();
+            flag = true;
+            return true;
+
+        } catch (Exception e) {
+            return false;
+        } finally {
+            // System.out.println("MouseOver Action performed on");
+            // log.info("MouseOver Action performed on");
+
+            if (flag) {
+                // System.out.println("MouseOver Action performed on");
+            } else {
+
+            }
+
+        }
+    }
 }

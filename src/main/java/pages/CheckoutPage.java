@@ -1,6 +1,8 @@
 package pages;
 
 import actiondriver.Action;
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utilities.datarepo;
@@ -8,7 +10,7 @@ import utilities.datarepo;
 import java.io.IOException;
 
 public class CheckoutPage extends BasePage {
-
+    public static Logger log = LoggerHelper.getLogger(CheckoutPage.class);
     Action actor = new Action();
 
 public CheckoutPage() throws IOException {

@@ -1,7 +1,6 @@
 package com.steps;
 
 
-import helper.assertionHelper.VerificationHelper;
 import helper.wait.WaitHelper;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -196,15 +195,6 @@ public class AllSteps extends BasePage {
         getDriver().getCurrentUrl().contains(arg1);
 
     }
-/*    @And("user enters email and personal details in {string}")
-    public void userEntersEmailAndPersonalDetailsIn(String arg0) {
-        Assert.assertTrue(accountCreatePage.verifyYourPersonalDetailsTxtIsDisplayed(arg0));
-        accountCreatePage.enterFirstName(datarepo.firstName);
-        accountCreatePage.enterLastName(datarepo.lastName);
-        accountCreatePage.enterEmailAddress();
-        accountCreatePage.enterTelephoneNumber(datarepo.getTelephone());
-        accountCreatePage.enterFaxNumber(datarepo.getFaxNumber());
-    }*/
     @And("user is in personal details in {string}")
     public void userIsInPersonalDetailsIn(String arg0) {
         String result = accountCreatePage.getYourPersonalDetailsTxt(arg0);
@@ -233,14 +223,7 @@ public class AllSteps extends BasePage {
     }
     @And("user on Address Section as {string}")
     public void userOnAddressSectionAs(String arg0) throws Exception {
-        accountCreatePage.verifyYourAddressTxt().isDisplayed();
-        accountCreatePage.enterCompanyName(datarepo.getCompanyName());
-        accountCreatePage.enterAddress1(datarepo.getAddress1());
-        accountCreatePage.enterAddress2(datarepo.getAddress2());
-        accountCreatePage.enterCity(datarepo.getCity());
-        accountCreatePage.selectRegionState(datarepo.getRegionState());
-        accountCreatePage.enterZipCode(datarepo.getZipCode());
-        accountCreatePage.selectCountry(datarepo.getCountry());
+        Assert.assertEquals(accountCreatePage.getYourAddressTxt(),arg0);
     }
     @And("user enters Company name as {word}")
     public void userEntersCompanyNameAsYourCompanyName(String companyName) throws Exception {
@@ -264,7 +247,7 @@ public class AllSteps extends BasePage {
         accountCreatePage.selectRegionState(datarepo.regionState);
     }
     @And("user enters ZIP Code box as {string}")
-    public void userEntersZIPCodeBoxAsYourZIPCode(String yourZIPCode) {
+    public void userEntersZIPCodeBoxAsYourZIPCode(String yourZIPCode) throws Exception {
         accountCreatePage.enterZipCode(yourZIPCode);
     }
     @And("user enters Country box as {string}")
@@ -272,7 +255,7 @@ public class AllSteps extends BasePage {
         accountCreatePage.selectCountry(arg0);
     }
     @And("user enters all the login requested details as {string}")
-    public void userEntersAllTheLoginRequestedDetailsAs() throws IOException {
+    public void userEntersAllTheLoginRequestedDetailsAs() throws Exception {
         Assert.assertTrue(accountCreatePage.loginDetailsSectionText.isDisplayed());
         accountCreatePage.enterLoginName();
         accountCreatePage.enterPassword(datarepo.getPassword());
@@ -289,22 +272,22 @@ public class AllSteps extends BasePage {
     }
 
     @And("user enters loginName in Login name box")
-    public void userEntersLoginNameInLoginNameBox() {
+    public void userEntersLoginNameInLoginNameBox() throws Exception {
         accountCreatePage.enterLoginName();
     }
     @And("user enters password in Password box as {string}")
-    public void userEntersPasswordInPasswordBoxAs(String arg0) {
+    public void userEntersPasswordInPasswordBoxAs(String arg0) throws Exception {
         accountCreatePage.enterPassword(arg0);
     }
     @And("user enters Confirm password in Password Confirm box as {string}")
-    public void userEntersConfirmPasswordInPasswordConfirmBoxAs(String arg0) {
+    public void userEntersConfirmPasswordInPasswordConfirmBoxAs(String arg0) throws Exception {
         accountCreatePage.enterPasswordConfirm(arg0);
 
     }
     @And("^user subscribed to Newsletter and check on Yes$")
     public void userSubscribedToNewsletterAndCheckOnYes() throws IOException {
         accountCreatePage.tickOnSubscribeAsYes();
-        Assert.assertTrue(act.isSelected(getDriver(), accountCreatePage.subscribeYesRadioButton));
+        Assert.assertTrue(isSelected(getDriver(), accountCreatePage.subscribeYesRadioButton));
     }
     @And("user ticks on read and agree to the Privacy Policy radio button")
     public void userTicksOnReadAndAgreeToThePrivacyPolicyRadioButton() {
@@ -315,13 +298,11 @@ public class AllSteps extends BasePage {
     public void userGetsSuccessConfirmationMessageAs(String Actual) {
         String Expected = accountSuccessPage.getAccountHasBeenCreatedHeadingTxt();
         Assert.assertEquals(Expected, Actual);
-        VerificationHelper.verifyText(Expected, Actual);
     }
     @And("user gets congratulatory message as {string}")
     public void userGetsCongratulatoryMessageAs(String arg0) {
         String result = String.valueOf(accountSuccessPage.congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt().isDisplayed());
         Assert.assertTrue(Boolean.parseBoolean(result));
-        VerificationHelper.verifyText(result, arg0);
     }
     @And("user clicks on ContinueAccountSuccess button")
     public void userClicksOnContinueAccountSuccessButton() throws IOException, InterruptedException {

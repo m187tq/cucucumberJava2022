@@ -1,14 +1,14 @@
 package helper.assertionHelper;
 
-import pages.BasePage;
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
 
-public class VerificationHelper extends BasePage {
-
-
+public class VerificationHelper{
+	public static Logger log = LoggerHelper.getLogger(VerificationHelper.class);
 	public VerificationHelper(WebDriver driver) throws IOException {
 	}
 

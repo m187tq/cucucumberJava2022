@@ -1,6 +1,8 @@
 package pages;
 
 import helper.DropDown.DropDownHelper;
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ProductIDPage extends BasePage {
-
+	public static Logger log = LoggerHelper.getLogger(ProductIDPage.class);
 	public ProductIDPage() throws IOException {
 		super();
 	}

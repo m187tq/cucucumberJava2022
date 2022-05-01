@@ -5,11 +5,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 
-
 @CucumberOptions(
         features = {"src/test/java/com/features/"},
         glue = {"com/steps"},
-        tags = "@Login_Both",
+        //tags = "@Login_Both",
         //tags = "@LoginValidCredentials",
         //tags = "@RegistrationFunctionality",
         //tags = "@NegativeLogin",
@@ -25,6 +24,10 @@ import io.cucumber.testng.CucumberOptions;
                 "rerun:target/cucumber-reports/rerun.txt" })
 
 public class MainRunner extends AbstractTestNGCucumberTests {
-
-
+// Parallel scenario execution //
+/*    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }*/
 }

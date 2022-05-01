@@ -11,13 +11,12 @@ import java.util.List;
 
 
 public class IndexPage extends BasePage {
+    public static Logger log = LoggerHelper.getLogger(IndexPage.class);
+    TopNaviPage topMenu = new TopNaviPage();
     public IndexPage() throws IOException {
         super();
 
     }
-
-    Logger log = LoggerHelper.getLogger(IndexPage.class);
-    TopNaviPage topMenu = new TopNaviPage();
 
     public final String url = "https://automationteststore.com/";
 
@@ -75,16 +74,19 @@ public class IndexPage extends BasePage {
     }
 
     public boolean userOnLandingPageUrl() {
+        log.info("The current URL was...");
         return getDriver().getCurrentUrl().contains(datarepo.getBaseUrl());
 
     }
 
     public void goToUrl(String url) throws InterruptedException {
+        log.info("got current Page Url....: " + url);
         getDriver().get(url);
     }
 
     public String getCurrentPageUrl() throws InterruptedException {
-        act.fluentWait(getDriver(), logoImage, 10);
+        fluentWait(getDriver(), logoImage, 10);
+        log.info("The current URL was: " + url );
         return getDriver().getCurrentUrl();
     }
 

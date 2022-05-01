@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -8,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FooterPage extends BasePage {
-
+    public static Logger log = LoggerHelper.getLogger(FooterPage.class);
     public FooterPage() throws IOException {
         super();
     }

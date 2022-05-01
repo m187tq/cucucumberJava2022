@@ -37,7 +37,7 @@ Feature: Login Page - Login Functionality
       | loginName       | password      | loginValidationErrorMessage                  | pageTitle     |
       | WrongLoginName  | Manchester1   | Error: Incorrect login or password provided. | Account Login |
       | datastudioplace | WrongPassword | Error: Incorrect login or password provided. | Account Login |
-      | WrongLoginName  | WrongPassword | Error: Incorrect login or password provided. | Account Login |
-      |                 |               | Error: Incorrect login or password provided. | Account Login |
-      | datastudioplace |               | Error: Incorrect login or password provided. | Account Login |
-      |                 | Manchester1   | Error: Incorrect login or password provided. | Account Login |
+#      | WrongLoginName  | WrongPassword | Error: Incorrect login or password provided. | Account Login |
+#      |                 |               | Error: Incorrect login or password provided. | Account Login |
+#      | datastudioplace |               | Error: Incorrect login or password provided. | Account Login |
+#      |                 | Manchester1   | Error: Incorrect login or password provided. | Account Login |

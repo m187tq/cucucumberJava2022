@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class NavigationMenuPage extends BasePage {
-
+	public static Logger log = LoggerHelper.getLogger(NavigationMenuPage.class);
 
 	public NavigationMenuPage() throws IOException {
 		super();

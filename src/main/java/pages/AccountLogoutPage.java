@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.globalVars;
@@ -7,6 +9,7 @@ import utils.globalVars;
 import java.io.IOException;
 
 public class AccountLogoutPage extends BasePage {
+    public static Logger log = LoggerHelper.getLogger(AccountLogoutPage.class);
     public AccountLogoutPage() throws IOException {
         super();
     }
@@ -21,27 +24,33 @@ public class AccountLogoutPage extends BasePage {
     public WebElement accountLogoutTxt;
 
     public boolean validateSuccessfulLogOffProcess() throws InterruptedException {
-        return act.isDisplayed(getDriver(), saveToLogoutTxt);
+        log.info("Element are Displayed...");
+        return isDisplayed(getDriver(), saveToLogoutTxt);
     }
 
     public boolean validateAccountLogoutTxtIsDisplayed() {
-        return act.isDisplayed(getDriver(), accountLogoutTxt);
+        log.info("element is Displayed...");
+        return isDisplayed(getDriver(), accountLogoutTxt);
     }
 
     public String getCurrentUrl() throws InterruptedException {
+        log.info("Found(Got) the following URL...");
         return getDriver().getCurrentUrl();
     }
     public IndexPage clickOnLogoutContinueButton() throws IOException {
         IndexPage indexPage = new IndexPage();
         act.explicitWait(getDriver(), logoutAccountContinueBtn, globalVars.getDefaultExplicitTimeout());
         waitAndClickElement(logoutAccountContinueBtn);
-        act.fluentWait(getDriver(), indexPage.logoImage, globalVars.getDefaultExplicitTimeout());
+        log.info("Wait ti click on the element...");
+        fluentWait(getDriver(), indexPage.logoImage, globalVars.getDefaultExplicitTimeout());
+        log.info("Returning new IndexPage...");
         return new IndexPage();
 
     }
     public boolean validateLogoutContinueBtnIsDisplayed() {
         act.explicitWait(getDriver(), logoutAccountContinueBtn, globalVars.getDefaultExplicitTimeout());
-        return act.isDisplayed(getDriver(), logoutAccountContinueBtn);
+        log.info("Waiting for element to Displayed..");
+        return isDisplayed(getDriver(), logoutAccountContinueBtn);
     }
 
 

@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class AccountPage extends BasePage {
+    public static Logger log = LoggerHelper.getLogger(AccountPage.class);
     public AccountPage() throws IOException {
             super();
     }
@@ -48,7 +51,9 @@ public class AccountPage extends BasePage {
 
     public AccountLogoutPage clickOnLogoffBtn() throws IOException {
         waitFor(logoffBtn);
+        log.info("Wait ti click on the element...");
         waitForWebElementAndClick(logoffBtn);
+        log.info("return a new AccountLogoutPage...");
         return new AccountLogoutPage();
     }
 
@@ -82,39 +87,42 @@ public class AccountPage extends BasePage {
 
     public boolean validateUserAccountTextIsDisplayed() throws InterruptedException {
         waitFor(myAccountTxt);
-        Thread.sleep(2000);
-        return act.isDisplayed(getDriver(), myAccountTxt);
+        log.info("element is Displayed.."+myAccountTxt.getText());
+        return isDisplayed(getDriver(), myAccountTxt);
     }
 
     public String userProfileInfoMessage() {
         waitFor(userProfileMyAccountTxt);
+        log.info("Getting element text..." + userProfileMyAccountTxt.getText());
         return userProfileMyAccountTxt.getText();
     }
     public boolean homePageWelcomeMessage(String arg1) throws InterruptedException {
-        //act.fluentWait(getDriver(), welcomeBackTxt, globalVars.getDefaultExplicitTimeout());
-        Thread.sleep(3000);
-        return act.isDisplayed(getDriver(), welcomeBackTxt);
+        fluentWait(getDriver(), welcomeBackTxt, globalVars.getDefaultExplicitTimeout());
+        log.info("The element is Displayed as: " + "<" + welcomeBackTxt.getText() + ">");
+        return isDisplayed(getDriver(), welcomeBackTxt);
     }
 
-    public boolean accountDashboardMessage() {
-        return act.getText(getDriver(), accountDashboardTxt);
+    public String accountDashboardMessage() {
+        log.info("Getting element text..." + accountDashboardTxt.getText());
+        return getText(accountDashboardTxt);
     }
 
     public void clickOnLogoutBtn() {
         waitFor(logout);
         waitAndClickElement(logout);
+        log.info("Waited and clicked on the element...");
     }
     public AccountEditPage clickOnEditAccountDetailsLink() throws IOException, InterruptedException {
         waitFor(editAccountDetailsLink);
-        act.click(getDriver(), editAccountDetailsLink);
-        Thread.sleep(5000);
+        waitAndClickElement(editAccountDetailsLink);
+        log.info("Waited and clicked on the element...");
+        log.info("return new AccountEditPage.... ");
         return new AccountEditPage();
 
     }
-
     public String accountProfileSuccessfulUpdateMessage() {
-        act.explicitWait(getDriver(), successYourAccountSuccessfullyUpdatedTxt, globalVars.getExplicitWait());
-        //waitFor(successYourAccountSuccessfullyUpdatedTxt);
+        waitFor(successYourAccountSuccessfullyUpdatedTxt);
+        log.info("Waited and getting element text..." );
         return successYourAccountSuccessfullyUpdatedTxt.getText();
 
     }

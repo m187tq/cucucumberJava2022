@@ -1,13 +1,15 @@
 package pages;
 
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.io.IOException;
 
 public class ShippingReturnsPage extends BasePage {
-
+    public static Logger log = LoggerHelper.getLogger(ShippingReturnsPage.class);
     public ShippingReturnsPage() throws IOException {
         super();
     }

@@ -1,5 +1,7 @@
 package pages;
 
+import helper.logger.LoggerHelper;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class OrderStatusPage  extends BasePage {
-
+    public static Logger log = LoggerHelper.getLogger(OrderStatusPage.class);
     public OrderStatusPage() throws IOException {
         super();
     }

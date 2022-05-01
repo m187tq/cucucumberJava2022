@@ -9,6 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/com/features/"},
         glue = {"com/steps"},
+        tags = "@Login_Both",
         //tags = "@LoginValidCredentials",
         //tags = "@RegistrationFunctionality",
         //tags = "@NegativeLogin",

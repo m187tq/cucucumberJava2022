@@ -108,6 +108,13 @@ public class AllSteps extends BasePage {
     public void userIsOnIndexPageUrlAsAndPageTitleAs(String Url, String arg1) throws InterruptedException {
         goToIndexPage(Url);
     }
+
+    @Given("user on index page url as {string} and page title as {string}")
+    public void userOnIndexPageUrlAsAndPageTitleAs(String arg0, String arg1) throws InterruptedException {
+        goToIndexPage(arg0);
+        Assert.assertEquals(getCurrentURL(), arg0);
+        Assert.assertEquals(getPageTitle(), arg1);
+    }
     @When("user clicks on Login Or Register link")
     public void userClicksOnLoginOrRegisterLink() throws IOException {
         topNaviPage.clickOnLoginRegisterBtn();

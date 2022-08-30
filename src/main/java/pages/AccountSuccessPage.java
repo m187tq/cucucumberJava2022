@@ -1,15 +1,17 @@
 package pages;
 
+import helper.action.Action;
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.globalVars;
 
 import java.io.IOException;
 
 public class AccountSuccessPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(AccountSuccessPage.class);
+    Action act = new Action();
     public AccountSuccessPage() throws IOException {
         super();
     }
@@ -28,25 +30,19 @@ public class AccountSuccessPage extends BasePage {
     WebElement congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt;
 
     public boolean validateMyAccountTxtIsDisplayed() {
-        waitFor(myAccountText);
-        log.info("Waiting for element to Displayed.."+myAccountText.getText());
-        return isDisplayed(getDriver(), myAccountText);
+        return new VerificationHelper(getDriver()).isDisplayed(myAccountText);
+
     }
 
     public String getAccountHasBeenCreatedHeadingTxt() {
-        waitHelper.waitForElement(accountHasBeenCreatedHeadingTxt,globalVars.getExplicitWait());
-        log.info("Waiting and getting element text..." + accountHasBeenCreatedHeadingTxt.getText());
-        return accountHasBeenCreatedHeadingTxt.getText();
+        return new VerificationHelper(getDriver()).getText(accountHasBeenCreatedHeadingTxt);
     }
-    public WebElement congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt() {
-        act.fluentWait(getDriver(), accountHasBeenCreatedHeadingTxt, globalVars.getExplicitWait());
-        log.info("Waited and getting element text..." + accountHasBeenCreatedHeadingTxt.getText());
-        return congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt;
+    public String congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt() {
+        return new VerificationHelper(getDriver()).getText(congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt);
     }
 
     public AccountPage clickOnContinueAccountSuccessBtn() throws IOException, InterruptedException {
         waitForWebElementAndClick(continueAccountSuccessBtn);
-        log.info("Waiting to click on the element...");
         log.info("Clicked and returning new IndexPage...");
         return new AccountPage();
     }

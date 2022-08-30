@@ -29,7 +29,7 @@ public class DropDownHelper {
 
     public String getSelectedValue(WebElement element) {
         String value = new Select(element).getFirstSelectedOption().getText();
-        Log.info("WebELement : " + element + " Value : " + value);
+        Log.info("WebElement : " + element + " Value : " + value);
         return value;
     }
 

@@ -1,5 +1,6 @@
 package pages;
 
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -32,27 +33,32 @@ public class CheckoutSuccessPage extends BasePage {
     WebElement continueBtn;
 
     public String getOrderHasBeenProcessedHeading() {
-        return getText(yourOrderHasBeenProcessedHeadingTxt);
-
+        return new VerificationHelper(getDriver()).getText(yourOrderHasBeenProcessedHeadingTxt);
+    }
+    public boolean validateOrderHasBeenProcessedHeading() {
+        return new VerificationHelper(getDriver()).isDisplayed(yourOrderHasBeenProcessedHeadingTxt);
     }
     public String getOrderNumber() {
-        return getText(OrderNumberText);
-
+        return new VerificationHelper(getDriver()).getText(OrderNumberText);
+    }
+    public boolean validateOrderNumber() {
+        return new VerificationHelper(getDriver()).isDisplayed(OrderNumberText);
     }
     public String getViewInvoice() {
-        return getText(viewInvoiceText);
+        return new VerificationHelper(getDriver()).getText(viewInvoiceText);
     }
     public String getThankYouForShoppingWithUsTxt() {
-        return thankYouForShoppingWithUsTxt.getText();
+        return new VerificationHelper(getDriver()).getText(thankYouForShoppingWithUsTxt);
+    }
+    public boolean validateThankYouForShoppingWithUsTxt() {
+        return new VerificationHelper(getDriver()).isDisplayed(thankYouForShoppingWithUsTxt);
     }
     public InvoiceOrderPage clickOnInvoicePageLink() throws IOException {
         waitForWebElementAndClick(invoicePageLink);
         return new InvoiceOrderPage();
     }
     public IndexPage clickOnContinueBtn() throws InterruptedException, IOException {
-        waitFor(continueBtn);
         waitForWebElementAndClick(continueBtn);
-        waitFor(indexPage.logoImage);
         return new IndexPage();
 
     }

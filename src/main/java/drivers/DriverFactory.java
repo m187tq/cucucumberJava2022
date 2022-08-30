@@ -26,7 +26,7 @@ public class DriverFactory {
 
         switch (getBrowserType()) {
            case "chrome" -> {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/drivers/driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\drivers\\oldDriver\\chromedriver.exe");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                 driver = new ChromeDriver(chromeOptions);
@@ -40,7 +40,7 @@ public class DriverFactory {
                 break;
             }
         }
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         return driver;
     }
 

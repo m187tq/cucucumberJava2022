@@ -1,14 +1,19 @@
 package pages;
 
+import helper.action.Action;
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import utilities.datarepo;
 
 import java.io.IOException;
 
 public class AddToCartPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(AddToCartPage.class);
+    Action act = new Action();
     public AddToCartPage() throws IOException {
         super();
     }
@@ -32,26 +37,26 @@ public class AddToCartPage extends BasePage {
     private WebElement proceedToCheckOutBtn;
 
     public void enterQuantity(String quantity1) throws Throwable {
-        act.type(quantity, quantity1);
+        sendKeysToWebElement(quantity, quantity1);
     }
     public void selectSize(String size1) throws Throwable {
-        act.selectByVisibleText(size1, size);
+        selectByVisibleText(size1, size);
     }
     public void clickOnAddToCart() throws Throwable {
-        act.click(getDriver(), addToCartBtn);
+        waitForWebElementAndClick(addToCartBtn);
     }
     public boolean validateAddToCart() throws Throwable {
-        act.fluentWait(getDriver(), addToCartMessage, 10);
-        return act.isDisplayed(getDriver(), addToCartMessage);
+        fluentWait(getDriver(), addToCartMessage, datarepo.getTenSeconds());
+        return new VerificationHelper(getDriver()).isDisplayed(addToCartMessage);
     }
     public OrderConfirmationPage clickOnCheckOut() throws Throwable {
-        act.fluentWait(getDriver(), proceedToCheckOutBtn, 10);
-        act.JSClick(getDriver(), proceedToCheckOutBtn);
+        fluentWait(getDriver(), proceedToCheckOutBtn, datarepo.getTenSeconds());
+        waitForWebElementAndClick(proceedToCheckOutBtn);
         return new OrderConfirmationPage();
     }
     public void ClickOnAddToCartByIndex() {
         act.moveToElement(getDriver(),addToCartByIndex);
-        act.JSClick(getDriver(),addToCartByIndex);
+        waitForWebElementAndClick(addToCartByIndex);
     }
     public void setAddToCartByIndex(WebElement addToCartByIndex) {
         this.addToCartByIndex = addToCartByIndex;

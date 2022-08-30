@@ -18,7 +18,7 @@ Feature: Verification of Registration functionality
     And user enters Address One box as yourAddress1
     And user enters Address Two box as yourAddress2
     And user enters City box as yourCity
-    And user enters Region or State box as "Lancashire"
+    And user selects Region or State as "Lancashire"
     And user enters ZIP Code box as "M11 IPT"
     And user enters Country box as "United Kingdom"
     And user on login section as "Login Details"

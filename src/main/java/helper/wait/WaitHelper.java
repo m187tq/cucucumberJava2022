@@ -39,8 +39,8 @@ public class WaitHelper {
 	 * @param pollingEveryInMiliSec
 	 * @return
 	 */
-	private WebDriverWait getWait(int timeOutInSeconds, int pollingEveryInMiliSec) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.SIXTY_SECONDS));
+	public WebDriverWait getWait(int timeOutInSeconds, int pollingEveryInMiliSec) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(datarepo.getTenSeconds()));
 		wait.pollingEvery(Duration.ofMillis(pollingEveryInMiliSec));
 		wait.ignoring(NoSuchElementException.class);
 		wait.ignoring(ElementNotVisibleException.class);

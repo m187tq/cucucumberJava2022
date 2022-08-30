@@ -1,0 +1,1153 @@
+2022-08-25 13:08:06 INFO  LoggerHelper:23 - logger is configured
+2022-08-25 13:08:17 INFO  LoggerHelper:24 - logger is configured
+2022-08-25 13:08:17 INFO  LoggerHelper:25 - logger is configured
+2022-08-25 13:08:360 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 13:08:484 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 13:08:661 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 13:08:823 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 13:08:61 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 13:08:232 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 13:08:599 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 13:08:992 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 13:08:111 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 13:08:368 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 13:08:168 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 13:08:870 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 13:08:402 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 13:08:406 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 13:08:416 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 13:08:349 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 13:08:818 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 13:08:544 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 13:08:553 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 13:08:256 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 13:08:459 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 13:08:694 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 13:08:876 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 13:08:143 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 13:08:372 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:159 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:427 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:804 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:230 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:187 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:152 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:327 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:334 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:572 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:537 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:344 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:180 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:187 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:525 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:680 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:927 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:150 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:03 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:704 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:632 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:67 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:770 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:269 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:410 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:907 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:911 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:915 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:34 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:26 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:875 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:674 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:681 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:01 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:202 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:443 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:636 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:901 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:79 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:752 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:232 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:383 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:607 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:469 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:303 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:899 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:904 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:854 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:594 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:950 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:936 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:942 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:692 INFO  AccountCreatePage:234 - Entered text :M11 IPT
+2022-08-25 14:08:791 INFO  AccountCreatePage:239 - Selected Visible Text :United Kingdom
+2022-08-25 14:08:791 INFO  AccountCreatePage:243 - getting Your Address Txt...
+2022-08-25 14:08:660 INFO  AccountCreatePage:249 - Entered generated Random loginName.... 
+2022-08-25 14:08:411 INFO  AccountCreatePage:254 - Entered password text :Password@123
+2022-08-25 14:08:238 INFO  AccountCreatePage:259 - Entered Confirm password text :Password@123
+2022-08-25 14:08:774 INFO  AccountCreatePage:270 - Waited and clicked on the element: 
+2022-08-25 14:08:791 INFO  AccountCreatePage:287 - Waited and clicked on the element: 
+2022-08-25 14:08:30 INFO  AccountCreatePage:300 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 14:08:190 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 14:08:676 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:853 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:90 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:247 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:532 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:717 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:552 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:357 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:588 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:982 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:119 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:160 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:533 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:542 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:945 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:545 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:405 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:623 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:639 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:09 INFO  AccountCreatePage:235 - Entered text :M11 IPT
+2022-08-25 14:08:166 INFO  AccountCreatePage:240 - Selected Visible Text :United Kingdom
+2022-08-25 14:08:166 INFO  AccountCreatePage:244 - getting Your Address Txt...
+2022-08-25 14:08:466 INFO  AccountCreatePage:250 - Entered generated Random loginName.... 
+2022-08-25 14:08:429 INFO  AccountCreatePage:255 - Entered password text :Password@123
+2022-08-25 14:08:452 INFO  AccountCreatePage:260 - Entered Confirm password text :Password@123
+2022-08-25 14:08:438 INFO  AccountCreatePage:271 - Waited and clicked on the element: 
+2022-08-25 14:08:912 INFO  AccountCreatePage:288 - Waited and clicked on the element: 
+2022-08-25 14:08:787 INFO  AccountCreatePage:301 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 14:08:330 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 14:08:956 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:166 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:734 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:963 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:563 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:127 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:395 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:786 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:949 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:226 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:101 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:429 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:246 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:252 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:442 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:252 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:175 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:139 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:148 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:174 INFO  AccountCreatePage:235 - Entered text :M11 IPT
+2022-08-25 14:08:260 INFO  AccountCreatePage:240 - Selected Visible Text :United Kingdom
+2022-08-25 14:08:476 INFO  AccountCreatePage:244 - getting Your Address Txt...
+2022-08-25 14:08:184 INFO  AccountCreatePage:250 - Entered generated Random loginName.... 
+2022-08-25 14:08:82 INFO  AccountCreatePage:255 - Entered password text :Password@123
+2022-08-25 14:08:30 INFO  AccountCreatePage:260 - Entered Confirm password text :Password@123
+2022-08-25 14:08:315 INFO  AccountCreatePage:271 - Waited and clicked on the element: 
+2022-08-25 14:08:833 INFO  AccountCreatePage:288 - Waited and clicked on the element: 
+2022-08-25 14:08:998 INFO  AccountCreatePage:301 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 14:08:318 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 14:08:900 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:54 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:329 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:563 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:952 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:337 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:204 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:613 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:766 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:112 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:88 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:46 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:751 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:756 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:570 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:699 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:494 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:171 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:179 INFO  AccountCreatePage:227 - entering yourAddressState..Lancashire
+2022-08-25 14:08:884 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:316 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:550 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:932 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:311 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:492 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:140 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:510 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:683 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:950 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:793 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:576 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:120 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:125 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:98 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:257 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:185 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:827 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:549 INFO  AccountCreatePage:233 - Entered text :M11 IPT
+2022-08-25 14:08:642 INFO  AccountCreatePage:238 - Selected Visible Text :United Kingdom
+2022-08-25 14:08:642 INFO  AccountCreatePage:242 - getting Your Address Txt...
+2022-08-25 14:08:458 INFO  AccountCreatePage:248 - Entered generated Random loginName.... 
+2022-08-25 14:08:202 INFO  AccountCreatePage:253 - Entered password text :Password@123
+2022-08-25 14:08:909 INFO  AccountCreatePage:258 - Entered Confirm password text :Password@123
+2022-08-25 14:08:438 INFO  AccountCreatePage:269 - Waited and clicked on the element: 
+2022-08-25 14:08:85 INFO  AccountCreatePage:286 - Waited and clicked on the element: 
+2022-08-25 14:08:529 INFO  AccountCreatePage:299 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 14:08:659 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 14:08:723 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 14:08:412 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 14:08:02 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 14:08:308 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 14:08:970 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 14:08:681 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 14:08:382 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 14:08:989 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 14:08:195 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 14:08:520 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 14:08:828 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 14:08:143 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 14:08:602 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 14:08:610 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 14:08:596 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 14:08:862 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 14:08:610 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 14:08:196 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 14:08:204 INFO  AccountCreatePage:227 - selecting region/ state....Lancashire
+2022-08-25 15:08:268 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 15:08:454 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 15:08:720 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 15:08:923 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 15:08:218 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 15:08:402 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 15:08:157 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 15:08:604 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 15:08:776 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 15:08:59 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 15:08:941 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 15:08:921 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 15:08:803 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 15:08:808 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 15:08:606 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 15:08:539 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 15:08:413 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 15:08:105 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 15:08:111 INFO  AccountCreatePage:227 - selecting region/ state....Lancashire
+2022-08-25 15:08:22 INFO  AccountCreatePage:233 - Entered text :M11 IPT
+2022-08-25 15:08:143 INFO  AccountCreatePage:238 - Selected Visible Text :United Kingdom
+2022-08-25 15:08:143 INFO  AccountCreatePage:242 - getting Your Address Txt...
+2022-08-25 15:08:128 INFO  AccountCreatePage:248 - Entered generated Random loginName.... 
+2022-08-25 15:08:00 INFO  AccountCreatePage:253 - Entered password text :Password@123
+2022-08-25 15:08:494 INFO  AccountCreatePage:258 - Entered Confirm password text :Password@123
+2022-08-25 15:08:383 INFO  AccountCreatePage:269 - Waited and clicked on the element: 
+2022-08-25 15:08:380 INFO  AccountCreatePage:286 - Waited and clicked on the element: 
+2022-08-25 15:08:973 INFO  AccountCreatePage:299 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 15:08:148 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 15:08:521 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 15:08:706 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 15:08:933 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 15:08:462 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 15:08:00 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 15:08:170 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 15:08:765 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 15:08:781 INFO  AccountCreatePage:146 - getting the element text...
+2022-08-25 15:08:930 INFO  AccountCreatePage:156 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 15:08:387 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-25 15:08:448 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-25 15:08:453 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-25 15:08:72 INFO  AccountCreatePage:184 - Entered text :07400000001
+2022-08-25 15:08:72 INFO  AccountCreatePage:202 - get Your Address Txt...
+2022-08-25 15:08:199 INFO  AccountCreatePage:208 - Entered text :YourCompanyName
+2022-08-25 15:08:14 INFO  AccountCreatePage:213 - Entered text :yourAddress1
+2022-08-25 15:08:809 INFO  AccountCreatePage:218 - Entered text :yourAddress2
+2022-08-25 15:08:584 INFO  AccountCreatePage:223 - Entered text :yourCity
+2022-08-25 15:08:593 INFO  AccountCreatePage:227 - selecting region/ state....Lancashire
+2022-08-25 15:08:356 INFO  AccountCreatePage:234 - Entered text :M11 IPT
+2022-08-25 15:08:484 INFO  AccountCreatePage:239 - Selected Visible Text :United Kingdom
+2022-08-25 15:08:500 INFO  AccountCreatePage:243 - getting Your Address Txt...
+2022-08-25 15:08:373 INFO  AccountCreatePage:249 - Entered generated Random loginName.... 
+2022-08-25 15:08:267 INFO  AccountCreatePage:254 - Entered password text :Password@123
+2022-08-25 15:08:494 INFO  AccountCreatePage:259 - Entered Confirm password text :Password@123
+2022-08-25 15:08:235 INFO  AccountCreatePage:270 - Waited and clicked on the element: 
+2022-08-25 15:08:737 INFO  AccountCreatePage:287 - Waited and clicked on the element: 
+2022-08-25 15:08:198 INFO  AccountCreatePage:300 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 15:08:334 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 15:08:391 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 15:08:888 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 15:08:211 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 15:08:407 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 15:08:326 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 15:08:621 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 15:08:355 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 15:08:19 INFO  AccountCreatePage:151 - getting the element text...
+2022-08-25 15:08:243 INFO  AccountCreatePage:161 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 15:08:560 INFO  AccountCreatePage:166 - Entered text :FirstName
+2022-08-25 15:08:379 INFO  AccountCreatePage:172 - Entered text :LastName
+2022-08-25 15:08:814 INFO  AccountCreatePage:183 - Entered text :07400000000
+2022-08-25 15:08:722 INFO  AccountCreatePage:189 - Entered text :07400000001
+2022-08-25 15:08:735 INFO  AccountCreatePage:207 - get Your Address Txt...
+2022-08-25 15:08:801 INFO  AccountCreatePage:213 - Entered text :YourCompanyName
+2022-08-25 15:08:706 INFO  AccountCreatePage:218 - Entered text :yourAddress1
+2022-08-25 15:08:788 INFO  AccountCreatePage:223 - Entered text :yourAddress2
+2022-08-25 15:08:21 INFO  AccountCreatePage:228 - Entered text :yourCity
+2022-08-25 15:08:29 INFO  AccountCreatePage:232 - selecting region/ state....Lancashire
+2022-08-25 15:08:204 INFO  AccountCreatePage:248 - Entered text :M11 IPT
+2022-08-25 15:08:357 INFO  AccountCreatePage:253 - Selected Visible Text :United Kingdom
+2022-08-25 15:08:357 INFO  AccountCreatePage:257 - getting Your Address Txt...
+2022-08-25 15:08:492 INFO  AccountCreatePage:263 - Entered generated Random loginName.... 
+2022-08-25 15:08:226 INFO  AccountCreatePage:268 - Entered password text :Password@123
+2022-08-25 15:08:830 INFO  AccountCreatePage:273 - Entered Confirm password text :Password@123
+2022-08-25 15:08:426 INFO  AccountCreatePage:284 - Waited and clicked on the element: 
+2022-08-25 15:08:14 INFO  AccountCreatePage:301 - Waited and clicked on the element: 
+2022-08-25 15:08:21 INFO  AccountCreatePage:314 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 15:08:154 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 15:08:948 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 15:08:657 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 15:08:795 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 15:08:578 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 15:08:392 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 15:08:574 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 15:08:633 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 15:08:17 INFO  AccountCreatePage:151 - getting the element text...
+2022-08-25 15:08:209 INFO  AccountCreatePage:161 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 15:08:435 INFO  AccountCreatePage:166 - Entered text :FirstName
+2022-08-25 15:08:986 INFO  AccountCreatePage:172 - Entered text :LastName
+2022-08-25 15:08:714 INFO  AccountCreatePage:183 - Entered text :07400000000
+2022-08-25 15:08:308 INFO  AccountCreatePage:189 - Entered text :07400000001
+2022-08-25 15:08:315 INFO  AccountCreatePage:207 - get Your Address Txt...
+2022-08-25 15:08:408 INFO  AccountCreatePage:213 - Entered text :YourCompanyName
+2022-08-25 15:08:248 INFO  AccountCreatePage:218 - Entered text :yourAddress1
+2022-08-25 15:08:187 INFO  AccountCreatePage:223 - Entered text :yourAddress2
+2022-08-25 15:08:903 INFO  AccountCreatePage:228 - Entered text :yourCity
+2022-08-25 15:08:910 INFO  AccountCreatePage:232 - selecting region/ state....Lancashire
+2022-08-25 15:08:576 INFO  AccountCreatePage:247 - Entered text :M11 IPT
+2022-08-25 15:08:284 INFO  AccountCreatePage:252 - Selected Visible Text :United Kingdom
+2022-08-25 15:08:284 INFO  AccountCreatePage:256 - getting Your Address Txt...
+2022-08-25 15:08:136 INFO  AccountCreatePage:262 - Entered generated Random loginName.... 
+2022-08-25 15:08:872 INFO  AccountCreatePage:267 - Entered password text :Password@123
+2022-08-25 15:08:604 INFO  AccountCreatePage:272 - Entered Confirm password text :Password@123
+2022-08-25 15:08:203 INFO  AccountCreatePage:283 - Waited and clicked on the element: 
+2022-08-25 15:08:788 INFO  AccountCreatePage:300 - Waited and clicked on the element: 
+2022-08-25 15:08:78 INFO  AccountCreatePage:313 - Waited for element on AccountSuccessPage : CREATE ACCOUNT
+2022-08-25 15:08:272 INFO  AccountSuccessPage:38 - Waiting and getting element text...CREATE ACCOUNT
+2022-08-25 16:08:265 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 16:08:397 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 16:08:566 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 16:08:731 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 16:08:999 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 16:08:176 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 16:08:670 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 16:08:53 INFO  AccountCreatePage:151 - getting the element text...
+2022-08-25 16:08:262 INFO  AccountCreatePage:161 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 16:08:530 INFO  AccountCreatePage:166 - Entered text :FirstName
+2022-08-25 16:08:489 INFO  AccountCreatePage:172 - Entered text :LastName
+2022-08-25 16:08:640 INFO  AccountCreatePage:183 - Entered text :07400000000
+2022-08-25 16:08:206 INFO  AccountCreatePage:189 - Entered text :07400000001
+2022-08-25 16:08:212 INFO  AccountCreatePage:207 - get Your Address Txt...
+2022-08-25 16:08:298 INFO  AccountCreatePage:213 - Entered text :YourCompanyName
+2022-08-25 16:08:160 INFO  AccountCreatePage:218 - Entered text :yourAddress1
+2022-08-25 16:08:926 INFO  AccountCreatePage:223 - Entered text :yourAddress2
+2022-08-25 16:08:831 INFO  AccountCreatePage:228 - Entered text :yourCity
+2022-08-25 16:08:836 INFO  AccountCreatePage:232 - selecting region/ state....
+2022-08-25 16:08:781 INFO  AccountCreatePage:240 - Entered text :M11 IPT
+2022-08-25 16:08:898 INFO  AccountCreatePage:245 - Selected Visible Text :United Kingdom
+2022-08-25 16:08:898 INFO  AccountCreatePage:249 - getting Your Address Txt...
+2022-08-25 16:08:884 INFO  AccountCreatePage:255 - Entered generated Random loginName.... 
+2022-08-25 16:08:661 INFO  AccountCreatePage:260 - Entered password text :Password@123
+2022-08-25 16:08:788 INFO  AccountCreatePage:265 - Entered Confirm password text :Password@123
+2022-08-25 16:08:303 INFO  AccountCreatePage:276 - Waited and clicked on the element: 
+2022-08-25 16:08:940 INFO  AccountCreatePage:293 - Waited and clicked on the element: 
+2022-08-25 16:08:282 INFO  AccountCreatePage:306 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:394 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:675 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-25 16:08:732 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:224 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-25 16:08:225 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-25 16:08:570 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-25 16:08:948 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-25 16:08:84 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 16:08:84 INFO  AccountLogoutPage:52 - Waiting for element to Displayed..
+2022-08-25 16:08:247 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 16:08:20 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-25 16:08:433 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-25 16:08:701 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 16:08:963 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 16:08:182 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 16:08:476 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 16:08:687 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 16:08:124 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 16:08:403 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 16:08:145 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 16:08:591 INFO  AccountCreatePage:153 - getting the element text...
+2022-08-25 16:08:863 INFO  AccountCreatePage:163 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 16:08:152 INFO  AccountCreatePage:168 - Entered text :FirstName
+2022-08-25 16:08:366 INFO  AccountCreatePage:174 - Entered text :LastName
+2022-08-25 16:08:75 INFO  AccountCreatePage:185 - Entered text :07400000000
+2022-08-25 16:08:701 INFO  AccountCreatePage:191 - Entered text :07400000001
+2022-08-25 16:08:708 INFO  AccountCreatePage:209 - get Your Address Txt...
+2022-08-25 16:08:156 INFO  AccountCreatePage:215 - Entered text :YourCompanyName
+2022-08-25 16:08:239 INFO  AccountCreatePage:220 - Entered text :yourAddress1
+2022-08-25 16:08:415 INFO  AccountCreatePage:225 - Entered text :yourAddress2
+2022-08-25 16:08:383 INFO  AccountCreatePage:230 - Entered text :yourCity
+2022-08-25 16:08:389 INFO  AccountCreatePage:234 - selecting region/ state....
+2022-08-25 16:08:996 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 16:08:469 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 16:08:625 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 16:08:845 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 16:08:30 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 16:08:369 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 16:08:738 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 16:08:357 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 16:08:723 INFO  AccountCreatePage:154 - getting the element text...
+2022-08-25 16:08:933 INFO  AccountCreatePage:164 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 16:08:288 INFO  AccountCreatePage:169 - Entered text :FirstName
+2022-08-25 16:08:161 INFO  AccountCreatePage:175 - Entered text :LastName
+2022-08-25 16:08:945 INFO  AccountCreatePage:186 - Entered text :07400000000
+2022-08-25 16:08:474 INFO  AccountCreatePage:192 - Entered text :07400000001
+2022-08-25 16:08:478 INFO  AccountCreatePage:210 - get Your Address Txt...
+2022-08-25 16:08:477 INFO  AccountCreatePage:216 - Entered text :YourCompanyName
+2022-08-25 16:08:367 INFO  AccountCreatePage:221 - Entered text :yourAddress1
+2022-08-25 16:08:783 INFO  AccountCreatePage:226 - Entered text :yourAddress2
+2022-08-25 16:08:421 INFO  AccountCreatePage:231 - Entered text :yourCity
+2022-08-25 16:08:426 INFO  AccountCreatePage:235 - selecting region/ state....
+2022-08-25 16:08:262 INFO  AccountCreatePage:245 - Entered text :M11 IPT
+2022-08-25 16:08:373 INFO  AccountCreatePage:250 - Selected Visible Text :United Kingdom
+2022-08-25 16:08:373 INFO  AccountCreatePage:254 - getting Your Address Txt...
+2022-08-25 16:08:283 INFO  AccountCreatePage:260 - Entered generated Random loginName.... 
+2022-08-25 16:08:06 INFO  AccountCreatePage:265 - Entered password text :Password@123
+2022-08-25 16:08:719 INFO  AccountCreatePage:270 - Entered Confirm password text :Password@123
+2022-08-25 16:08:221 INFO  AccountCreatePage:281 - Waited and clicked on the element: 
+2022-08-25 16:08:775 INFO  AccountCreatePage:298 - Waited and clicked on the element: 
+2022-08-25 16:08:88 INFO  AccountCreatePage:311 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:208 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:473 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-25 16:08:523 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 16:08:477 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-25 16:08:479 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-25 16:08:963 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-25 16:08:431 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-25 16:08:557 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 16:08:557 INFO  AccountLogoutPage:52 - Waiting for element to Displayed..
+2022-08-25 16:08:724 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 16:08:340 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-25 16:08:872 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-25 17:08:355 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 17:08:588 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 17:08:454 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 17:08:748 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 17:08:84 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 17:08:288 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 17:08:904 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 17:08:335 INFO  AccountCreatePage:151 - getting the element text...
+2022-08-25 17:08:460 INFO  AccountCreatePage:161 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 17:08:783 INFO  AccountCreatePage:166 - Entered text :FirstName
+2022-08-25 17:08:594 INFO  AccountCreatePage:172 - Entered text :LastName
+2022-08-25 17:08:905 INFO  AccountCreatePage:183 - Entered text :07400000000
+2022-08-25 17:08:74 INFO  AccountCreatePage:189 - Entered text :07400000001
+2022-08-25 17:08:82 INFO  AccountCreatePage:207 - get Your Address Txt...
+2022-08-25 17:08:368 INFO  AccountCreatePage:213 - Entered text :YourCompanyName
+2022-08-25 17:08:151 INFO  AccountCreatePage:218 - Entered text :yourAddress1
+2022-08-25 17:08:851 INFO  AccountCreatePage:223 - Entered text :yourAddress2
+2022-08-25 17:08:600 INFO  AccountCreatePage:228 - Entered text :yourCity
+2022-08-25 17:08:605 INFO  AccountCreatePage:232 - selecting region/ state....
+2022-08-25 17:08:858 INFO  AccountCreatePage:243 - Entered text :M11 IPT
+2022-08-25 17:08:11 INFO  AccountCreatePage:248 - Selected Visible Text :United Kingdom
+2022-08-25 17:08:11 INFO  AccountCreatePage:252 - getting Your Address Txt...
+2022-08-25 17:08:943 INFO  AccountCreatePage:258 - Entered generated Random loginName.... 
+2022-08-25 17:08:651 INFO  AccountCreatePage:263 - Entered password text :Password@123
+2022-08-25 17:08:335 INFO  AccountCreatePage:268 - Entered Confirm password text :Password@123
+2022-08-25 17:08:796 INFO  AccountCreatePage:279 - Waited and clicked on the element: 
+2022-08-25 17:08:426 INFO  AccountCreatePage:296 - Waited and clicked on the element: 
+2022-08-25 17:08:295 INFO  AccountCreatePage:309 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:419 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:712 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-25 17:08:787 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:189 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-25 17:08:191 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-25 17:08:707 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-25 17:08:297 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-25 17:08:448 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 17:08:448 INFO  AccountLogoutPage:52 - Waiting for element to Displayed..
+2022-08-25 17:08:630 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 17:08:223 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-25 17:08:106 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-25 17:08:428 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-25 17:08:561 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-25 17:08:202 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-25 17:08:408 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-25 17:08:746 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-25 17:08:947 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-25 17:08:850 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-25 17:08:505 INFO  AccountCreatePage:151 - getting the element text...
+2022-08-25 17:08:867 INFO  AccountCreatePage:161 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-25 17:08:53 INFO  AccountCreatePage:166 - Entered text :FirstName
+2022-08-25 17:08:286 INFO  AccountCreatePage:172 - Entered text :LastName
+2022-08-25 17:08:825 INFO  AccountCreatePage:183 - Entered text :07400000000
+2022-08-25 17:08:770 INFO  AccountCreatePage:189 - Entered text :07400000001
+2022-08-25 17:08:787 INFO  AccountCreatePage:207 - get Your Address Txt...
+2022-08-25 17:08:26 INFO  AccountCreatePage:213 - Entered text :YourCompanyName
+2022-08-25 17:08:84 INFO  AccountCreatePage:218 - Entered text :yourAddress1
+2022-08-25 17:08:982 INFO  AccountCreatePage:223 - Entered text :yourAddress2
+2022-08-25 17:08:173 INFO  AccountCreatePage:228 - Entered text :yourCity
+2022-08-25 17:08:178 INFO  AccountCreatePage:232 - selecting region/ state....
+2022-08-25 17:08:586 INFO  AccountCreatePage:240 - Entered text :M11 IPT
+2022-08-25 17:08:790 INFO  AccountCreatePage:245 - Selected Visible Text :United Kingdom
+2022-08-25 17:08:806 INFO  AccountCreatePage:249 - getting Your Address Txt...
+2022-08-25 17:08:311 INFO  AccountCreatePage:255 - Entered generated Random loginName.... 
+2022-08-25 17:08:470 INFO  AccountCreatePage:260 - Entered password text :Password@123
+2022-08-25 17:08:374 INFO  AccountCreatePage:265 - Entered Confirm password text :Password@123
+2022-08-25 17:08:162 INFO  AccountCreatePage:276 - Waited and clicked on the element: 
+2022-08-25 17:08:836 INFO  AccountCreatePage:293 - Waited and clicked on the element: 
+2022-08-25 17:08:611 INFO  AccountCreatePage:306 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:823 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:127 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-25 17:08:192 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-25 17:08:702 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-25 17:08:705 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-25 17:08:977 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-25 17:08:436 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-25 17:08:569 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 17:08:569 INFO  AccountLogoutPage:52 - Waiting for element to Displayed..
+2022-08-25 17:08:770 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-25 17:08:502 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-25 17:08:468 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-27 10:08:449 INFO  TopNaviPage:79 - Waited and clicked on the element: Login or register
+2022-08-27 10:08:699 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-27 10:08:953 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-27 10:08:118 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-27 10:08:425 INFO  AccountLoginPage:139 - Waited and verify element is Displayed:  Register Account  
+2022-08-27 10:08:824 INFO  AccountLoginPage:150 - Waited and clicked on the element...
+2022-08-27 10:08:04 INFO  AccountLoginPage:153 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-27 10:08:401 INFO  AccountCreatePage:147 - getting the element text...
+2022-08-27 10:08:564 INFO  AccountCreatePage:157 - getting the element text => <yourPersonalDetailsTxt>
+2022-08-27 10:08:36 INFO  AccountCreatePage:162 - Entered text :FirstName
+2022-08-27 10:08:822 INFO  AccountCreatePage:168 - Entered text :LastName
+2022-08-27 10:08:647 INFO  AccountCreatePage:179 - Entered text :07400000000
+2022-08-27 10:08:291 INFO  AccountCreatePage:185 - Entered text :07400000001
+2022-08-27 10:08:299 INFO  AccountCreatePage:203 - get Your Address Txt...
+2022-08-27 10:08:373 INFO  AccountCreatePage:209 - Entered text :YourCompanyName
+2022-08-27 10:08:162 INFO  AccountCreatePage:214 - Entered text :yourAddress1
+2022-08-27 10:08:918 INFO  AccountCreatePage:219 - Entered text :yourAddress2
+2022-08-27 10:08:591 INFO  AccountCreatePage:224 - Entered text :yourCity
+2022-08-27 10:08:596 INFO  AccountCreatePage:228 - selecting region/ state....
+2022-08-27 10:08:502 INFO  AccountCreatePage:235 - Entered text :M11 IPT
+2022-08-27 10:08:669 INFO  AccountCreatePage:240 - Selected Visible Text :United Kingdom
+2022-08-27 10:08:676 INFO  AccountCreatePage:244 - getting Your Address Txt...
+2022-08-27 10:08:876 INFO  VerificationHelper:21 - element is Displayed..Login Details
+2022-08-27 10:08:945 INFO  VerificationHelper:78 - element text is ..Login Details
+2022-08-27 10:08:859 INFO  AccountCreatePage:254 - Entered generated Random loginName.... 
+2022-08-27 10:08:628 INFO  AccountCreatePage:259 - Entered password text :Password@123
+2022-08-27 10:08:409 INFO  AccountCreatePage:264 - Entered Confirm password text :Password@123
+2022-08-27 10:08:882 INFO  AccountCreatePage:274 - Waited and clicked on the element: 
+2022-08-27 10:08:507 INFO  AccountCreatePage:289 - Waited and clicked on the element: 
+2022-08-27 10:08:665 INFO  AccountCreatePage:302 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-27 10:08:790 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-27 10:08:118 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-27 10:08:195 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-27 10:08:626 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-27 10:08:630 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-27 10:08:595 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-27 10:08:967 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-27 10:08:104 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-27 10:08:105 INFO  AccountLogoutPage:52 - Waiting for element to Displayed..
+2022-08-27 10:08:311 INFO  BasePage:793 - explicitWait Waiting for 15 SECONDS.....
+2022-08-27 10:08:674 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-27 10:08:46 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-27 10:08:158 INFO  BasePage:34 - click on ""
+2022-08-27 10:08:387 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 10:08:503 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 10:08:506 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 10:08:507 INFO  BasePage:50 - Successfully Found element: SHOPPING CART
+2022-08-27 10:08:808 INFO  BasePage:68 - The element is Displayed...: SHOPPING CART
+2022-08-27 10:08:131 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 10:08:335 INFO  BasePage:104 - The element is Enabled...: 
+2022-08-27 10:08:863 INFO  BasePage:34 - click on ""
+2022-08-27 10:08:176 INFO  BasePage:124 - Entered text :4
+2022-08-27 10:08:179 INFO  BasePage:133 - Successfully entered value...: 4
+2022-08-27 10:08:08 INFO  CheckoutCartPage:130 - Your Shopping Cart Is Empty and Displayed...
+2022-08-27 10:08:353 INFO  BasePage:50 - Successfully Found element: Your shopping cart is empty!
+Continue
+2022-08-27 10:08:585 INFO  BasePage:68 - The element is Displayed...: Your shopping cart is empty!
+Continue
+2022-08-27 10:08:76 INFO  BasePage:34 - click on ""
+2022-08-27 10:08:655 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 10:08:573 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 10:08:575 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 10:08:567 INFO  BasePage:34 - click on ""
+2022-08-27 10:08:894 INFO  BasePage:124 - Entered text :6
+2022-08-27 10:08:896 INFO  BasePage:133 - Successfully entered value...: 6
+2022-08-27 10:08:734 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 10:08:920 INFO  BasePage:68 - The element is Displayed...: 
+2022-08-27 10:08:829 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-27 10:08:966 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-27 10:08:101 INFO  AccountLoginPage:70 - Sent data to the element: datastudioplace
+2022-08-27 10:08:200 INFO  AccountLoginPage:75 - Sent data to the element: Manchester1
+2022-08-27 10:08:697 INFO  AccountLoginPage:79 - Waited and clicked on the element...
+2022-08-27 10:08:822 INFO  AccountLoginPage:81 - Returning to new AccountPage.welcomeBackTxt
+2022-08-27 11:08:491 INFO  BasePage:34 - click on ""
+2022-08-27 11:08:461 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:375 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:377 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:491 INFO  BasePage:50 - Successfully Found element: SHOPPING CART
+2022-08-27 11:08:679 INFO  BasePage:68 - The element is Displayed...: SHOPPING CART
+2022-08-27 11:08:917 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 11:08:72 INFO  BasePage:104 - The element is Enabled...: 
+2022-08-27 11:08:976 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-27 11:08:890 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:710 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:711 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:694 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:306 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:307 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:633 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-27 11:08:833 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-27 11:08:896 INFO  VerificationHelper:78 - element text is ..$5.00
+2022-08-27 11:08:118 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-27 11:08:165 INFO  VerificationHelper:78 - element text is ..$10.00
+2022-08-27 11:08:393 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-27 11:08:465 INFO  VerificationHelper:78 - element text is ..$10.00
+2022-08-27 11:08:682 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-27 11:08:789 INFO  VerificationHelper:78 - element text is ..$12.00
+2022-08-27 11:08:423 INFO  AccountLoginPage:144 - Waited and verify element is Displayed: I AM A NEW CUSTOMER.
+2022-08-27 11:08:630 INFO  AccountLoginPage:134 - Waited and verify element is Displayed: I am a new customer.
+2022-08-27 11:08:777 INFO  AccountLoginPage:70 - Sent data to the element: datastudioplace
+2022-08-27 11:08:52 INFO  AccountLoginPage:75 - Sent data to the element: Manchester1
+2022-08-27 11:08:998 INFO  AccountLoginPage:79 - Waited and clicked on the element...
+2022-08-27 11:08:106 INFO  AccountLoginPage:81 - Returning to new AccountPage.welcomeBackTxt
+2022-08-27 11:08:978 INFO  BasePage:34 - click on ""
+2022-08-27 11:08:360 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:881 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:881 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:758 INFO  BasePage:50 - Successfully Found element: SHOPPING CART
+2022-08-27 11:08:963 INFO  BasePage:68 - The element is Displayed...: SHOPPING CART
+2022-08-27 11:08:533 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 11:08:736 INFO  BasePage:104 - The element is Enabled...: 
+2022-08-27 11:08:900 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-27 11:08:764 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:637 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:639 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:128 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:366 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:367 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:492 INFO  BasePage:34 - click on ""
+2022-08-27 11:08:880 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:740 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:741 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:350 INFO  BasePage:50 - Successfully Found element: SHOPPING CART
+2022-08-27 11:08:193 INFO  BasePage:68 - The element is Displayed...: SHOPPING CART
+2022-08-27 11:08:350 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 11:08:584 INFO  BasePage:104 - The element is Enabled...: 
+2022-08-27 11:08:271 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-27 11:08:690 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:836 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:848 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 11:08:101 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 11:08:525 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 11:08:525 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 12:08:929 INFO  BasePage:34 - click on ""
+2022-08-27 12:08:382 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 12:08:831 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 12:08:847 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 12:08:935 INFO  BasePage:50 - Successfully Found element: SHOPPING CART
+2022-08-27 12:08:258 INFO  BasePage:68 - The element is Displayed...: SHOPPING CART
+2022-08-27 12:08:607 INFO  BasePage:50 - Successfully Found element: 
+2022-08-27 12:08:873 INFO  BasePage:104 - The element is Enabled...: 
+2022-08-27 12:08:806 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-27 12:08:242 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 12:08:06 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 12:08:08 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 12:08:668 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 12:08:188 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 12:08:189 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-27 12:08:997 INFO  BasePage:34 - click on ""
+2022-08-27 12:08:343 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-27 12:08:805 INFO  TopNaviPage:103 - Waited and clicked on the element: 
+2022-08-27 12:08:235 INFO  TopNaviPage:104 - Returning to new SearchResultPage
+2022-08-29 08:08:544 INFO  BasePage:34 - click on ""
+2022-08-29 08:08:498 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 08:08:18 INFO  BasePage:34 - click on ""
+2022-08-29 08:08:799 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 08:08:668 INFO  BasePage:34 - click on ""
+2022-08-29 08:08:673 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 08:08:703 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 08:08:599 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 08:08:956 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 09:08:112 INFO  BasePage:34 - click on ""
+2022-08-29 09:08:893 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 09:08:473 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 09:08:781 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 09:08:991 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 09:08:480 INFO  BasePage:34 - click on ""
+2022-08-29 09:08:840 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 09:08:784 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 09:08:43 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 09:08:274 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 09:08:604 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 09:08:659 ERROR VerificationHelper:37 - element is not enabled..
+2022-08-29 09:08:495 INFO  BasePage:34 - click on ""
+2022-08-29 09:08:631 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 09:08:441 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 09:08:149 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 09:08:431 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 09:08:846 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 09:08:924 ERROR VerificationHelper:37 - element is not enabled..
+2022-08-29 09:08:83 INFO  BasePage:34 - click on ""
+2022-08-29 09:08:837 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 09:08:95 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 09:08:722 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 09:08:807 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 09:08:316 INFO  BasePage:34 - click on ""
+2022-08-29 09:08:336 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 09:08:137 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 09:08:623 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 09:08:896 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 09:08:125 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 09:08:194 ERROR VerificationHelper:37 - element is not enabled..
+2022-08-29 10:08:626 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:973 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:223 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:528 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:773 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:16 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:214 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:689 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:678 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:553 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:117 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:448 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:944 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:294 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:886 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:767 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:220 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:535 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:945 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:899 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:577 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:976 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:481 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:742 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:957 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:451 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:745 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:526 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:540 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:316 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:792 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:751 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:243 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:766 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:94 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:274 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:561 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:315 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:145 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:838 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:734 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:946 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:832 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:398 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:937 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:150 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 10:08:228 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 10:08:481 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:547 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:892 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:05 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:270 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 10:08:348 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 10:08:895 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:918 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:906 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:168 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:358 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:485 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:659 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:767 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:776 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:453 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:630 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:792 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:790 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:997 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:778 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:977 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 10:08:56 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 10:08:334 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:397 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:810 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:880 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:134 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 10:08:196 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 10:08:195 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 10:08:775 INFO  BasePage:34 - click on ""
+2022-08-29 10:08:855 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:147 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:515 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:891 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:114 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 10:08:331 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 10:08:222 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 10:08:927 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:941 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:144 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 10:08:319 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:851 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 10:08:395 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 10:08:515 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 10:08:679 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 10:08:734 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 10:08:965 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:19 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:251 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 10:08:298 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 10:08:536 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 10:08:598 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 10:08:474 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 10:08:636 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 10:08:716 INFO  AccountLoginPage:71 - Sent data to the element: datastudioplace
+2022-08-29 10:08:474 INFO  AccountLoginPage:79 - Waited and clicked on the element...
+2022-08-29 11:08:697 INFO  BasePage:34 - click on ""
+2022-08-29 11:08:892 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:628 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:860 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 11:08:71 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:815 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 11:08:38 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 11:08:968 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 11:08:940 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:147 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:362 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 11:08:553 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:73 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:586 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:821 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:991 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 11:08:55 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 11:08:287 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 11:08:409 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 11:08:641 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 11:08:688 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 11:08:973 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 11:08:42 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 11:08:895 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 11:08:93 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 11:08:184 INFO  AccountLoginPage:71 - Sent data to the element: datastudioplace
+2022-08-29 11:08:726 INFO  BasePage:34 - click on ""
+2022-08-29 11:08:682 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:231 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:175 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 11:08:392 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:508 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 11:08:695 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 11:08:226 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 11:08:726 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:532 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:747 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 11:08:909 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:128 INFO  TopNaviPage:99 - Sent keyword data to element:
+2022-08-29 11:08:616 INFO  TopNaviPage:103 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 11:08:874 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 11:08:63 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 11:08:141 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 11:08:364 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 11:08:426 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 11:08:686 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 11:08:734 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 11:08:981 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 11:08:44 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 11:08:665 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 11:08:857 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 11:08:940 INFO  AccountLoginPage:71 - Sent data to the element: datastudioplace
+2022-08-29 13:08:293 INFO  BasePage:34 - click on ""
+2022-08-29 13:08:124 INFO  TopNaviPage:100 - Sent keyword data to element:
+2022-08-29 13:08:559 INFO  TopNaviPage:104 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 13:08:882 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 13:08:116 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 13:08:875 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 13:08:58 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 13:08:910 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 13:08:954 INFO  TopNaviPage:100 - Sent keyword data to element:
+2022-08-29 13:08:607 INFO  TopNaviPage:104 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 13:08:817 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 13:08:98 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 13:08:214 INFO  BasePage:34 - click on ""
+2022-08-29 13:08:83 INFO  TopNaviPage:100 - Sent keyword data to element:
+2022-08-29 13:08:572 INFO  TopNaviPage:104 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 13:08:870 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 13:08:111 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 13:08:358 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-29 13:08:558 INFO  VerificationHelper:33 - element is enabled..
+2022-08-29 13:08:942 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-29 13:08:968 INFO  TopNaviPage:100 - Sent keyword data to element:
+2022-08-29 13:08:89 INFO  TopNaviPage:104 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 13:08:375 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-29 13:08:604 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 13:08:712 INFO  TopNaviPage:100 - Sent keyword data to element:
+2022-08-29 13:08:03 INFO  TopNaviPage:104 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-29 13:08:86 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-29 13:08:248 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-29 13:08:322 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-29 13:08:592 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 13:08:644 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 13:08:908 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-29 13:08:990 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-29 13:08:251 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-29 13:08:363 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-29 13:08:967 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 13:08:189 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 13:08:283 INFO  AccountLoginPage:71 - Sent data to the element: datastudioplace
+2022-08-29 14:08:394 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-29 14:08:509 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-29 14:08:560 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-29 14:08:835 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 14:08:98 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 14:08:431 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-29 14:08:835 INFO  AccountLoginPage:131 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-29 14:08:797 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-29 14:08:916 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-29 14:08:296 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-29 14:08:470 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-29 14:08:974 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-29 14:08:25 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-29 14:08:175 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-29 14:08:253 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-29 14:08:440 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:725 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:814 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:209 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-29 14:08:270 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-29 14:08:148 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:323 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:534 ERROR VerificationHelper:25 - element is not Displayed..
+2022-08-29 14:08:109 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-29 14:08:182 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-29 14:08:484 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-29 14:08:708 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-29 14:08:09 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-29 14:08:353 INFO  AccountLoginPage:131 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-29 14:08:182 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-29 14:08:276 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-29 14:08:618 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-29 14:08:841 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-29 14:08:935 INFO  AccountCreatePage:161 - Entered text :FirstName
+2022-08-29 14:08:679 INFO  AccountCreatePage:167 - Entered text :LastName
+2022-08-30 03:08:238 INFO  TopNaviPage:80 - Waited and clicked on the element: Login or register
+2022-08-30 03:08:363 INFO  TopNaviPage:81 - Waited for element on AccountLoginPage
+2022-08-30 03:08:586 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 03:08:782 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 03:08:01 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 03:08:970 INFO  AccountLoginPage:131 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 03:08:536 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 03:08:21 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 03:08:543 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-30 03:08:397 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-30 03:08:461 INFO  AccountCreatePage:175 - Entered text :07400000000
+2022-08-30 03:08:557 INFO  VerificationHelper:21 - element is Displayed..Your Address
+2022-08-30 03:08:658 INFO  VerificationHelper:90 - element text is ..Your Address
+2022-08-30 03:08:780 INFO  AccountCreatePage:218 - selecting region/ state....
+2022-08-30 03:08:633 INFO  VerificationHelper:21 - element is Displayed..Login Details
+2022-08-30 03:08:697 INFO  VerificationHelper:90 - element text is ..Login Details
+2022-08-30 03:08:579 INFO  AccountCreatePage:241 - Entered generated Random loginName.... 
+2022-08-30 03:08:483 INFO  AccountCreatePage:246 - Entered password text :Password@123
+2022-08-30 03:08:436 INFO  AccountCreatePage:251 - Entered Confirm password text :Password@123
+2022-08-30 03:08:105 INFO  AccountCreatePage:261 - Waited and clicked on the element: 
+2022-08-30 03:08:350 INFO  AccountCreatePage:276 - Waited and clicked on the element: 
+2022-08-30 03:08:763 INFO  AccountCreatePage:287 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 03:08:15 INFO  AccountSuccessPage:38 - Waiting and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 03:08:402 INFO  BasePage:776 - FluentWait Waiting for 20 SECONDS.....
+2022-08-30 03:08:461 INFO  AccountSuccessPage:43 - Waited and getting element text...YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 03:08:945 INFO  AccountSuccessPage:49 - Waiting to click on the element...
+2022-08-30 03:08:948 INFO  AccountSuccessPage:50 - Clicked and returning new IndexPage...
+2022-08-30 03:08:487 INFO  AccountPage:101 - The element is Displayed as: <Welcome back FirstName>
+2022-08-30 03:08:283 INFO  AccountPage:113 - Waited and clicked on the element...
+2022-08-30 03:08:581 INFO  VerificationHelper:21 - element is Displayed..Continue
+2022-08-30 03:08:656 INFO  AccountLogoutPage:44 - Wait ti click on the element...
+2022-08-30 03:08:789 INFO  AccountLogoutPage:46 - Returning new IndexPage...
+2022-08-30 05:08:187 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:221 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:475 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:721 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:642 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 05:08:948 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 05:08:563 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 05:08:708 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 05:08:440 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-30 05:08:572 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-30 05:08:228 INFO  AccountCreatePage:174 - Entered text :07400000000
+2022-08-30 05:08:840 INFO  VerificationHelper:21 - element is Displayed..Your Address
+2022-08-30 05:08:909 INFO  VerificationHelper:90 - element text is ..Your Address
+2022-08-30 05:08:860 INFO  AccountCreatePage:217 - selecting region/ state....
+2022-08-30 05:08:987 INFO  VerificationHelper:21 - element is Displayed..Login Details
+2022-08-30 05:08:56 INFO  VerificationHelper:90 - element text is ..Login Details
+2022-08-30 05:08:795 INFO  AccountCreatePage:240 - Entered generated Random loginName.... 
+2022-08-30 05:08:511 INFO  AccountCreatePage:245 - Entered password text :Password@123
+2022-08-30 05:08:317 INFO  AccountCreatePage:250 - Entered Confirm password text :Password@123
+2022-08-30 05:08:764 INFO  AccountCreatePage:260 - Waited and clicked on the element: 
+2022-08-30 05:08:472 INFO  AccountCreatePage:275 - Waited and clicked on the element: 
+2022-08-30 05:08:500 INFO  AccountCreatePage:286 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:640 INFO  VerificationHelper:21 - element is Displayed..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:702 INFO  VerificationHelper:90 - element text is ..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:22 INFO  VerificationHelper:21 - element is Displayed..Congratulations! Your new account has been successfully created!
+2022-08-30 05:08:72 INFO  VerificationHelper:90 - element text is ..Congratulations! Your new account has been successfully created!
+2022-08-30 05:08:393 INFO  AccountSuccessPage:46 - Clicked and returning new IndexPage...
+2022-08-30 05:08:19 INFO  AccountPage:96 - The element is Displayed as: <Welcome back FirstName>
+2022-08-30 05:08:167 INFO  VerificationHelper:21 - element is Displayed..Welcome back FirstName
+2022-08-30 05:08:769 INFO  AccountPage:107 - Waited and clicked on the element...
+2022-08-30 05:08:954 INFO  VerificationHelper:21 - element is Displayed..Continue
+2022-08-30 05:08:485 INFO  AccountLogoutPage:43 - Wait ti click on the element...
+2022-08-30 05:08:919 INFO  AccountLogoutPage:45 - Returning new IndexPage...
+2022-08-30 05:08:378 INFO  BasePage:34 - click on ""
+2022-08-30 05:08:48 INFO  TopNaviPage:101 - Sent keyword data to element:
+2022-08-30 05:08:647 INFO  TopNaviPage:105 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-30 05:08:978 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-30 05:08:306 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-30 05:08:780 INFO  VerificationHelper:21 - element is Displayed..SHOPPING CART
+2022-08-30 05:08:963 INFO  VerificationHelper:33 - element is enabled..
+2022-08-30 05:08:845 INFO  VerificationHelper:21 - element is Displayed..Your shopping cart is empty!
+Continue
+2022-08-30 05:08:833 INFO  TopNaviPage:101 - Sent keyword data to element:
+2022-08-30 05:08:719 INFO  TopNaviPage:105 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-30 05:08:882 INFO  VerificationHelper:21 - element is Displayed..Viva Glam Lipstick
+2022-08-30 05:08:45 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-30 05:08:335 INFO  TopNaviPage:101 - Sent keyword data to element:
+2022-08-30 05:08:455 INFO  TopNaviPage:105 - Waited and clicked on the element:  Returning to new SearchResultPage
+2022-08-30 05:08:941 INFO  VerificationHelper:21 - element is Displayed..
+2022-08-30 05:08:107 INFO  VerificationHelper:21 - element is Displayed..$5.00
+2022-08-30 05:08:172 INFO  VerificationHelper:90 - element text is ..$5.00
+2022-08-30 05:08:365 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-30 05:08:418 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-30 05:08:634 INFO  VerificationHelper:21 - element is Displayed..$10.00
+2022-08-30 05:08:697 INFO  VerificationHelper:90 - element text is ..$10.00
+2022-08-30 05:08:913 INFO  VerificationHelper:21 - element is Displayed..$12.00
+2022-08-30 05:08:969 INFO  VerificationHelper:90 - element text is ..$12.00
+2022-08-30 05:08:545 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:711 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:792 INFO  AccountLoginPage:75 - Sent data to the element: datastudioplace
+2022-08-30 05:08:870 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:526 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:996 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:531 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:547 INFO  AccountLoginPage:75 - Sent data to the element: datastudioplace
+2022-08-30 05:08:916 INFO  AccountLoginPage:87 - Waited and clicked on the element...
+2022-08-30 05:08:805 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+Checkout Options:
+ Register Account  
+By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+Continue
+RETURNING CUSTOMER
+I am a returning customer.
+Login Name:
+Password:
+Forgot your password?   Forgot your login?
+
+Login
+2022-08-30 05:08:106 INFO  VerificationHelper:90 - element text is ..I AM A NEW CUSTOMER.
+Checkout Options:
+ Register Account  
+By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+Continue
+RETURNING CUSTOMER
+I am a returning customer.
+Login Name:
+Password:
+Forgot your password?   Forgot your login?
+
+Login
+2022-08-30 05:08:894 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:919 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:204 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:406 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:609 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 05:08:62 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 05:08:652 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 05:08:721 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 05:08:969 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:85 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:386 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:585 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:836 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 05:08:554 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 05:08:122 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 05:08:200 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 05:08:821 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:878 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:69 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:307 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:841 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 05:08:959 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 05:08:482 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 05:08:567 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 05:08:861 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 05:08:893 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 05:08:129 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 05:08:364 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 05:08:571 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 05:08:90 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 05:08:626 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 05:08:748 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 05:08:44 INFO  BasePage:823 - explicitWait Waiting for 15 SECONDS.....
+2022-08-30 05:08:361 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-30 05:08:432 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-30 05:08:515 INFO  AccountCreatePage:178 - Entered text :07400000000
+2022-08-30 05:08:636 INFO  VerificationHelper:21 - element is Displayed..Your Address
+2022-08-30 05:08:722 INFO  VerificationHelper:90 - element text is ..Your Address
+2022-08-30 05:08:151 INFO  AccountCreatePage:221 - selecting region/ state....
+2022-08-30 05:08:347 INFO  VerificationHelper:21 - element is Displayed..Login Details
+2022-08-30 05:08:410 INFO  VerificationHelper:90 - element text is ..Login Details
+2022-08-30 05:08:142 INFO  AccountCreatePage:244 - Entered generated Random loginName.... 
+2022-08-30 05:08:882 INFO  AccountCreatePage:249 - Entered password text :Password@123
+2022-08-30 05:08:615 INFO  AccountCreatePage:254 - Entered Confirm password text :Password@123
+2022-08-30 05:08:97 INFO  AccountCreatePage:264 - Waited and clicked on the element: 
+2022-08-30 05:08:747 INFO  AccountCreatePage:279 - Waited and clicked on the element: 
+2022-08-30 05:08:571 INFO  AccountCreatePage:290 - Waited for element on AccountSuccessPage : YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:708 INFO  VerificationHelper:21 - element is Displayed..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:773 INFO  VerificationHelper:90 - element text is ..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 05:08:992 INFO  VerificationHelper:21 - element is Displayed..Congratulations! Your new account has been successfully created!
+2022-08-30 05:08:45 INFO  VerificationHelper:90 - element text is ..Congratulations! Your new account has been successfully created!
+2022-08-30 05:08:516 INFO  AccountSuccessPage:46 - Clicked and returning new IndexPage...
+2022-08-30 05:08:942 INFO  AccountPage:96 - The element is Displayed as: <Welcome back FirstName>
+2022-08-30 05:08:88 INFO  VerificationHelper:21 - element is Displayed..Welcome back FirstName
+2022-08-30 05:08:880 INFO  AccountPage:107 - Waited and clicked on the element...
+2022-08-30 05:08:122 INFO  VerificationHelper:21 - element is Displayed..Continue
+2022-08-30 05:08:947 INFO  AccountLogoutPage:43 - Wait ti click on the element...
+2022-08-30 05:08:797 INFO  AccountLogoutPage:45 - Returning new IndexPage...
+2022-08-30 06:08:888 INFO  TopNaviPage:82 - Waited and clicked on the element: Login or register
+2022-08-30 06:08:918 INFO  TopNaviPage:83 - Waited for element on AccountLoginPage
+2022-08-30 06:08:414 INFO  VerificationHelper:21 - element is Displayed..I AM A NEW CUSTOMER.
+2022-08-30 06:08:598 INFO  VerificationHelper:21 - element is Displayed..RETURNING CUSTOMER
+2022-08-30 06:08:813 INFO  VerificationHelper:21 - element is Displayed.. Register Account  
+2022-08-30 06:08:211 INFO  AccountLoginPage:133 - clicked and waited for element on returning to AccountSuccessPage...
+2022-08-30 06:08:451 INFO  VerificationHelper:21 - element is Displayed..CREATE ACCOUNT
+2022-08-30 06:08:646 INFO  VerificationHelper:90 - element text is ..CREATE ACCOUNT
+2022-08-30 06:08:938 INFO  VerificationHelper:21 - element is Displayed..Your Personal Details
+2022-08-30 06:08:92 INFO  VerificationHelper:90 - element text is ..Your Personal Details
+2022-08-30 06:08:415 INFO  VerificationHelper:21 - element is Displayed..Your Address
+2022-08-30 06:08:498 INFO  VerificationHelper:90 - element text is ..Your Address
+2022-08-30 06:08:713 INFO  AccountCreatePage:216 - selecting region/ state....
+2022-08-30 06:08:858 INFO  VerificationHelper:21 - element is Displayed..Login Details
+2022-08-30 06:08:921 INFO  VerificationHelper:90 - element text is ..Login Details
+2022-08-30 06:08:756 INFO  AccountCreatePage:239 - Entered generated Random loginName.... 
+2022-08-30 06:08:711 INFO  AccountCreatePage:256 - Waited and clicked on the element: 
+2022-08-30 06:08:368 INFO  BasePage:823 - explicitWait Waiting for 15 SECONDS.....
+2022-08-30 06:08:492 INFO  VerificationHelper:21 - element is Displayed..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 06:08:559 INFO  VerificationHelper:90 - element text is ..YOUR ACCOUNT HAS BEEN CREATED!
+2022-08-30 06:08:795 INFO  VerificationHelper:21 - element is Displayed..Congratulations! Your new account has been successfully created!
+2022-08-30 06:08:879 INFO  VerificationHelper:90 - element text is ..Congratulations! Your new account has been successfully created!
+2022-08-30 06:08:267 INFO  AccountSuccessPage:46 - Clicked and returning new IndexPage...
+2022-08-30 06:08:713 INFO  VerificationHelper:21 - element is Displayed..Welcome back FirstName
+2022-08-30 06:08:986 INFO  AccountPage:104 - Waited and clicked on the element...
+2022-08-30 06:08:186 INFO  VerificationHelper:21 - element is Displayed..Continue
+2022-08-30 06:08:232 INFO  AccountLogoutPage:43 - Wait ti click on the element...
+2022-08-30 06:08:734 INFO  AccountLogoutPage:45 - Returning new IndexPage...

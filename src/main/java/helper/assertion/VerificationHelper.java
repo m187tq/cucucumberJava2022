@@ -4,11 +4,8 @@ import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-/**
- * 
- * @author Bhanu Pratap Singh
- *
- */
+
+
 public class VerificationHelper {
 
 	private WebDriver driver;
@@ -26,6 +23,33 @@ public class VerificationHelper {
 		}
 		catch(Exception e){
 			log.error("element is not Displayed..", e.getCause());
+			return false;
+		}
+	}
+
+	public boolean isEnabled(WebElement element){
+		try{
+			element.isEnabled();
+			log.info("element is enabled.."+element.getText());
+			return true;
+		}
+		catch(Exception e){
+			log.error("element is not enabled..", e.getCause());
+			return false;
+		}
+	}
+
+	public boolean isSelected(WebElement element) {
+
+		try{
+			element.isSelected();
+			System.out.println("The element is Selected:  " + "<" + element + ">");
+			log.info("The element is Selected:  " + "<" + element + ">");
+			return true;
+		}
+		catch(Exception e){
+			System.out.println("The element is not Selected.... ");
+			log.error("The element is not Selected: ", e.getCause());
 			return false;
 		}
 	}

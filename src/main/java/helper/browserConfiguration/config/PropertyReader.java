@@ -3,8 +3,6 @@ package helper.browserConfiguration.config;
 
 import helper.browserConfiguration.BrowserType;
 import helper.resource.ResourceHelper;
-
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -31,7 +29,7 @@ public class PropertyReader implements ConfigReader {
         }
     }
 
-    public int getImpliciteWait() {
+    public int getImplicitWait() {
         return Integer.parseInt(OR.getProperty("implicitwait"));
     }
 

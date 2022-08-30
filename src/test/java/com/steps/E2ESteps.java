@@ -1,11 +1,13 @@
 package com.steps;
 
+import helper.action.Action;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.*;
+import utilities.datarepo;
 
 import java.io.IOException;
 
@@ -15,6 +17,7 @@ public class E2ESteps extends BasePage {
         super();
     }
     private WebDriver driver = getDriver();
+    Action act = new Action();
     private TopNaviPage topNaviPage;
     private AccountPage accountPage;
     private AccountLoginPage accountLoginPage;
@@ -25,6 +28,8 @@ public class E2ESteps extends BasePage {
     private IndexPage indexPage;
     private AddToCartPage addToCartPage;
     private NavigationMenuPage navigationMenuPage;
+
+    private ProductCategoryPage productCategoryPage;
     private ProductIDPage productIDPage;
     private SearchResultPage searchResultPage;
     private ShippingReturnsPage shippingReturnsPage;
@@ -53,6 +58,7 @@ public class E2ESteps extends BasePage {
                       AccountPage accountPage,
                       AddToCartPage addToCartPage,
                       NavigationMenuPage navigationMenuPage,
+                      ProductCategoryPage productCategoryPage,
                       ProductIDPage productIDPage,
                       SearchResultPage searchResultPage,
                       ShippingReturnsPage shippingReturnsPage,
@@ -95,6 +101,7 @@ public class E2ESteps extends BasePage {
         this.cartSummary = cartSummary;
         this.cartPage = cartPage;
         this.navigationMenuPage = navigationMenuPage;
+        this.productCategoryPage = productCategoryPage;
         this.footerPage = footerPage;
     }
 
@@ -106,28 +113,26 @@ public class E2ESteps extends BasePage {
     }
     @And("user should be able to see search result item and click on add to cart button")
     public void userShouldBeAbleToSeeSearchResultItemAndClickOnAddToCartButton() throws Throwable {
-        searchResultPage.productName().isDisplayed();
-        searchResultPage.productDetailsImage().isDisplayed();
-        searchResultPage.productAvailablity().isDisplayed();
-        searchResultPage.addtoCartBtn().isDisplayed();
-        searchResultPage.clickOnAddToCartBtn();
+        searchResultPage.validateProductNameIsDisplayed();
+        searchResultPage.validateProductDetailsImageIsDisplayed();
+        searchResultPage.clickOnAddToCartButton();
     }
     @And("user enters a number in quantity box to increases items by {string} and clicks on remove icon to remove from cart")
-    public void userEntersANumberInQuantityBoxToIncreasesItemsByAndClicksOnRemoveIconToRemoveFromCart(String arg0) throws InterruptedException {
+    public void userEntersANumberInQuantityBoxToIncreasesItemsByAndClicksOnRemoveIconToRemoveFromCart(String arg0) throws Exception {
         checkoutCartPage.validateUserOnShoppingCartPage();
         checkoutCartPage.validateRemoveIconBtnisEnabled();
-        checkoutCartPage.enterAddQuantityBox(arg0);
+        checkoutCartPage.adjustItemQuantity(arg0);
         checkoutCartPage.clickOnUpdateBtn();
         checkoutCartPage.clickOnRemoveIconBtn();
         Assert.assertTrue(checkoutCartPage.validateYourShoppingCartIsEmptyIsDisplayed());
     }
     @And("user starts all over again from the previous steps as {string} and increases items by {string}")
-    public void userStartsAllOverAgainFromThePreviousStepsAsAndIncreasesItemsBy(String arg0, String arg1) throws Exception {
-        act.click(getDriver(), topNaviPage.searchBox);
+    public void userStartsAllOverAgainFromThePreviousStepsAsAndIncreasesOrDecreaseItemsBy(String arg0, String arg1) throws Throwable {
+        waitForWebElementAndClick(topNaviPage.searchBox);
         topNaviPage.enterItemKeyword(arg0);
         topNaviPage.clickOnSearchBtn();
-        searchResultPage.clickOnAddToCartBtn();
-        checkoutCartPage.enterAddQuantityBox(arg1);
+        userShouldBeAbleToSeeSearchResultItemAndClickOnAddToCartButton();
+        checkoutCartPage.adjustItemQuantity(arg1);
         checkoutCartPage.clickOnUpdateBtn();
     }
     @And("user verifies the product item by item image, unit price, quantity and grand total")
@@ -137,7 +142,6 @@ public class E2ESteps extends BasePage {
         checkoutCartPage.getSubPrice();
         checkoutCartPage.getProductTotalPrice();
         checkoutCartPage.getProductGrandTotalPrice();
-
     }
     @And("user clicks on the Checkout button")
     public void userClicksOnTheCheckOutButton() throws IOException, InterruptedException {
@@ -172,4 +176,18 @@ public class E2ESteps extends BasePage {
 
     }
 
+    @And("user decreases items quantity by {string}")
+    public void userDecreasesItemsQuantityBy(String arg0) throws Exception {
+        checkoutCartPage.adjustItemQuantity(arg0);
+        checkoutCartPage.clickOnUpdateBtn();
+    }
+
+    @And("user adds an items as {string} and clicks on top items dropdown button")
+    public void userAddsAnItemsAsAndClicksOnTopItemsDropdownButton(String arg0) throws Exception {
+        waitForWebElementAndClick(topNaviPage.searchBox);
+        topNaviPage.enterItemKeyword(arg0);
+        topNaviPage.clickOnSearchBtn();
+        searchResultPage.addProductsToCart();
+        searchResultPage.clickOnItemCartSubMenu();
+    }
 }

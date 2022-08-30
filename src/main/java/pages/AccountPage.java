@@ -1,5 +1,6 @@
 package pages;
 
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -15,7 +16,6 @@ public class AccountPage extends BasePage {
     public AccountPage() throws IOException {
             super();
     }
-
     @FindBy(css = ".maintext")
     public WebElement userProfileMyAccountTxt;
 
@@ -45,20 +45,16 @@ public class AccountPage extends BasePage {
 
 
     public boolean isAccountDashboardTxtDisplayed() {
-        waitFor(accountDashboardTxt);
-        return act.isDisplayed(getDriver(),accountDashboardTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(accountDashboardTxt);
     }
 
     public AccountLogoutPage clickOnLogoffBtn() throws IOException {
-        waitFor(logoffBtn);
-        log.info("Wait ti click on the element...");
         waitForWebElementAndClick(logoffBtn);
-        log.info("return a new AccountLogoutPage...");
         return new AccountLogoutPage();
     }
 
     public boolean isLogoffBtnDisplayed() {
-        return act.isDisplayed(getDriver(), logoffBtn);
+        return new VerificationHelper(getDriver()).isDisplayed(logoffBtn);
     }
 
     public void verifyAllSideWidgetElementsInAccountPageLinks() {
@@ -86,44 +82,36 @@ public class AccountPage extends BasePage {
     }
 
     public boolean validateUserAccountTextIsDisplayed() throws InterruptedException {
-        waitFor(myAccountTxt);
-        log.info("element is Displayed.."+myAccountTxt.getText());
-        return isDisplayed(getDriver(), myAccountTxt);
+        fluentWait(getDriver(), myAccountTxt, globalVars.getDefaultExplicitTimeout());
+        return new VerificationHelper(getDriver()).isDisplayed(myAccountTxt);
     }
-
     public String userProfileInfoMessage() {
-        waitFor(userProfileMyAccountTxt);
-        log.info("Getting element text..." + userProfileMyAccountTxt.getText());
-        return userProfileMyAccountTxt.getText();
+        fluentWait(getDriver(), userProfileMyAccountTxt, globalVars.getDefaultExplicitTimeout());
+        return new VerificationHelper(getDriver()).getText(userProfileMyAccountTxt);
     }
-    public boolean homePageWelcomeMessage(String arg1) throws InterruptedException {
+    public boolean homePageWelcomeMessage() throws InterruptedException {
         fluentWait(getDriver(), welcomeBackTxt, globalVars.getDefaultExplicitTimeout());
-        log.info("The element is Displayed as: " + "<" + welcomeBackTxt.getText() + ">");
-        return isDisplayed(getDriver(), welcomeBackTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(welcomeBackTxt);
     }
 
     public String accountDashboardMessage() {
-        log.info("Getting element text..." + accountDashboardTxt.getText());
-        return getText(accountDashboardTxt);
+        return new VerificationHelper(getDriver()).getText(accountDashboardTxt);
     }
 
     public void clickOnLogoutBtn() {
-        waitFor(logout);
+        fluentWait(getDriver(), userProfileMyAccountTxt, globalVars.getDefaultExplicitTimeout());
         waitAndClickElement(logout);
         log.info("Waited and clicked on the element...");
     }
     public AccountEditPage clickOnEditAccountDetailsLink() throws IOException, InterruptedException {
-        waitFor(editAccountDetailsLink);
+        fluentWait(getDriver(), editAccountDetailsLink, globalVars.getDefaultExplicitTimeout());
         waitAndClickElement(editAccountDetailsLink);
-        log.info("Waited and clicked on the element...");
-        log.info("return new AccountEditPage.... ");
         return new AccountEditPage();
 
     }
     public String accountProfileSuccessfulUpdateMessage() {
-        waitFor(successYourAccountSuccessfullyUpdatedTxt);
-        log.info("Waited and getting element text..." );
-        return successYourAccountSuccessfullyUpdatedTxt.getText();
+        fluentWait(getDriver(), successYourAccountSuccessfullyUpdatedTxt, globalVars.getDefaultExplicitTimeout());
+        return new VerificationHelper(getDriver()).getText(successYourAccountSuccessfullyUpdatedTxt);
 
     }
 

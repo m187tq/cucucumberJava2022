@@ -1,5 +1,6 @@
 package pages;
 
+import helper.action.Action;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import java.util.List;
 
 public class CheckoutConfirmationPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(CheckoutConfirmationPage.class);
+    Action act = new Action();
     public CheckoutConfirmationPage() throws IOException {
         super();
     }

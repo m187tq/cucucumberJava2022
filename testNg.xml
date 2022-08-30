@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Test Suite">
-    <test name="Regression Test" preserve-order="true">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/House/Desktop/Cucumber2022">
         <classes>
-            <class name="com.runners.MainRunner"/>
+            <class name="com.demo.add_An_Item">
+                <methods>
+                    <include name="AddItemsToCart"/>
+                </methods>
+            </class>
+            <class name="com.demo.add_Multiple_Items">
+                <methods>
+                    <include name="AddItemsToCart"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

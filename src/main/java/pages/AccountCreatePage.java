@@ -1,10 +1,14 @@
 package pages;
 
-
+import helper.action.Action;
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
+import helper.wait.WaitHelper;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.datarepo;
 import utils.globalVars;
 
 import java.io.IOException;
@@ -12,13 +16,13 @@ import java.util.List;
 
 public class AccountCreatePage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(AccountCreatePage.class);
+    Action act = new Action();
     AccountSuccessPage asPage = new AccountSuccessPage();
-
     String loginName = "covid19" + generateRandomString(5);
     String email = System.currentTimeMillis() + "Apr";
+
     public AccountCreatePage() throws IOException {
         super();
-
     }
 
     // URL, LOGO, TEXTS//
@@ -57,8 +61,10 @@ public class AccountCreatePage extends BasePage {
     public WebElement address2TextBox;
     @FindBy(css = "#AccountFrm_city")
     public WebElement cityTextBox;
-    @FindBy(xpath = "//select[@id='AccountFrm_zone_id']")
-    public WebElement regionStateDropdownBtn;
+    @FindBy(css = "select#AccountFrm_zone_id")
+    public WebElement regionOrStateDropdownBtn;
+    @FindBy(xpath = "//*[@id=\"AccountFrm_zone_id\"]/option[52]")
+    public WebElement regionOrStateName;
     @FindBy(xpath = "//input[@id='AccountFrm_postcode']")
     public WebElement zipCodeTextBox;
     @FindBy(xpath = "//select[@id='AccountFrm_country_id']")
@@ -88,7 +94,6 @@ public class AccountCreatePage extends BasePage {
     // Summit button //
     @FindBy(xpath = "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[5]/div[1]/div[1]/button[1]")
     public WebElement continueBtn;
-
 
 
     //**********ERRORS ********************//
@@ -129,7 +134,7 @@ public class AccountCreatePage extends BasePage {
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/fieldset[1]/div[6]/span[1]")
     public WebElement zipCodeRedMessages;
     @FindBy(xpath = "//span[contains(text(),'Please select a region / state!')]")
-    public WebElement StateProvinceRedMessages;
+    public WebElement stateProvinceRedMessages;
     @FindBy(xpath = "//span[contains(text(),'Login name must be alphanumeric only and between 5')]")
     public WebElement loginNameRedMessages;
     @FindBy(xpath = "//span[contains(text(),'Password must be between 4 and 20 characters!')]")
@@ -139,42 +144,38 @@ public class AccountCreatePage extends BasePage {
 
 
     public String createAccountText(String arg0) {
-        act.fluentWait(getDriver(),createAccountTxt, globalVars.getDefaultExplicitTimeout());
-        log.info("getting the element text...");
-        return createAccountTxt.getText();
+        fluentWait(getDriver(), createAccountTxt, globalVars.getDefaultExplicitTimeout());
+        return new VerificationHelper(getDriver()).getText(createAccountTxt);
     }
 
     public String getIfYouAlreadyHaveAnAccountWithUsTxt() {
-        log.info("getting the element text => <ifYouAlreadyHaveAnAccountWithUs>");
-        return getText(ifYouAlreadyHaveAnAccountWithUs);
+        return new VerificationHelper(getDriver()).getText(ifYouAlreadyHaveAnAccountWithUs);
     }
+
     public String getYourPersonalDetailsTxt(String arg1) {
-        log.info("getting the element text => <yourPersonalDetailsTxt>");
-        return getText(yourPersonalDetailsTxt);
+        return new VerificationHelper(getDriver()).getText(yourPersonalDetailsTxt);
     }
 
     public void enterFirstName(String firstname) throws Exception {
-        log.info("Entered text :" + firstname);
         sendKeysToWebElement(firstNameTextBox, firstname);
 
     }
+
     public void enterLastName(String lastName) throws Exception {
-        log.info("Entered text :" + lastName);
         sendKeysToWebElement(lastNameTextBox, lastName);
 
     }
 
     public void enterFreshEmailAddress() throws Exception {
         sendKeysToWebElement(emailTextBox, email);
-        log.info("Entered text :" + email);
     }
+
     public void enterTelephoneNumber(String telephoneNumber) throws Exception {
-        log.info("Entered text :" + telephoneNumber);
-        sendKeysToWebElement(telephoneTextBox,telephoneNumber);
+        sendKeysToWebElement(telephoneTextBox, telephoneNumber);
     }
+
     public void enterFaxNumber(String faxNumber) throws Exception {
         sendKeysToWebElement(faxTextBox, faxNumber);
-        log.info("Entered text :" + faxNumber);
     }
 
     public void enterYourPersonalDetailsSection(String firstName, String lastName, String telephone, String fax) throws Exception {
@@ -190,189 +191,168 @@ public class AccountCreatePage extends BasePage {
         log.info("Entered text :" + fax);
 
     }
+
     public String getYourAddressTxt() {
-        log.info("get Your Address Txt...");
-        return getText(yourAddressText);
-    }
-    public void enterCompanyName(String companyName) throws Exception {
-        sendKeysToWebElement(companyTextBox, companyName);
-        log.info("Entered text :" + companyName);
-    }
-    public void enterAddress1(String address1) throws Exception {
-        sendKeysToWebElement(address1TextBox, address1);
-        log.info("Entered text :" + address1);
-    }
-    public void enterAddress2(String address2) throws Exception {
-        sendKeysToWebElement(address2TextBox, address2);
-        log.info("Entered text :" + address2);
-    }
-    public void enterCity(String yourCity) throws Exception {
-        sendKeysToWebElement(cityTextBox, yourCity);
-        log.info("Entered text :" + yourCity);
+        return new VerificationHelper(getDriver()).getText(yourAddressText);
     }
 
-    public void selectRegionState(String yourRegionOrState) {
-        selectByVisibleText(yourRegionOrState, regionStateDropdownBtn);
-        log.info("Selected Visible Tex :" + yourRegionOrState);
+    public void enterCompanyName(String companyName) throws Exception {
+        sendKeysToWebElement(companyTextBox, companyName);
     }
+
+    public void enterAddress1(String address1) throws Exception {
+        sendKeysToWebElement(address1TextBox, address1);
+    }
+
+    public void enterAddress2(String address2) throws Exception {
+        sendKeysToWebElement(address2TextBox, address2);
+    }
+
+    public void enterCity(String yourCity) throws Exception {
+        sendKeysToWebElement(cityTextBox, yourCity);
+    }
+
+    public void selectRegionOrState(String arg0) {
+        log.info("selecting region/ state....");
+        WebElement regionOrStateName = getDriver().findElement(By.xpath("//option[contains(text(),'"+arg0+"')]"));
+        regionOrStateName.click();
+    }
+
     public void enterZipCode(String ZipCode) throws Exception {
         sendKeysToWebElement(zipCodeTextBox, ZipCode);
-        log.info("Entered text :" + ZipCode);
     }
 
     public void selectCountry(String countryName) {
         selectByVisibleText(countryName, countryDropdownBtn);
-        log.info("Selected Visible Text :" + countryName);
     }
-    public String getloginDetailsSectionText(String arg0) throws IOException {
+
+    public String getLoginDetailsSectionTxt(String arg0) throws IOException {
+        return new VerificationHelper(getDriver()).getText(loginDetailsSectionText);
+    }
+    public boolean validateLoginDetailsSectionTxtIsDisplayed(String arg0) throws IOException {
         log.info("getting Your Address Txt...");
-        return getText(loginDetailsSectionText);
+        return new VerificationHelper(getDriver()).isDisplayed(loginDetailsSectionText);
     }
 
     public void enterLoginName() throws Exception {
         sendKeysToWebElement(loginNameTextBox, ("Covid" + generateRandomNumber(5)));
         log.info("Entered generated Random loginName.... ");
     }
+
     public void enterPassword(String arg0) throws Exception {
         sendKeysToWebElement(passwordTextBox, arg0);
-        log.info("Entered password text :" + arg0);
     }
     public void enterPasswordConfirm(String arg0) throws Exception {
-       sendKeysToWebElement(passwordConfirmTextBox, arg0);
-        log.info("Entered Confirm password text :" + arg0);
+        sendKeysToWebElement(passwordConfirmTextBox, arg0);
     }
 
     public String getNewsletterTxt() throws IOException {
         log.info("Gotten element Newsletter text...");
         return getText(newsletterText);
-
     }
 
     public void tickOnSubscribeAsYes() {
         waitForWebElementAndClick(subscribeYesRadioButton);
-        log.info("Waited and clicked on the element: "+ subscribeYesRadioButton.getText());
+        log.info("Waited and clicked on the element: " + subscribeYesRadioButton.getText());
     }
 
     public boolean validateSubscribeYesTicked() {
-        log.info("Selected visible Radio Btn :" + subscribeYesRadioButton.getText());
-        return isSelected(getDriver(),subscribeYesRadioButton);
-
+        return isSelected(getDriver(), subscribeYesRadioButton);
     }
 
     public void clickOnSubscribeAsNo() {
         waitForWebElementAndClick(subscribeNORadioButton);
-        log.info("Waited and clicked on the element: "+ subscribeNORadioButton.getText());
-
     }
+
     public void checkOnIAgreeToPrivacyPolicyRadioButton() {
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
-        log.info("Waited and clicked on the element: "+ agreeToPrivacyPolicyButton.getText());
     }
+
     public void clickOnIAgreeToPrivacyPolicyRadioButton() {
         waitForWebElementAndClick(agreeToPrivacyPolicyButton);
-        log.info("Waited and clicked on the element: "+ agreeToPrivacyPolicyButton.getText());
 
     }
+
     public AccountSuccessPage clickOnContinueButton() throws IOException, InterruptedException {
-        waitFor(continueBtn);
+        act.explicitWait(getDriver(),continueBtn, datarepo.getFifteenSeconds());
         waitForWebElementAndClick(continueBtn);
-        waitFor(asPage.accountHasBeenCreatedHeadingTxt);
-        log.info("Waited for element on AccountSuccessPage : "+ asPage.accountHasBeenCreatedHeadingTxt.getText());
         return new AccountSuccessPage();
     }
 
     //******************SETTERS for Error*****************************//
 
-    public void getFirstNameRedErrorTxt() throws Exception {
-        // basePage.sendKeysToWebElement("    ");
+    public String getFirstNameRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(this.firstNameErrorTxt);
     }
 
-    public void getLastNameRedErrorTxt() throws Exception {
-        // sendKeysToWebElement(lastNameErrorTxt,"    ");
+    public String getLastNameRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(lastNameErrorTxt);
     }
 
-    public void getEmailRedErrorTxt() throws Exception {
-        // sendKeysToWebElement(emailErrorTxt,"    ");
+    public String getEmailRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(emailErrorTxt);
     }
 
-    public void getAddress1RedErrorTxt() throws Exception {
-        // sendKeysToWebElement(address1ErrorTxt,"    ");
+    public String getAddress1RedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(address1ErrorTxt);
     }
 
-    public void getCityRedErrorTxt() throws Exception {
-        //boolean result = cityErrorTxt.isDisplayed();
-        // sendKeysToWebElement(cityErrorTxt,"    ");
-        // checkPoint.mark("City",result,"City is Displayed");
+    public String getCityRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(cityErrorTxt);
     }
 
-    public void selectRegionStateRedErrorTxt() throws Exception {
-        //regionStateErrorTxt
+    public String getRegionStateRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(regionStateErrorTxt);       
     }
 
-    public void getZipCodeRedErrorTxt() throws Exception {
-        //sendKeysToWebElement(zipCodeErrorTxt,"    ");
+    public String getZipCodeRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(zipCodeErrorTxt);
     }
 
-    public void getPasswordRedErrorTxt() throws Exception {
-
+    public String getPasswordRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(passwordErrorTxt);
+    }
+    public String getPrivacyPolicyTxtRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(privacyPolicyErrorTxt);
     }
 
-    public void getPrivacyPolicyTxtRedErrorTxt() throws Exception {
-
-    }
-
-    public WebElement getErrorYouMustAgreeToThePrivacyPolicyRedErrorTxt() throws Exception {
-        return youMustAgreeToThePrivacyPolicyErrorTxt;
+    public String getErrorYouMustAgreeToThePrivacyPolicyRedErrorTxt() throws Exception {
+        return new VerificationHelper(getDriver()).getText(youMustAgreeToThePrivacyPolicyErrorTxt);
     }
 
 //===========================================================================================================//
 
-    public boolean verifyFirstNameRedMessages() {
-        return firstNameRedMessages.isDisplayed();
+    public boolean verifyFirstNameRedMessageIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(firstNameRedMessages);
+    }
+    public boolean verifyLastNameRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(lastNameRedMessages);
 
     }
-
-    public boolean verifyLastNameRedMessages() {
-        return lastNameRedMessages.isDisplayed();
+    public boolean verifyEmailRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(emailRedMessages);
+    }
+    public boolean verifyAddress1RedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(address1RedMessages);
+    }
+    public boolean verifyCityRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(cityRedMessages);
+    }
+    public boolean verifyZipCodeRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(zipCodeRedMessages);
+    }
+    public boolean verifyStateProvinceRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(stateProvinceRedMessages);
+    }
+    public boolean verifyLoginNameRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(loginNameRedMessages);
 
     }
-
-    public boolean verifyEmailRedMessages() {
-        return emailRedMessages.isDisplayed();
-
+    public boolean verifyPasswordRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(passwordRedMessages);
     }
-
-    public boolean verifyAddress1RedMessages() {
-        return address1RedMessages.isDisplayed();
-
-    }
-
-    public boolean verifyCityRedMessages() {
-        return cityRedMessages.isDisplayed();
-
-    }
-
-    public boolean verifyZipCodeRedMessages() {
-        return zipCodeRedMessages.isDisplayed();
-    }
-
-    public boolean verifyStateProvinceRedMessages() {
-        return StateProvinceRedMessages.isDisplayed();
-
-    }
-
-    public boolean verifyLoginNameRedMessages() {
-        return loginNameRedMessages.isDisplayed();
-
-    }
-
-    public boolean verifyPasswordRedMessages() {
-        return passwordRedMessages.isDisplayed();
-    }
-
-    public boolean verifyAgreeToPrivacyPolicyRedMessages() {
-        return agreeToPrivacyPolicyRedMessages.isDisplayed();
-
+    public boolean verifyAgreeToPrivacyPolicyRedMessagesIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(agreeToPrivacyPolicyRedMessages);
     }
 
 }

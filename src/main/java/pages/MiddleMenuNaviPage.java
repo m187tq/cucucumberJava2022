@@ -1,5 +1,6 @@
 package pages;
 
+import helper.action.Action;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ import java.util.List;
 
 public class MiddleMenuNaviPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(MiddleMenuNaviPage.class);
+    Action act = new Action();
     public MiddleMenuNaviPage() throws IOException {
         super();
     }

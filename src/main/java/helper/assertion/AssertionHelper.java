@@ -3,17 +3,13 @@ package helper.assertion;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
-/**
- * 
- * @author Bhanu Pratap Singh
- *
- */
+
 public class AssertionHelper {
 	
 	private static Logger log = LoggerHelper.getLogger(AssertionHelper.class);
 	
 	public static void verifyText(String s1, String s2){
-		log.info("veryfing test: "+ s1 + " with "+ s2);
+		log.info("verifying test: "+ s1 + " with "+ s2);
 		Assert.assertEquals(s1, s1);
 	}
 	

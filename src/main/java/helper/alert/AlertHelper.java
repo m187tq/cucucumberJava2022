@@ -14,7 +14,7 @@ public class AlertHelper {
 
     public AlertHelper(WebDriver driver) {
         this.driver = driver;
-        log.info("AlertHelper object is craeted..");
+        log.info("AlertHelper object is created..");
     }
 
     public Alert getAlert() {

@@ -36,6 +36,7 @@ public class datarepo {
     public static final String TELEPHONE = "2022034001";
     public static final String FAX = "2022034005";
 
+    public static final int pollingEveryInMiliSecInterval = 250;
     public static final int FIVE_SECONDS = 5;
     public static final int FOUR_SECONDS = 4;
     public static final int THREE_SECONDS = 3;
@@ -60,6 +61,7 @@ public class datarepo {
     public static final String address2 = "yourAddress2";
     public static final String city = "yourCity";
     public static final String regionState = "Lancashire";
+    public static final String regionStateByIndex = "3563";
     public static final String zipCode = "M1 7TG";
     public static final String country = "United Kingdom";
     public static final String password = "yourPassword01";
@@ -205,6 +207,10 @@ public class datarepo {
         return TWO_SECONDS;
     }
 
+    public static int getPollingEveryInMiliSecInterval() {
+        return pollingEveryInMiliSecInterval;
+    }
+
     public static int getSixSeconds() {
         return SIX_SECONDS;
     }
@@ -233,7 +239,7 @@ public class datarepo {
         return SIXTY_SECONDS;
     }
 
-    public static int getHundredandtwentySeconds() {
+    public static int getHundredAndTwentySeconds() {
         return HUNDREDANDTWENTY_SECONDS;
     }
 

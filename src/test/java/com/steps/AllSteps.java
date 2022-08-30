@@ -1,12 +1,12 @@
 package com.steps;
 
-
 import helper.wait.WaitHelper;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.messages.internal.com.fasterxml.jackson.databind.ObjectReader;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.*;
@@ -121,7 +121,7 @@ public class AllSteps extends BasePage {
     @And("user should be on account login page with option to login as {string} or create an Account as {string}")
     public void userShouldBeOnAccountLoginPageWithOptionToLoginAsOrCreateAnAccountAs(String arg0, String arg1) {
         accountLoginPage.validateNewCustomerTxtIsDisplayed(arg0);
-       accountLoginPage.verifyReturningCustomerTxtIsDisplayed(arg1);
+        accountLoginPage.verifyReturningCustomerTxtIsDisplayed(arg1);
 
     }
 
@@ -135,7 +135,7 @@ public class AllSteps extends BasePage {
     }
     @Then("user should be presented with the following validation message as {string}")
     public void user_should_be_presented_with_the_following_validation_message_as(String arg1) throws InterruptedException {
-        Assert.assertTrue(accountPage.homePageWelcomeMessage(arg1), arg1);
+        Assert.assertTrue(accountPage.homePageWelcomeMessage(), arg1);
     }
     @Then("user clicks on edit profile button")
     public void user_clicks_on_edit_profile_button() throws IOException, InterruptedException {
@@ -210,8 +210,8 @@ public class AllSteps extends BasePage {
         accountCreatePage.enterLastName(lastName);
     }
     @And("user enters fresh email in E-Mail box")
-    public void userEntersFreshEmailInEMailBox() {
-        sendKeys(accountCreatePage.emailTextBox, email);
+    public void userEntersFreshEmailInEMailBox() throws Exception {
+        sendKeysToWebElement(accountCreatePage.emailTextBox, email);
     }
     @And("user enters Telephone box as {word}")
     public void userEntersTelephoneBoxAs(String telephoneNumber) throws Exception {
@@ -242,9 +242,9 @@ public class AllSteps extends BasePage {
     public void userEntersCityBoxAsYourCity(String yourCity) throws Exception {
         accountCreatePage.enterCity(yourCity);
     }
-    @And("user enters Region or State box as {string}")
-    public void userEntersRegionOrStateBoxAsYourRegionOrState(String yourRegionOrState ) {
-        accountCreatePage.selectRegionState(datarepo.regionState);
+    @And("user selects Region or State as {string}")
+    public void userSelectsRegionOrStateBoxAs(String arg0) {
+        accountCreatePage.selectRegionOrState(arg0);
     }
     @And("user enters ZIP Code box as {string}")
     public void userEntersZIPCodeBoxAsYourZIPCode(String yourZIPCode) throws Exception {
@@ -268,7 +268,7 @@ public class AllSteps extends BasePage {
     }
     @And("user on login section as {string}")
     public void userOnLoginSectionAs(String arg0) throws IOException {
-        Assert.assertEquals(accountCreatePage.getloginDetailsSectionText(arg0), arg0);
+        Assert.assertEquals(accountCreatePage.getLoginDetailsSectionTxt(arg0), arg0);
     }
 
     @And("user enters loginName in Login name box")
@@ -301,15 +301,12 @@ public class AllSteps extends BasePage {
     }
     @And("user gets congratulatory message as {string}")
     public void userGetsCongratulatoryMessageAs(String arg0) {
-        String result = String.valueOf(accountSuccessPage.congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt().isDisplayed());
-        Assert.assertTrue(Boolean.parseBoolean(result));
+        Assert.assertTrue(accountSuccessPage.congratulationsYourNewAccountHasBeenSuccessfullyCreatedTxt().contains(arg0));
     }
     @And("user clicks on ContinueAccountSuccess button")
     public void userClicksOnContinueAccountSuccessButton() throws IOException, InterruptedException {
         accountSuccessPage.clickOnContinueAccountSuccessBtn();
     }
-
-
     @When("user clicks on logoff button on Account page")
     public void userClicksOnLogoffButtonOnAccountPage() {
         accountPage.clickOnLogoutBtn();
@@ -322,11 +319,9 @@ public class AllSteps extends BasePage {
 
     @And("user is on home page and presented with welcome message as {string}")
     public void userIsOnHomePageAndPresentedWithWelcomeMessageAs(String arg0) throws InterruptedException {
-        Assert.assertTrue(accountPage.homePageWelcomeMessage(arg0),(arg0));
+        Assert.assertTrue(accountPage.homePageWelcomeMessage(),(arg0));
 
     }
-
-
     @And("^user clicks on SignOut button$")
     public void userClicksOnSignOutButton() throws IOException {
         accountPage.clickOnLogoffBtn();
@@ -335,7 +330,7 @@ public class AllSteps extends BasePage {
     }
     @And("user on account logout page url contains {string} and clicks on logout Continue Button")
     public void userOnAccountLogoutPageUrlContainsAndClicksOnLogoutContinueButton(String arg0) throws IOException {
-        Assert.assertTrue(act.getCurrentURL(getDriver()).contains(arg0));
+        Assert.assertTrue(getCurrentURL().contains(arg0));
         Assert.assertTrue(accountLogoutPage.validateLogoutContinueBtnIsDisplayed());
         accountLogoutPage.clickOnLogoutContinueButton();
     }

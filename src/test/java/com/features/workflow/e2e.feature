@@ -7,6 +7,8 @@ Feature: Verifying e-commerce Search to Order item functionality
     And user should be able to see search result item and click on add to cart button
     And user enters a number in quantity box to increases items by "4" and clicks on remove icon to remove from cart
     And user starts all over again from the previous steps as "Lipstick" and increases items by "6"
+    And user decreases items quantity by "2"
+    And user adds an items as "Makeup" and clicks on top items dropdown button
     And user verifies the product item by item image, unit price, quantity and grand total
     And user clicks on the Checkout button
     And user should be on account login page with option to login as "Returning Customer" or create an Account as "I am a new customer."

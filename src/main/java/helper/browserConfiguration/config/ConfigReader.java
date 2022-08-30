@@ -6,7 +6,7 @@ import helper.browserConfiguration.BrowserType;
 
 public interface ConfigReader {
 
-    public int getImpliciteWait();
+    public int getImplicitWait();
 
     public int getExplicitWait();
 

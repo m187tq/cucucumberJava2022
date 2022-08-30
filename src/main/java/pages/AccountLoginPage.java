@@ -1,15 +1,20 @@
 package pages;
 
+import helper.action.Action;
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
+import helper.wait.WaitHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.datarepo;
 
 import java.io.IOException;
 
 public class AccountLoginPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(AccountLoginPage.class);
-    AccountPage accountPage = new AccountPage();
+    Action act = new Action();
+    WaitHelper waitHelper;
     public AccountLoginPage() throws IOException {
     super();
     }
@@ -54,7 +59,7 @@ public class AccountLoginPage extends BasePage {
     @FindBy(id = "accountFrm_accountguest")
     public WebElement guestCheckoutRadioBtn;
     public boolean validateGuestCheckoutRadioBtnIsEnabled() {
-        return act.isEnabled(getDriver(), guestCheckoutRadioBtn);
+        return new VerificationHelper(getDriver()).isEnabled(guestCheckoutRadioBtn);
     }
 
     // Forget Password Variable declaration //
@@ -72,90 +77,64 @@ public class AccountLoginPage extends BasePage {
     }
     public void enterPassword(String Password) throws Exception {
         sendKeysToWebElement(passwordTxtField, Password);
-        log.info("Sent data to the element: " + Password);
     }
     public AccountPage clickOnLoginBtn() throws IOException, InterruptedException {
         waitAndClickElement(loginBtn);
-        log.info("Waited and clicked on the element...");
-        waitFor(accountPage.welcomeBackTxt);
-        log.info("Returning to new AccountPage.welcomeBackTxt");
         return new AccountPage();
     }
     public AccountLoginPage clickOnLoginButton() throws InterruptedException, IOException {
         waitAndClickElement(loginBtn);
         log.info("Waited and clicked on the element...");
-        waitFor(errorIncorrectLoginOrPasswordProvidedTxt);
-        log.info("Waited for element on AccountLoginPage : " + errorIncorrectLoginOrPasswordProvidedTxt.getText());
         return new AccountLoginPage();
     }
     public boolean validateLoginBtnIsEnabled() {
-        log.info("Element is enabled ...");
-        return isEnabled(loginBtn);
+        return new VerificationHelper(getDriver()).isEnabled(loginBtn);
     }
 
     public void goToLoginPageEnterLoginNameAndPasswordThenClickOnLoginBtn(String loginName, String password) throws Exception {
         enterLoginName(loginName);
         enterPassword(password);
         clickOnLoginBtn();
-        log.info("Successfully loged in....");
+        log.info("Successfully logged in....");
     }
     public void clickForgetYourLogin() {
         waitForWebElementAndClick(forgotYourLoginLink);
-        log.info("Waited and clicked on the element: "+ forgotYourLoginLink.getText());
     }
     public void clickForgetYourPassword() {
        waitForWebElementAndClick(forgotYourPasswordLink);
-       log.info("Waited and clicked on the element: "+ forgotYourPasswordLink.getText());
     }
     public String getForgotYourPasswordTxtLink() {
-        log.info("Gotten element text..." + forgotYourPasswordLink);
-        return getText(forgotYourPasswordLink);
+        return new VerificationHelper(getDriver()).getText(forgotYourPasswordLink);
     }
     public String getForgotYourLogin() {
-        log.info("Gotten element text..." + forgotYourPasswordLink);
-        return getText(forgotYourLoginLink);
+        return new VerificationHelper(getDriver()).getText(forgotYourLoginLink);
     }
     public String errorIncorrectLoginPasswordProvidedConfirmationMessage(String loginValidationErrorMessage) {
-        log.info("Gotten element text..." + errorIncorrectLoginOrPasswordProvidedTxt);
-        return getText(errorIncorrectLoginOrPasswordProvidedTxt);
+        return new VerificationHelper(getDriver()).getText(errorIncorrectLoginOrPasswordProvidedTxt);
 
     }
     public String validateErrorIncorrectLoginPasswordProvidedConfirmationMessage() {
-        waitFor(errorIncorrectLoginOrPasswordProvidedTxt);
-        log.info("Waited and Got element text..." + errorIncorrectLoginOrPasswordProvidedTxt);
-        return getText(errorIncorrectLoginOrPasswordProvidedTxt);
+        return new VerificationHelper(getDriver()).getText(errorIncorrectLoginOrPasswordProvidedTxt);
     }
     public String currentPageTitle(String pageTitle) {
-        log.info("Getting currentPageTitle..."+ pageTitle);
-        return getTitle();
+        return new VerificationHelper(getDriver()).getTitle();
     }
   public boolean verifyReturningCustomerTxtIsDisplayed(String arg1) {
-      waitFor(returningCustomerTxt);
-      log.info("Waited and verify element is Displayed: "+ arg1);
-      return isDisplayed(returningCustomerTxt);
+      return new VerificationHelper(getDriver()).isDisplayed(returningCustomerTxt);
   }
     public boolean verifyRegisterAccountTextCheckBoxIsDisplayed() {
-        waitFor(registerAccountCheckBoxTxt);
-        log.info("Waited and verify element is Displayed: "+ registerAccountCheckBoxTxt.getText());
-        return registerAccountCheckBoxTxt.isDisplayed();
+        return new VerificationHelper(getDriver()).isDisplayed(registerAccountCheckBoxTxt);
     }
     public boolean validateNewCustomerTxtIsDisplayed(String arg0) {
-        waitFor(newCustomerTxt);
-        log.info("Waited and verify element is Displayed: "+ newCustomerTxt.getText());
-        return isDisplayed(newCustomerTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(newCustomerTxt);
     }
     public AccountCreatePage clickOnContinueRegisterAccountBtn() throws IOException, InterruptedException {
-        AccountCreatePage acp = new AccountCreatePage();
-        waitFor(continueRegisterAccountBtn);
-        log.info("Waited and clicked on the element...");
-        continueRegisterAccountBtn.click();
-        waitFor(acp.createAccountTxt);
+        waitAndClickElementUsingJS(continueRegisterAccountBtn);
         log.info("clicked and waited for element on returning to AccountSuccessPage...");
         return new AccountCreatePage();
     }
     public String getCreateAnAccountTxt() {
-        log.info("Getting element text..." + createAnAccountTxt);
-        return getText(createAnAccountTxt);
+        return new VerificationHelper(getDriver()).getText(createAnAccountTxt);
 
     }
 

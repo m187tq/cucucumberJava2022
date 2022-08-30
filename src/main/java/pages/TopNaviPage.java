@@ -1,6 +1,9 @@
 package pages;
 
+import helper.action.Action;
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
+import helper.wait.WaitHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +13,8 @@ import java.io.IOException;
 
 public class TopNaviPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(TopNaviPage.class);
+    Action act = new Action();
+    WaitHelper waitHelper;
     public TopNaviPage() throws IOException {
         super();
     }
@@ -57,27 +62,24 @@ public class TopNaviPage extends BasePage {
         log.info("navigate To IndexPage...");
     }
 
-    public String V() {
+    public String getTitle() {
         log.info("Gotten current Page Url...");
-        return getCurrentURL();
+        return new VerificationHelper(getDriver()).getTitle();
     }
     public String currentPageTitle() throws InterruptedException {
         log.info("Gotten current Page title...");
-        return getTitle();
+        return new VerificationHelper(getDriver()).getTitle();
     }
-    public String loginOrRegisterLink() {
-        log.info("Gotten element text..." + loginOrRegisterLink);
-        return getText(loginOrRegisterLink);
+    public boolean validateLoginOrRegisterLinkIsDisplayed() {
+        return new VerificationHelper(getDriver()).isDisplayed(loginOrRegisterLink);
     }
-
     public boolean loginOrRegisterBtnEnabled() {
-        return act.isEnabled(getDriver(), loginOrRegisterLink);
+        return new VerificationHelper(getDriver()).isEnabled(loginOrRegisterLink);
     }
     public AccountLoginPage clickOnLoginRegisterBtn() throws IOException {
         AccountLoginPage accountLoginPage = new AccountLoginPage();
         waitForWebElementAndClick(loginOrRegisterLink);
         log.info("Waited and clicked on the element: "+ loginOrRegisterLink.getText());
-        waitFor(accountLoginPage.createAnAccountTxt);
         log.info("Waited for element on AccountLoginPage");
         return new AccountLoginPage();
     }
@@ -100,16 +102,8 @@ public class TopNaviPage extends BasePage {
     }
     public SearchResultPage clickOnSearchBtn() throws IOException {
         waitForWebElementAndClick(searchBtn);
-        log.info("Waited and clicked on the element: "+ searchBtn.getText());
-        log.info("Returning to new SearchResultPage");
+        log.info("Waited and clicked on the element: "+ searchBtn.getText() + " Returning to new SearchResultPage");
         return new SearchResultPage();
     }
-
-
-
-
-
-
-
 
 }

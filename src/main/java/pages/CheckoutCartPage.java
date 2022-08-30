@@ -1,5 +1,6 @@
 package pages;
 
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -74,11 +75,11 @@ public class CheckoutCartPage extends BasePage {
 //==============================================================//
 
     public boolean validateUserOnShoppingCartPage() {
-        return act.isDisplayed(getDriver(), shoppingCartTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(shoppingCartTxt);
     }
 
-    public void enterCouponNumberOnCouponBox(String CouponNumber) {
-        act.type(couponBox, CouponNumber);
+    public void enterCouponNumberOnCouponBox(String CouponNumber) throws Exception {
+       sendKeysToWebElement(couponBox, CouponNumber);
     }
 
     public void clickOnApplyCouponBtn() {
@@ -86,23 +87,23 @@ public class CheckoutCartPage extends BasePage {
     }
 
     public void selectEstimateCountryDropdown(String countryName) {
-        act.selectByVisibleText(countryName, estimateCountryDropdown);
+        selectByVisibleText(countryName, estimateCountryDropdown);
     }
     public void selectCountryZonesDropdown(String countryZonesName) {
-        act.selectByVisibleText(countryZonesName, countryZonesDropdown) ;
+        selectByVisibleText(countryZonesName, countryZonesDropdown) ;
     }
 
     public void enterOnEstimatePostcodeBox(String postCode) throws Exception {
-        act.type(estimatePostcodeBox, postCode);
+        sendKeysToWebElement(estimatePostcodeBox, postCode);
     }
     public void clickOnEstimateCalculatorBtn() {
         waitForWebElementAndClick(estimateCalculatorBtn);
     }
     public void selectFlatRateShipmentsDropdown(String flatRateShipment) {
-        act.selectByVisibleText(flatRateShipment, FlatRateShipmentsDropdown);
+        selectByVisibleText(flatRateShipment, FlatRateShipmentsDropdown);
     }
     public boolean validateRemoveIconBtnisEnabled() {
-        return act.isEnabled(getDriver(), removeItemBtn);
+        return new VerificationHelper(getDriver()).isEnabled(removeItemBtn);
     }
     public void clickOnRemoveIconBtn() {
         waitForWebElementAndClick(removeItemBtn);
@@ -121,34 +122,32 @@ public class CheckoutCartPage extends BasePage {
         Thread.sleep(3000);
         return new AccountLoginPage();
     }
-    public void enterAddQuantityBox(String arg1) throws InterruptedException {
-        act.click(getDriver(), addQuantityBox);
-
-        act.type(addQuantityBox, arg1);
+    public void adjustItemQuantity(String arg1) throws Exception {
+        addQuantityBox.click();
+        sendKeysToWebElement(addQuantityBox, arg1);
     }
     public boolean validateYourShoppingCartIsEmptyIsDisplayed() {
-        log.info("Your Shopping Cart Is Empty and Displayed...");
-        return act.isDisplayed(getDriver(), yourShoppingCartIsEmptyTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(yourShoppingCartIsEmptyTxt);
     }
 
     public boolean validateProductImageIsDisplayed() {
-        return act.isDisplayed(getDriver(), productImage);
+        return new VerificationHelper(getDriver()).isDisplayed(productImage);
     }
 
     public String getProductPrice() {
-        return productPrice.getText();
+        return new VerificationHelper(getDriver()).getText(productPrice);
     }
 
     public String getSubPrice() {
-        return subPrice.getText();
+        return new VerificationHelper(getDriver()).getText(subPrice);
     }
 
     public String getProductTotalPrice() {
-        return productTotalPrice.getText();
+        return new VerificationHelper(getDriver()).getText(productTotalPrice);
     }
 
     public String getProductGrandTotalPrice() {
-        return productGrandTotalPrice.getText();
+        return new VerificationHelper(getDriver()).getText(productGrandTotalPrice);
     }
 
 }

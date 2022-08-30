@@ -1,9 +1,11 @@
 package pages;
 
+import helper.assertion.VerificationHelper;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.datarepo;
 import utils.globalVars;
 
 import java.io.IOException;
@@ -24,13 +26,11 @@ public class AccountLogoutPage extends BasePage {
     public WebElement accountLogoutTxt;
 
     public boolean validateSuccessfulLogOffProcess() throws InterruptedException {
-        log.info("Element are Displayed...");
-        return isDisplayed(getDriver(), saveToLogoutTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(saveToLogoutTxt);
     }
 
     public boolean validateAccountLogoutTxtIsDisplayed() {
-        log.info("element is Displayed...");
-        return isDisplayed(getDriver(), accountLogoutTxt);
+        return new VerificationHelper(getDriver()).isDisplayed(accountLogoutTxt);
     }
 
     public String getCurrentUrl() throws InterruptedException {
@@ -39,7 +39,6 @@ public class AccountLogoutPage extends BasePage {
     }
     public IndexPage clickOnLogoutContinueButton() throws IOException {
         IndexPage indexPage = new IndexPage();
-        act.explicitWait(getDriver(), logoutAccountContinueBtn, globalVars.getDefaultExplicitTimeout());
         waitAndClickElement(logoutAccountContinueBtn);
         log.info("Wait ti click on the element...");
         fluentWait(getDriver(), indexPage.logoImage, globalVars.getDefaultExplicitTimeout());
@@ -48,9 +47,7 @@ public class AccountLogoutPage extends BasePage {
 
     }
     public boolean validateLogoutContinueBtnIsDisplayed() {
-        act.explicitWait(getDriver(), logoutAccountContinueBtn, globalVars.getDefaultExplicitTimeout());
-        log.info("Waiting for element to Displayed..");
-        return isDisplayed(getDriver(), logoutAccountContinueBtn);
+        return new VerificationHelper(getDriver()).isDisplayed(logoutAccountContinueBtn);
     }
 
 

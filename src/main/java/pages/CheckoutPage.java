@@ -1,6 +1,6 @@
 package pages;
 
-import actiondriver.Action;
+import helper.action.Action;
 import helper.logger.LoggerHelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class CheckoutPage extends BasePage {
     public static Logger log = LoggerHelper.getLogger(CheckoutPage.class);
-    Action actor = new Action();
+    Action act = new Action();
 
 public CheckoutPage() throws IOException {
     super();
@@ -75,7 +75,7 @@ public CheckoutPage() throws IOException {
     }
 
     public void clickOnBillingAddrEditBtn() {
-        actor.fluentWait(getDriver(), billingAddrEditBtn, datarepo.getFifteenSeconds());
+        act.fluentWait(getDriver(), billingAddrEditBtn, datarepo.getFifteenSeconds());
         act.click(getDriver(), billingAddrEditBtn);
 
     }
